@@ -836,19 +836,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\duhak\\.nuget\\packages\\": {}
+    "C:\\Users\\lukop\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\duhak\\source\\repos\\Jaar 2\\NoSQL-Project\\UI\\UI.csproj",
+      "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\UI.csproj",
       "projectName": "UI",
-      "projectPath": "C:\\Users\\duhak\\source\\repos\\Jaar 2\\NoSQL-Project\\UI\\UI.csproj",
-      "packagesPath": "C:\\Users\\duhak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\duhak\\source\\repos\\Jaar 2\\NoSQL-Project\\UI\\obj\\",
+      "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\UI.csproj",
+      "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\duhak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -862,11 +862,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\duhak\\source\\repos\\Jaar 2\\NoSQL-Project\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\duhak\\source\\repos\\Jaar 2\\NoSQL-Project\\Model\\Model.csproj"
+            "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj"
             },
-            "C:\\Users\\duhak\\source\\repos\\Jaar 2\\NoSQL-Project\\Service\\Service.csproj": {
-              "projectPath": "C:\\Users\\duhak\\source\\repos\\Jaar 2\\NoSQL-Project\\Service\\Service.csproj"
+            "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Service\\Service.csproj": {
+              "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Service\\Service.csproj"
             }
           }
         }
