@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2fI2kztmbZJHH+6T40goOb3EVp0jbLCqf0ZCsl/Zfp/0mUg2KgYzI9PPz0mQmweUA0HWP6aUx6fFo+hf38Lrxg==",
+  "dgSpecHash": "dF/r/Hld0XmaJHQUybiAf50+OpGPfOOduyRrq7k6adIhW/7EG/NGEDg/4/+s19pKjXQBWOehzAOa04WLgHXNnQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\duhak\\.nuget\\packages\\mongodb.bson\\2.21.0\\mongodb.bson.2.21.0.nupkg.sha512",
+    "C:\\Users\\duhak\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\duhak\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

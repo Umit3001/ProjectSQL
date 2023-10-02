@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\UI.csproj": {}
+    "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\DAL.csproj": {
+    "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\duhak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duhak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj"
+              "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj"
               }
             }
           }
@@ -44,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.21.0, )"
+            },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -73,72 +77,17 @@
         }
       }
     },
-    "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj": {
+    "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj",
-        "projectName": "Model",
-        "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\obj\\",
+        "projectUniqueName": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\Logic.csproj",
+        "projectName": "Logic",
+        "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\Logic.csproj",
+        "packagesPath": "C:\\Users\\duhak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Service\\Service.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Service\\Service.csproj",
-        "projectName": "Service",
-        "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Service\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duhak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -152,8 +101,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\DAL.csproj"
+              "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\DAL.csproj"
+              },
+              "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj"
               }
             }
           }
@@ -187,17 +139,78 @@
         }
       }
     },
-    "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\UI.csproj": {
+    "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\UI.csproj",
-        "projectName": "UI",
-        "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\UI.csproj",
-        "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\obj\\",
+        "projectUniqueName": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj",
+        "projectName": "Model",
+        "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\duhak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duhak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.21.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\UI.csproj",
+        "projectName": "UI",
+        "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\UI.csproj",
+        "packagesPath": "C:\\Users\\duhak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\duhak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -211,11 +224,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj"
+              "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\Logic.csproj": {
+                "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\Logic.csproj"
               },
-              "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Service\\Service.csproj": {
-                "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Service\\Service.csproj"
+              "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj"
               }
             }
           }

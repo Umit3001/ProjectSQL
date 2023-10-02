@@ -3,116 +3,100 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 using System.Diagnostics;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using System.Collections.Generic;
+using Model;
+using MongoDB.Bson.Serialization;
 
 namespace DAL
 {
-    public abstract class BaseDao
+    public class BaseDao
     {
-        private SqlDataAdapter adapter;
-        private SqlConnection conn;
+        private MongoClient client;
 
         public BaseDao()
         {
-
-            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChapeauDatabase"].ConnectionString);
-            adapter = new SqlDataAdapter();
-        }
-        protected SqlConnection OpenConnection()
-        {
             try
             {
-                if (conn.State == ConnectionState.Closed || conn.State == ConnectionState.Broken)
+                client = new MongoClient("mongodb+srv://697637:Karacauren06@mongodb-cluster.ullii05.mongodb.net/");
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occur during MongoClient initialization.
+                Console.WriteLine("Error initializing MongoClient: " + ex.Message);
+            }
+        }
+
+        public List<Databases_Model> GetDatabases()
+        {
+            List<Databases_Model> all_databases = new List<Databases_Model>();
+
+            try
+            {
+                foreach (BsonDocument db in client.ListDatabases().ToList())
                 {
-                    conn.Open();
+                    all_databases.Add(BsonSerializer.Deserialize<Databases_Model>(db));
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                //Print.ErrorLog(e);
-                throw;
+                // Handle any exceptions that occur during database operations.
+                Console.WriteLine("Error while getting databases: " + ex.Message);
             }
-            return conn;
-        }
 
-        private void CloseConnection()
-        {
-            conn.Close();
+            return all_databases;
         }
-
-        /* For Insert/Update/Delete Queries with transaction */
-        protected void ExecuteEditTranQuery(string query, SqlParameter[] sqlParameters, SqlTransaction sqlTransaction)
+        public List<string> GetCollectionNames(string databaseName)
         {
-            SqlCommand command = new SqlCommand(query, conn, sqlTransaction);
+            List<string> collectionNames = new List<string>();
+            IAsyncCursor<string> cursor = null;
 
             try
             {
-                command.Parameters.AddRange(sqlParameters);
-                adapter.InsertCommand = command;
-                command.ExecuteNonQuery();
+                var database = client.GetDatabase(databaseName);
+                cursor = database.ListCollectionNames();
+
+                foreach (var collectionName in cursor.ToList())
+                {
+                    collectionNames.Add(collectionName);
+                }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                //Print.ErrorLog(e);
-                throw;
+                Console.WriteLine("Error while getting collection names: " + ex.Message);
             }
             finally
             {
-                CloseConnection();
+                if (cursor != null)
+                {
+                    cursor.Dispose();
+                }
             }
-        }
 
-        /* For Insert/Update/Delete Queries */
-        protected void ExecuteEditQuery(string query, SqlParameter[] sqlParameters)
+            return collectionNames;
+        }
+        public List<BsonDocument> GetDocuments(string databaseName, string collectionName)
         {
-            SqlCommand command = new SqlCommand();
+            List<BsonDocument> documents = new List<BsonDocument>();
 
             try
             {
-                command.Connection = OpenConnection();
-                command.CommandText = query;
-                command.Parameters.AddRange(sqlParameters);
-                adapter.InsertCommand = command;
-                command.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                // Print.ErrorLog(e);
-                throw;
-            }
-            finally
-            {
-                CloseConnection();
-            }
-        }
+                var database = client.GetDatabase(databaseName);
+                var collection = database.GetCollection<BsonDocument>(collectionName);
 
-        /* For Select Queries */
-        protected DataTable ExecuteSelectQuery(string query, params SqlParameter[] sqlParameters)
-        {
-            SqlCommand command = new SqlCommand();
-            DataTable dataTable;
-            DataSet dataSet = new DataSet();
+                var filter = new BsonDocument(); // You can add a filter if needed
 
-            try
-            {
-                command.Connection = OpenConnection();
-                command.CommandText = query;
-                command.Parameters.AddRange(sqlParameters);
-                command.ExecuteNonQuery();
-                adapter.SelectCommand = command;
-                adapter.Fill(dataSet);
-                dataTable = dataSet.Tables[0];
+                var cursor = collection.Find(filter).ToListAsync();
+
+                documents = cursor.Result;
             }
-            catch (SqlException e)
+            catch (Exception ex)
             {
-                Debug.Fail(e.Message);
-                throw;
-            }
-            finally
-            {
-                CloseConnection();
+                Console.WriteLine("Error while getting documents: " + ex.Message);
             }
 
-            return dataTable;
+            return documents;
         }
     }
 }
