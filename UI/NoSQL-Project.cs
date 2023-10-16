@@ -12,28 +12,108 @@ namespace UI
 {
     public partial class NoSQL : Form
     {
-        private Databases databases;
+        private User foundUser;
+
+        private UserLogic userLogic;
+
+        private TicketLogic ticketLogic;
 
         public NoSQL()
         {
+            userLogic = new UserLogic();
+            ticketLogic = new TicketLogic();
 
             InitializeComponent();
-            databases = new Databases();
 
+            HideAllPanels();
+            LoginPanel.Show();
 
         }
-
-        private void NoSQL_Load(object sender, EventArgs e)
+        private void HideAllPanels()
         {
-            var dbList = databases.Get_All_Databases();
-
-            foreach (var db in dbList)
-            {
-                listBox1.Items.Add(db.name);
-            }
+            LoginPanel.Hide();
+            ServicedeskPanel.Hide();
+            EmployeePanel.Hide();
         }
 
-     
+        // LOGIN
+        private void LoginPanelLoginButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string username = LoginPanelUsernameTextBox.Text;
+                string password = LoginPanelPasswordTextBox.Text;
+
+
+                foundUser = userLogic.FindUser(username, password);
+
+                if (foundUser != null)
+                {
+                    // open employee panel
+                    if (foundUser.EmployeeType == TypeOfEmployee.Regular)
+                    {
+                        ShowRegularEmployeePanel();
+                    }
+                    // open servicedesk panel
+                    else if (foundUser.EmployeeType == TypeOfEmployee.ServiceDesk)
+                    {
+                        ShowServicedeskEmployeePanel();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Username or password is incorrect.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Fout bij het inloggen: " + ex.Message);
+            }
+            LoginPanelUsernameTextBox.Text = "";
+            LoginPanelPasswordTextBox.Text = "";
+
+        }
+        private void ServicedeskPanelBackButton_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            LoginPanel.Show();
+        }
+
+        private void EmployeePanelBackButton_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            LoginPanel.Show();
+        }
+
+        private void ShowRegularEmployeePanel()
+        {
+            EmployeePanel.Show();
+
+
+        }
+        private void ShowServicedeskEmployeePanel()
+        {
+            List<Ticket> tickets = ticketLogic.GetAllTickets();
+
+            AllTickets.Items.Clear(); // Clear any existing items in the ListBox.
+
+            foreach (var ticket in tickets)
+            {
+                AllTickets.Items.Add(ticket.Description); // Display the description in the ListBox.
+            }
+
+            ServicedeskPanel.Show();
+
+        }
+
+
+
+        
+
+
+
+
     }
 }
 
