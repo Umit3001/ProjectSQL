@@ -32,7 +32,7 @@ namespace UI
         private void HideAllPanels()
         {
             LoginPanel.Hide();
-            ServicedeskPanel.Hide();
+            UserManagementPanel.Hide();
             EmployeePanel.Hide();
             NavigationPanel.Hide();
         }
@@ -109,7 +109,7 @@ namespace UI
                 AllTickets.Items.Add(ticket.Description); // Display the description in the ListBox.
             }
 
-            ServicedeskPanel.Show();
+            UserManagementPanel.Show();
 
         }
 

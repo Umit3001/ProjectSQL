@@ -32,9 +32,12 @@
             this.EmployeePanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.EmployeePanelBackButton = new System.Windows.Forms.Button();
-            this.ServicedeskPanel = new System.Windows.Forms.Panel();
+            this.UserManagementPanel = new System.Windows.Forms.Panel();
             this.ServicedeskPanelBackButton = new System.Windows.Forms.Button();
             this.LoginPanel = new System.Windows.Forms.Panel();
+            this.RememberMeCheckBoxLoginPanel = new System.Windows.Forms.CheckBox();
+            this.TitleDetailLoginPanel = new System.Windows.Forms.Label();
+            this.TitleLoginPanel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LoginPanelUsernameTextBox = new System.Windows.Forms.TextBox();
             this.LoginPanelPasswordTextBox = new System.Windows.Forms.TextBox();
@@ -48,11 +51,9 @@
             this.UserManagementButtonNavigationPanel = new System.Windows.Forms.Button();
             this.IncidentManagementButtonNavigationPanel = new System.Windows.Forms.Button();
             this.DashboardButtonNavigationPanel = new System.Windows.Forms.Button();
-            this.TitleLoginPanel = new System.Windows.Forms.Label();
-            this.TitleDetailLoginPanel = new System.Windows.Forms.Label();
-            this.RememberMeCheckBoxLoginPanel = new System.Windows.Forms.CheckBox();
+            this.CreateNewUserPanel = new System.Windows.Forms.Panel();
             this.EmployeePanel.SuspendLayout();
-            this.ServicedeskPanel.SuspendLayout();
+            this.UserManagementPanel.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginPanelLogo)).BeginInit();
@@ -63,9 +64,9 @@
             // 
             this.AllTickets.FormattingEnabled = true;
             this.AllTickets.ItemHeight = 15;
-            this.AllTickets.Location = new System.Drawing.Point(153, 3);
+            this.AllTickets.Location = new System.Drawing.Point(153, 63);
             this.AllTickets.Name = "AllTickets";
-            this.AllTickets.Size = new System.Drawing.Size(553, 409);
+            this.AllTickets.Size = new System.Drawing.Size(553, 349);
             this.AllTickets.TabIndex = 0;
             // 
             // EmployeePanel
@@ -97,14 +98,15 @@
             this.EmployeePanelBackButton.UseVisualStyleBackColor = true;
             this.EmployeePanelBackButton.Click += new System.EventHandler(this.EmployeePanelBackButton_Click);
             // 
-            // ServicedeskPanel
+            // UserManagementPanel
             // 
-            this.ServicedeskPanel.Controls.Add(this.ServicedeskPanelBackButton);
-            this.ServicedeskPanel.Controls.Add(this.AllTickets);
-            this.ServicedeskPanel.Location = new System.Drawing.Point(1, 9);
-            this.ServicedeskPanel.Name = "ServicedeskPanel";
-            this.ServicedeskPanel.Size = new System.Drawing.Size(935, 644);
-            this.ServicedeskPanel.TabIndex = 1;
+            this.UserManagementPanel.Controls.Add(this.CreateNewUserPanel);
+            this.UserManagementPanel.Controls.Add(this.ServicedeskPanelBackButton);
+            this.UserManagementPanel.Controls.Add(this.AllTickets);
+            this.UserManagementPanel.Location = new System.Drawing.Point(1, 153);
+            this.UserManagementPanel.Name = "UserManagementPanel";
+            this.UserManagementPanel.Size = new System.Drawing.Size(948, 510);
+            this.UserManagementPanel.TabIndex = 1;
             // 
             // ServicedeskPanelBackButton
             // 
@@ -132,6 +134,37 @@
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(929, 644);
             this.LoginPanel.TabIndex = 4;
+            // 
+            // RememberMeCheckBoxLoginPanel
+            // 
+            this.RememberMeCheckBoxLoginPanel.AutoSize = true;
+            this.RememberMeCheckBoxLoginPanel.Location = new System.Drawing.Point(399, 333);
+            this.RememberMeCheckBoxLoginPanel.Name = "RememberMeCheckBoxLoginPanel";
+            this.RememberMeCheckBoxLoginPanel.Size = new System.Drawing.Size(104, 19);
+            this.RememberMeCheckBoxLoginPanel.TabIndex = 12;
+            this.RememberMeCheckBoxLoginPanel.Text = "Remember me";
+            this.RememberMeCheckBoxLoginPanel.UseVisualStyleBackColor = true;
+            // 
+            // TitleDetailLoginPanel
+            // 
+            this.TitleDetailLoginPanel.AutoSize = true;
+            this.TitleDetailLoginPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.TitleDetailLoginPanel.Location = new System.Drawing.Point(349, 159);
+            this.TitleDetailLoginPanel.Name = "TitleDetailLoginPanel";
+            this.TitleDetailLoginPanel.Size = new System.Drawing.Size(284, 40);
+            this.TitleDetailLoginPanel.TabIndex = 10;
+            this.TitleDetailLoginPanel.Text = "Please provide login credentials to login to \r\nNoDesk for The Garden Group";
+            this.TitleDetailLoginPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TitleLoginPanel
+            // 
+            this.TitleLoginPanel.AutoSize = true;
+            this.TitleLoginPanel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TitleLoginPanel.Location = new System.Drawing.Point(399, 105);
+            this.TitleLoginPanel.Name = "TitleLoginPanel";
+            this.TitleLoginPanel.Size = new System.Drawing.Size(185, 37);
+            this.TitleLoginPanel.TabIndex = 9;
+            this.TitleLoginPanel.Text = "NoDesk: TGG";
             // 
             // pictureBox1
             // 
@@ -265,49 +298,26 @@
             this.DashboardButtonNavigationPanel.Text = "Dashboard";
             this.DashboardButtonNavigationPanel.UseVisualStyleBackColor = false;
             // 
-            // TitleLoginPanel
+            // CreateNewUserPanel
             // 
-            this.TitleLoginPanel.AutoSize = true;
-            this.TitleLoginPanel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TitleLoginPanel.Location = new System.Drawing.Point(399, 105);
-            this.TitleLoginPanel.Name = "TitleLoginPanel";
-            this.TitleLoginPanel.Size = new System.Drawing.Size(185, 37);
-            this.TitleLoginPanel.TabIndex = 9;
-            this.TitleLoginPanel.Text = "NoDesk: TGG";
-            // 
-            // TitleDetailLoginPanel
-            // 
-            this.TitleDetailLoginPanel.AutoSize = true;
-            this.TitleDetailLoginPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.TitleDetailLoginPanel.Location = new System.Drawing.Point(349, 159);
-            this.TitleDetailLoginPanel.Name = "TitleDetailLoginPanel";
-            this.TitleDetailLoginPanel.Size = new System.Drawing.Size(284, 40);
-            this.TitleDetailLoginPanel.TabIndex = 10;
-            this.TitleDetailLoginPanel.Text = "Please provide login credentials to login to \r\nNoDesk for The Garden Group";
-            this.TitleDetailLoginPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // RememberMeCheckBoxLoginPanel
-            // 
-            this.RememberMeCheckBoxLoginPanel.AutoSize = true;
-            this.RememberMeCheckBoxLoginPanel.Location = new System.Drawing.Point(399, 333);
-            this.RememberMeCheckBoxLoginPanel.Name = "RememberMeCheckBoxLoginPanel";
-            this.RememberMeCheckBoxLoginPanel.Size = new System.Drawing.Size(104, 19);
-            this.RememberMeCheckBoxLoginPanel.TabIndex = 12;
-            this.RememberMeCheckBoxLoginPanel.Text = "Remember me";
-            this.RememberMeCheckBoxLoginPanel.UseVisualStyleBackColor = true;
+            this.CreateNewUserPanel.BackColor = System.Drawing.Color.White;
+            this.CreateNewUserPanel.Location = new System.Drawing.Point(3, 3);
+            this.CreateNewUserPanel.Name = "CreateNewUserPanel";
+            this.CreateNewUserPanel.Size = new System.Drawing.Size(945, 510);
+            this.CreateNewUserPanel.TabIndex = 6;
             // 
             // NoSQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 663);
-            this.Controls.Add(this.LoginPanel);
-            this.Controls.Add(this.ServicedeskPanel);
+            this.Controls.Add(this.UserManagementPanel);
             this.Controls.Add(this.NavigationPanel);
+            this.Controls.Add(this.LoginPanel);
             this.Name = "NoSQL";
             this.Text = "NoSQL-Project";
             this.EmployeePanel.ResumeLayout(false);
-            this.ServicedeskPanel.ResumeLayout(false);
+            this.UserManagementPanel.ResumeLayout(false);
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -322,7 +332,7 @@
 
         private ListBox AllTickets;
         private Panel EmployeePanel;
-        private Panel ServicedeskPanel;
+        private Panel UserManagementPanel;
         private Panel LoginPanel;
         private TextBox LoginPanelUsernameTextBox;
         private TextBox LoginPanelPasswordTextBox;
@@ -343,5 +353,6 @@
         private CheckBox RememberMeCheckBoxLoginPanel;
         private Label TitleDetailLoginPanel;
         private Label TitleLoginPanel;
+        private Panel CreateNewUserPanel;
     }
 }
