@@ -73,10 +73,13 @@ namespace UI
             {
                 MessageBox.Show("Fout bij het inloggen: " + ex.Message);
             }
-            LoginPanelUsernameTextBox.Text = "";
-            LoginPanelPasswordTextBox.Text = "";
-
+            if(!RememberMeCheckBoxLoginPanel.Checked)
+            {
+                LoginPanelUsernameTextBox.Text = "";
+                LoginPanelPasswordTextBox.Text = "";
+            }
         }
+
         private void ServicedeskPanelBackButton_Click(object sender, EventArgs e)
         {
             HideAllPanels();
@@ -93,7 +96,6 @@ namespace UI
         {
             NavigationPanel.Show();
             EmployeePanel.Show();
-
 
         }
         private void ShowServicedeskEmployeePanel()
