@@ -34,7 +34,20 @@
             this.dateTimeReportedLabelInIncidentPanel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.EmployeePanelBackButton = new System.Windows.Forms.Button();
+<<<<<<< Updated upstream
             this.ServicedeskPanel = new System.Windows.Forms.Panel();
+=======
+            this.UserManagementPanel = new System.Windows.Forms.Panel();
+            this.UserListView = new System.Windows.Forms.ListView();
+            this.Id = new System.Windows.Forms.ColumnHeader();
+            this.Email = new System.Windows.Forms.ColumnHeader();
+            this.EmployeeName = new System.Windows.Forms.ColumnHeader();
+            this.Tickets = new System.Windows.Forms.ColumnHeader();
+            this.AddNewUserButtonUserManagement = new System.Windows.Forms.Button();
+            this.FilterByEmailLabelUserManagement = new System.Windows.Forms.Label();
+            this.FilterByEmailTextBoxUserManagement = new System.Windows.Forms.TextBox();
+            this.TitleUserManagementPanel = new System.Windows.Forms.Label();
+>>>>>>> Stashed changes
             this.ServicedeskPanelBackButton = new System.Windows.Forms.Button();
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -75,15 +88,23 @@
             // AllTickets
             // 
             this.AllTickets.FormattingEnabled = true;
+<<<<<<< Updated upstream
             this.AllTickets.ItemHeight = 20;
             this.AllTickets.Location = new System.Drawing.Point(175, 4);
             this.AllTickets.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AllTickets.Name = "AllTickets";
             this.AllTickets.Size = new System.Drawing.Size(631, 544);
+=======
+            this.AllTickets.ItemHeight = 15;
+            this.AllTickets.Location = new System.Drawing.Point(16, 92);
+            this.AllTickets.Name = "AllTickets";
+            this.AllTickets.Size = new System.Drawing.Size(70, 124);
+>>>>>>> Stashed changes
             this.AllTickets.TabIndex = 0;
             // 
             // AddIncendentPanel
             // 
+<<<<<<< Updated upstream
             this.AddIncendentPanel.Controls.Add(this.submitTicketButtonInIncidentPanel);
             this.AddIncendentPanel.Controls.Add(this.cancelButtonInIncidentPanel);
             this.AddIncendentPanel.Controls.Add(this.textBox1);
@@ -107,6 +128,14 @@
             this.AddIncendentPanel.Name = "AddIncendentPanel";
             this.AddIncendentPanel.Size = new System.Drawing.Size(1069, 663);
             this.AddIncendentPanel.TabIndex = 1;
+=======
+            this.EmployeePanel.Controls.Add(this.button1);
+            this.EmployeePanel.Controls.Add(this.EmployeePanelBackButton);
+            this.EmployeePanel.Location = new System.Drawing.Point(0, 148);
+            this.EmployeePanel.Name = "EmployeePanel";
+            this.EmployeePanel.Size = new System.Drawing.Size(935, 493);
+            this.EmployeePanel.TabIndex = 1;
+>>>>>>> Stashed changes
             // 
             // dateTimePicker1
             // 
@@ -148,6 +177,7 @@
             // 
             // ServicedeskPanel
             // 
+<<<<<<< Updated upstream
             this.ServicedeskPanel.Controls.Add(this.ServicedeskPanelBackButton);
             this.ServicedeskPanel.Controls.Add(this.AllTickets);
             this.ServicedeskPanel.Location = new System.Drawing.Point(1, 12);
@@ -155,13 +185,103 @@
             this.ServicedeskPanel.Name = "ServicedeskPanel";
             this.ServicedeskPanel.Size = new System.Drawing.Size(1069, 859);
             this.ServicedeskPanel.TabIndex = 1;
+=======
+            this.UserManagementPanel.Controls.Add(this.UserListView);
+            this.UserManagementPanel.Controls.Add(this.AddNewUserButtonUserManagement);
+            this.UserManagementPanel.Controls.Add(this.FilterByEmailLabelUserManagement);
+            this.UserManagementPanel.Controls.Add(this.FilterByEmailTextBoxUserManagement);
+            this.UserManagementPanel.Controls.Add(this.TitleUserManagementPanel);
+            this.UserManagementPanel.Controls.Add(this.ServicedeskPanelBackButton);
+            this.UserManagementPanel.Controls.Add(this.AllTickets);
+            this.UserManagementPanel.Location = new System.Drawing.Point(0, 138);
+            this.UserManagementPanel.Name = "UserManagementPanel";
+            this.UserManagementPanel.Size = new System.Drawing.Size(948, 510);
+            this.UserManagementPanel.TabIndex = 1;
+>>>>>>> Stashed changes
+            // 
+            // UserListView
+            // 
+            this.UserListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Id,
+            this.Email,
+            this.EmployeeName,
+            this.Tickets});
+            this.UserListView.Location = new System.Drawing.Point(117, 76);
+            this.UserListView.Name = "UserListView";
+            this.UserListView.Size = new System.Drawing.Size(760, 412);
+            this.UserListView.TabIndex = 6;
+            this.UserListView.UseCompatibleStateImageBehavior = false;
+            this.UserListView.View = System.Windows.Forms.View.Details;
+            // 
+            // Id
+            // 
+            this.Id.Text = "ID";
+            this.Id.Width = 50;
+            // 
+            // Email
+            // 
+            this.Email.Text = "Email";
+            this.Email.Width = 250;
+            // 
+            // EmployeeName
+            // 
+            this.EmployeeName.Text = "Name";
+            this.EmployeeName.Width = 200;
+            // 
+            // Tickets
+            // 
+            this.Tickets.Text = "#Tickets";
+            this.Tickets.Width = 100;
+            // 
+            // AddNewUserButtonUserManagement
+            // 
+            this.AddNewUserButtonUserManagement.BackColor = System.Drawing.Color.Lime;
+            this.AddNewUserButtonUserManagement.Location = new System.Drawing.Point(755, 40);
+            this.AddNewUserButtonUserManagement.Name = "AddNewUserButtonUserManagement";
+            this.AddNewUserButtonUserManagement.Size = new System.Drawing.Size(122, 30);
+            this.AddNewUserButtonUserManagement.TabIndex = 5;
+            this.AddNewUserButtonUserManagement.Text = "+ADD NEW USER";
+            this.AddNewUserButtonUserManagement.UseVisualStyleBackColor = false;
+            this.AddNewUserButtonUserManagement.Click += new System.EventHandler(this.AddNewUserButtonUserManagement_Click);
+            // 
+            // FilterByEmailLabelUserManagement
+            // 
+            this.FilterByEmailLabelUserManagement.AutoSize = true;
+            this.FilterByEmailLabelUserManagement.Location = new System.Drawing.Point(115, 48);
+            this.FilterByEmailLabelUserManagement.Name = "FilterByEmailLabelUserManagement";
+            this.FilterByEmailLabelUserManagement.Size = new System.Drawing.Size(87, 15);
+            this.FilterByEmailLabelUserManagement.TabIndex = 4;
+            this.FilterByEmailLabelUserManagement.Text = "Filter by email: ";
+            // 
+            // FilterByEmailTextBoxUserManagement
+            // 
+            this.FilterByEmailTextBoxUserManagement.Location = new System.Drawing.Point(208, 45);
+            this.FilterByEmailTextBoxUserManagement.Name = "FilterByEmailTextBoxUserManagement";
+            this.FilterByEmailTextBoxUserManagement.Size = new System.Drawing.Size(191, 23);
+            this.FilterByEmailTextBoxUserManagement.TabIndex = 3;
+            // 
+            // TitleUserManagementPanel
+            // 
+            this.TitleUserManagementPanel.AutoSize = true;
+            this.TitleUserManagementPanel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TitleUserManagementPanel.Location = new System.Drawing.Point(115, 10);
+            this.TitleUserManagementPanel.Name = "TitleUserManagementPanel";
+            this.TitleUserManagementPanel.Size = new System.Drawing.Size(223, 32);
+            this.TitleUserManagementPanel.TabIndex = 2;
+            this.TitleUserManagementPanel.Text = "User Management";
             // 
             // ServicedeskPanelBackButton
             // 
+<<<<<<< Updated upstream
             this.ServicedeskPanelBackButton.Location = new System.Drawing.Point(106, 575);
             this.ServicedeskPanelBackButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ServicedeskPanelBackButton.Name = "ServicedeskPanelBackButton";
             this.ServicedeskPanelBackButton.Size = new System.Drawing.Size(106, 45);
+=======
+            this.ServicedeskPanelBackButton.Location = new System.Drawing.Point(16, 460);
+            this.ServicedeskPanelBackButton.Name = "ServicedeskPanelBackButton";
+            this.ServicedeskPanelBackButton.Size = new System.Drawing.Size(74, 28);
+>>>>>>> Stashed changes
             this.ServicedeskPanelBackButton.TabIndex = 1;
             this.ServicedeskPanelBackButton.Text = "Back";
             this.ServicedeskPanelBackButton.UseVisualStyleBackColor = true;
@@ -254,15 +374,25 @@
             // NavigationPanel
             // 
             this.NavigationPanel.BackColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.NavigationPanel.Controls.Add(this.AddIncendentPanel);
+=======
+>>>>>>> Stashed changes
             this.NavigationPanel.Controls.Add(this.TitleDetailNavigationPanel);
             this.NavigationPanel.Controls.Add(this.TitleNavigationPanel);
             this.NavigationPanel.Controls.Add(this.UserManagementButtonNavigationPanel);
             this.NavigationPanel.Controls.Add(this.IncidentManagementButtonNavigationPanel);
             this.NavigationPanel.Controls.Add(this.DashboardButtonNavigationPanel);
             this.NavigationPanel.Controls.Add(this.LoginPanelLogo);
+<<<<<<< Updated upstream
             this.NavigationPanel.Location = new System.Drawing.Point(1, 16);
             this.NavigationPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+=======
+            this.NavigationPanel.Controls.Add(this.UserManagementPanel);
+            this.NavigationPanel.Controls.Add(this.CreateNewUserPanel);
+            this.NavigationPanel.Controls.Add(this.EmployeePanel);
+            this.NavigationPanel.Location = new System.Drawing.Point(1, 12);
+>>>>>>> Stashed changes
             this.NavigationPanel.Name = "NavigationPanel";
             this.NavigationPanel.Size = new System.Drawing.Size(1069, 855);
             this.NavigationPanel.TabIndex = 5;
@@ -298,6 +428,7 @@
             this.UserManagementButtonNavigationPanel.TabIndex = 2;
             this.UserManagementButtonNavigationPanel.Text = "User Management";
             this.UserManagementButtonNavigationPanel.UseVisualStyleBackColor = false;
+            this.UserManagementButtonNavigationPanel.Click += new System.EventHandler(this.UserManagementButtonNavigationPanel_Click);
             // 
             // IncidentManagementButtonNavigationPanel
             // 
@@ -325,6 +456,7 @@
             // 
             // subjectOfIncidentLabelInIncidentPanel
             // 
+<<<<<<< Updated upstream
             this.subjectOfIncidentLabelInIncidentPanel.AutoSize = true;
             this.subjectOfIncidentLabelInIncidentPanel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.subjectOfIncidentLabelInIncidentPanel.Location = new System.Drawing.Point(131, 143);
@@ -443,21 +575,38 @@
             this.submitTicketButtonInIncidentPanel.TabIndex = 27;
             this.submitTicketButtonInIncidentPanel.Text = "Cancel";
             this.submitTicketButtonInIncidentPanel.UseVisualStyleBackColor = false;
+=======
+            this.CreateNewUserPanel.BackColor = System.Drawing.Color.White;
+            this.CreateNewUserPanel.Location = new System.Drawing.Point(0, 141);
+            this.CreateNewUserPanel.Name = "CreateNewUserPanel";
+            this.CreateNewUserPanel.Size = new System.Drawing.Size(945, 510);
+            this.CreateNewUserPanel.TabIndex = 6;
+>>>>>>> Stashed changes
             // 
             // NoSQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(1081, 884);
+=======
+            this.ClientSize = new System.Drawing.Size(946, 663);
+>>>>>>> Stashed changes
             this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.ServicedeskPanel);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "NoSQL";
             this.Text = "NoSQL-Project";
+<<<<<<< Updated upstream
             this.AddIncendentPanel.ResumeLayout(false);
             this.AddIncendentPanel.PerformLayout();
             this.ServicedeskPanel.ResumeLayout(false);
+=======
+            this.EmployeePanel.ResumeLayout(false);
+            this.UserManagementPanel.ResumeLayout(false);
+            this.UserManagementPanel.PerformLayout();
+>>>>>>> Stashed changes
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -489,6 +638,7 @@
         private Button UserManagementButtonNavigationPanel;
         private Button IncidentManagementButtonNavigationPanel;
         private Button DashboardButtonNavigationPanel;
+<<<<<<< Updated upstream
         private DateTimePicker dateTimePicker1;
         private Label dateTimeReportedLabelInIncidentPanel;
         private Label label1;
@@ -506,5 +656,21 @@
         private ComboBox priorityComboBox;
         private TextBox ReportedByUserTextBox;
         private ComboBox typeOfIncidentComboBox;
+=======
+        private Button button1;
+        private CheckBox RememberMeCheckBoxLoginPanel;
+        private Label TitleDetailLoginPanel;
+        private Label TitleLoginPanel;
+        private Panel CreateNewUserPanel;
+        private ListView UserListView;
+        private Button AddNewUserButtonUserManagement;
+        private Label FilterByEmailLabelUserManagement;
+        private TextBox FilterByEmailTextBoxUserManagement;
+        private Label TitleUserManagementPanel;
+        private ColumnHeader Id;
+        private ColumnHeader Email;
+        private ColumnHeader EmployeeName;
+        private ColumnHeader Tickets;
+>>>>>>> Stashed changes
     }
 }

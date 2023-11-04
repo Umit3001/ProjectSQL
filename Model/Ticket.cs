@@ -15,12 +15,17 @@ namespace Model
         public string Id { get; set; }
 
         [BsonElement("DateOpened")]
+<<<<<<< Updated upstream
         public string DateTime { get; set; }
+=======
+        public string DateOpened { get; set; }
+>>>>>>> Stashed changes
 
         [BsonElement("SubjectOfIncident")]
         public string SubjectOfIncident { get; set; }
 
         [BsonElement("TypeOfIncident")]
+<<<<<<< Updated upstream
         public TypeOfIncident TypeOfIncident { get; set; }
 
         [BsonElement("ReportedByUser")]
@@ -28,6 +33,15 @@ namespace Model
         
         [BsonElement("Priority")]
         public Priority Priority { get; set; }
+=======
+        public string TypeOfIncident { get; set; }
+
+        [BsonElement("ReportedByUser")]
+        public string ReportedByUser { get; set; }
+
+        [BsonElement("Priority")]
+        public string Priority { get; set; }
+>>>>>>> Stashed changes
 
         [BsonElement("Deadline")]
         public string Deadline { get; set; }
@@ -36,13 +50,14 @@ namespace Model
         public string Description { get; set; }
 
         [BsonElement("Status")]
-        public StatusTicket Status { get; set; }
+        public string Status { get; set; }
 
         [BsonElement("ServiceDeskEmployeeID")]
         public EmployeeReference ServiceDeskEmployeeID { get; set; }
 
         [BsonElement("RegularEmployeeID")]
         public EmployeeReference RegularEmployeeID { get; set; }
+
 
     }
 

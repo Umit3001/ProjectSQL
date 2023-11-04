@@ -19,6 +19,10 @@ namespace Logic
         {
             return userDao.FindUser(username, password);
         }
+        public List<User> GetAllUsers()
+        {
+            return userDao.GetAllUsers();
+        }
 
 
 

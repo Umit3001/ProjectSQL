@@ -35,6 +35,7 @@ namespace UI
             ServicedeskPanel.Hide();
             AddIncendentPanel.Hide();
             NavigationPanel.Hide();
+            CreateNewUserPanel.Hide();
         }
 
         // LOGIN
@@ -50,17 +51,17 @@ namespace UI
 
                 if (foundUser != null)
                 {
+                    HideAllPanels();
                     // open employee panel
                     if (foundUser.EmployeeType == TypeOfEmployee.Regular)
                     {
-                        HideAllPanels();
-                        ShowRegularEmployeePanel();
+                        UserManagementButtonNavigationPanel.Enabled = false;
+                        ShowDashBoardPanel();
                     }
                     // open servicedesk panel
                     else if (foundUser.EmployeeType == TypeOfEmployee.ServiceDesk)
                     {
-                        HideAllPanels();
-                        ShowServicedeskEmployeePanel();
+                        ShowDashBoardPanel();
                     }
                 }
                 else
@@ -89,12 +90,16 @@ namespace UI
             LoginPanel.Show();
         }
 
-        private void ShowRegularEmployeePanel()
+        private void ShowDashBoardPanel()
         {
             NavigationPanel.Show();
+<<<<<<< Updated upstream
             AddIncendentPanel.Show();
 
 
+=======
+            EmployeePanel.Show();
+>>>>>>> Stashed changes
         }
         private void ShowServicedeskEmployeePanel()
         {
@@ -111,7 +116,50 @@ namespace UI
 
         }
 
+<<<<<<< Updated upstream
        
+=======
+        private void AddNewUserButtonUserManagement_Click(object sender, EventArgs e)
+        {
+            CreateNewUserPanel.Show();
+        }
+
+        private void UserManagementButtonNavigationPanel_Click(object sender, EventArgs e)
+        {
+            UserManagementPanel.Show();
+            List<User> users = userLogic.GetAllUsers();
+
+            UserListView.Items.Clear();
+
+            foreach (var user in users)
+            {
+                int totalTicketsCreatedByUser = GetTotalTicketsCreatedByUser(user.Id); // Calculate the total tickets for the user
+                ListViewItem item = new ListViewItem(user.Id);
+                item.SubItems.Add(user.Email);
+                item.SubItems.Add(user.Name);
+                item.SubItems.Add(totalTicketsCreatedByUser.ToString()); // Display the total tickets
+
+                UserListView.Items.Add(item);
+            }
+        }
+
+        private int GetTotalTicketsCreatedByUser(string userId)
+        {
+            List<Ticket> tickets = ticketLogic.GetAllTickets();
+
+            int totalTicketsCreatedByUser = 0;
+
+            foreach (Ticket ticket in tickets)
+            {
+                if (ticket.RegularEmployeeID != null && ticket.RegularEmployeeID.EmployeeId == userId)
+                {
+                    totalTicketsCreatedByUser++;
+                }
+            }
+
+            return totalTicketsCreatedByUser;
+        }
+>>>>>>> Stashed changes
     }
 }
 

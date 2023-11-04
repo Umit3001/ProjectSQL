@@ -33,7 +33,21 @@ namespace DAL
             return null; // User not found
         }
 
-        
+        public List<User> GetAllUsers()
+        {
+            var userDocuments = Collection.Find(new BsonDocument()).ToList();
+            List<User> users = new List<User>();
+
+            foreach (var userDocument in userDocuments)
+            {
+                User user = BsonSerializer.Deserialize<User>(userDocument);
+                users.Add(user);
+            }
+
+            return users;
+        }
+
+
 
     }
 }
