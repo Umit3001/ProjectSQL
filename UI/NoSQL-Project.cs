@@ -1,5 +1,6 @@
 
 using Logic;
+using Microsoft.VisualBasic.ApplicationServices;
 using Model;
 using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
@@ -7,6 +8,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using static System.Windows.Forms.LinkLabel;
 using Timer = System.Windows.Forms.Timer;
+using User = Model.User;
 
 namespace UI
 {
@@ -32,10 +34,10 @@ namespace UI
         private void HideAllPanels()
         {
             LoginPanel.Hide();
-            ServicedeskPanel.Hide();
             AddIncendentPanel.Hide();
             NavigationPanel.Hide();
             CreateNewUserPanel.Hide();
+           
         }
 
         // LOGIN
@@ -74,9 +76,11 @@ namespace UI
             {
                 MessageBox.Show("Fout bij het inloggen: " + ex.Message);
             }
-            LoginPanelUsernameTextBox.Text = "";
-            LoginPanelPasswordTextBox.Text = "";
-
+            if (!RememberMeCheckBoxLoginPanel.Checked)
+            {
+                LoginPanelUsernameTextBox.Text = "";
+                LoginPanelPasswordTextBox.Text = "";
+            }
         }
         private void ServicedeskPanelBackButton_Click(object sender, EventArgs e)
         {
@@ -92,40 +96,20 @@ namespace UI
 
         private void ShowDashBoardPanel()
         {
+            HideAllPanels();
             NavigationPanel.Show();
-<<<<<<< Updated upstream
-            AddIncendentPanel.Show();
-
-
-=======
-            EmployeePanel.Show();
->>>>>>> Stashed changes
+            AddIncendentPanel.Show(); //hier moet dashboard komen
         }
-        private void ShowServicedeskEmployeePanel()
-        {
-            List<Ticket> tickets = ticketLogic.GetAllTickets();
-
-            AllTickets.Items.Clear(); // Clear any existing items in the ListBox.
-
-            foreach (var ticket in tickets)
-            {
-                AllTickets.Items.Add(ticket.Description); // Display the description in the ListBox.
-            }
-
-            ServicedeskPanel.Show();
-
-        }
-
-<<<<<<< Updated upstream
-       
-=======
         private void AddNewUserButtonUserManagement_Click(object sender, EventArgs e)
         {
+            HideAllPanels();
             CreateNewUserPanel.Show();
         }
 
         private void UserManagementButtonNavigationPanel_Click(object sender, EventArgs e)
         {
+            HideAllPanels();
+            NavigationPanel.Show();
             UserManagementPanel.Show();
             List<User> users = userLogic.GetAllUsers();
 
@@ -141,6 +125,8 @@ namespace UI
 
                 UserListView.Items.Add(item);
             }
+
+            
         }
 
         private int GetTotalTicketsCreatedByUser(string userId)
@@ -159,7 +145,42 @@ namespace UI
 
             return totalTicketsCreatedByUser;
         }
->>>>>>> Stashed changes
+
+        private void FilterByEmailTextBoxUserManagement_TextChanged(object sender, EventArgs e)
+        {
+            FilterUserListByEmail(userLogic.GetAllUsers(), FilterByEmailTextBoxUserManagement.Text);
+        }
+        private void FilterUserListByEmail(List<User> users, string filter)
+        {
+            // Clear the current items in the ListView
+            UserListView.Items.Clear();
+
+            // Iterate through the users and filter by email
+            foreach (var user in users)
+            {
+                int totalTicketsCreatedByUser = GetTotalTicketsCreatedByUser(user.Id);
+
+                // Check if the email contains the filter text (with at least 3 letters)
+                if (string.IsNullOrEmpty(filter) || filter.Length < 3 || user.Email.Contains(filter, StringComparison.OrdinalIgnoreCase))
+                {
+                    ListViewItem item = new ListViewItem(user.Id);
+                    item.SubItems.Add(user.Email);
+                    item.SubItems.Add(user.Name);
+                    item.SubItems.Add(totalTicketsCreatedByUser.ToString());
+
+                    UserListView.Items.Add(item);
+                }
+            }
+        }
+
+        private void IncidentManagementButtonNavigationPanel_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            NavigationPanel.Show();
+            AddIncendentPanel.Show();
+        }
+
+  
     }
 }
 
