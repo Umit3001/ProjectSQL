@@ -24,12 +24,11 @@ namespace Model
         public StatusTicket Status { get; set; }
 
         [BsonElement("ServiceDeskEmployeeID")]
-        [BsonRepresentation(BsonType.ObjectId)] // Assuming ServiceDeskEmployeeID is an ObjectId
-        public string ServiceDeskEmployeeID { get; set; }
+        public EmployeeReference ServiceDeskEmployeeID { get; set; }
 
         [BsonElement("RegularEmployeeID")]
-        [BsonRepresentation(BsonType.ObjectId)] // Assuming RegularEmployeeID is an ObjectId
-        public string RegularEmployeeID { get; set; }
+        public EmployeeReference RegularEmployeeID { get; set; }
+
     }
 
     public enum StatusTicket
@@ -40,4 +39,11 @@ namespace Model
         Pending,
         Reopened
     }
+
+    public class EmployeeReference
+    {
+        [BsonElement("$_id")]
+        public string EmployeeId { get; set; }
+    }
+
 }
