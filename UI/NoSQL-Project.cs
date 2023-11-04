@@ -33,7 +33,7 @@ namespace UI
         {
             LoginPanel.Hide();
             ServicedeskPanel.Hide();
-            EmployeePanel.Hide();
+            AddIncendentPanel.Hide();
             NavigationPanel.Hide();
         }
 
@@ -92,7 +92,7 @@ namespace UI
         private void ShowRegularEmployeePanel()
         {
             NavigationPanel.Show();
-            EmployeePanel.Show();
+            AddIncendentPanel.Show();
 
 
         }
@@ -111,13 +111,7 @@ namespace UI
 
         }
 
-
-
-        
-
-
-
-
+       
     }
 }
 

@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.AllTickets = new System.Windows.Forms.ListBox();
-            this.EmployeePanel = new System.Windows.Forms.Panel();
+            this.AddIncendentPanel = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeReportedLabelInIncidentPanel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.EmployeePanelBackButton = new System.Windows.Forms.Button();
             this.ServicedeskPanel = new System.Windows.Forms.Panel();
             this.ServicedeskPanelBackButton = new System.Windows.Forms.Button();
@@ -47,8 +50,21 @@
             this.UserManagementButtonNavigationPanel = new System.Windows.Forms.Button();
             this.IncidentManagementButtonNavigationPanel = new System.Windows.Forms.Button();
             this.DashboardButtonNavigationPanel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.EmployeePanel.SuspendLayout();
+            this.subjectOfIncidentLabelInIncidentPanel = new System.Windows.Forms.Label();
+            this.typeOfIncidentLabelInIncidentLabel = new System.Windows.Forms.Label();
+            this.reportedByUserInIncidentPanel = new System.Windows.Forms.Label();
+            this.priorityLabelInIncididentPanel = new System.Windows.Forms.Label();
+            this.deadlineLabelInIncidentLabel = new System.Windows.Forms.Label();
+            this.descriptionLabelInIncidentPanel = new System.Windows.Forms.Label();
+            this.subjectOfIncidentTextBox = new System.Windows.Forms.TextBox();
+            this.typeOfIncidentComboBox = new System.Windows.Forms.ComboBox();
+            this.ReportedByUserTextBox = new System.Windows.Forms.TextBox();
+            this.priorityComboBox = new System.Windows.Forms.ComboBox();
+            this.DeadlineComboBox = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cancelButtonInIncidentPanel = new System.Windows.Forms.Button();
+            this.submitTicketButtonInIncidentPanel = new System.Windows.Forms.Button();
+            this.AddIncendentPanel.SuspendLayout();
             this.ServicedeskPanel.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,19 +82,62 @@
             this.AllTickets.Size = new System.Drawing.Size(631, 544);
             this.AllTickets.TabIndex = 0;
             // 
-            // EmployeePanel
+            // AddIncendentPanel
             // 
-            this.EmployeePanel.Controls.Add(this.button1);
-            this.EmployeePanel.Controls.Add(this.EmployeePanelBackButton);
-            this.EmployeePanel.Location = new System.Drawing.Point(0, 188);
-            this.EmployeePanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.EmployeePanel.Name = "EmployeePanel";
-            this.EmployeePanel.Size = new System.Drawing.Size(1069, 663);
-            this.EmployeePanel.TabIndex = 1;
+            this.AddIncendentPanel.Controls.Add(this.submitTicketButtonInIncidentPanel);
+            this.AddIncendentPanel.Controls.Add(this.cancelButtonInIncidentPanel);
+            this.AddIncendentPanel.Controls.Add(this.textBox1);
+            this.AddIncendentPanel.Controls.Add(this.DeadlineComboBox);
+            this.AddIncendentPanel.Controls.Add(this.priorityComboBox);
+            this.AddIncendentPanel.Controls.Add(this.ReportedByUserTextBox);
+            this.AddIncendentPanel.Controls.Add(this.typeOfIncidentComboBox);
+            this.AddIncendentPanel.Controls.Add(this.subjectOfIncidentTextBox);
+            this.AddIncendentPanel.Controls.Add(this.descriptionLabelInIncidentPanel);
+            this.AddIncendentPanel.Controls.Add(this.deadlineLabelInIncidentLabel);
+            this.AddIncendentPanel.Controls.Add(this.priorityLabelInIncididentPanel);
+            this.AddIncendentPanel.Controls.Add(this.reportedByUserInIncidentPanel);
+            this.AddIncendentPanel.Controls.Add(this.typeOfIncidentLabelInIncidentLabel);
+            this.AddIncendentPanel.Controls.Add(this.subjectOfIncidentLabelInIncidentPanel);
+            this.AddIncendentPanel.Controls.Add(this.dateTimePicker1);
+            this.AddIncendentPanel.Controls.Add(this.dateTimeReportedLabelInIncidentPanel);
+            this.AddIncendentPanel.Controls.Add(this.label1);
+            this.AddIncendentPanel.Controls.Add(this.EmployeePanelBackButton);
+            this.AddIncendentPanel.Location = new System.Drawing.Point(0, 188);
+            this.AddIncendentPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddIncendentPanel.Name = "AddIncendentPanel";
+            this.AddIncendentPanel.Size = new System.Drawing.Size(1069, 663);
+            this.AddIncendentPanel.TabIndex = 1;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(306, 97);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(320, 27);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // dateTimeReportedLabelInIncidentPanel
+            // 
+            this.dateTimeReportedLabelInIncidentPanel.AutoSize = true;
+            this.dateTimeReportedLabelInIncidentPanel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimeReportedLabelInIncidentPanel.Location = new System.Drawing.Point(131, 104);
+            this.dateTimeReportedLabelInIncidentPanel.Name = "dateTimeReportedLabelInIncidentPanel";
+            this.dateTimeReportedLabelInIncidentPanel.Size = new System.Drawing.Size(142, 20);
+            this.dateTimeReportedLabelInIncidentPanel.TabIndex = 11;
+            this.dateTimeReportedLabelInIncidentPanel.Text = "Date/time reported:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(131, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(514, 54);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Create new incident ticket";
             // 
             // EmployeePanelBackButton
             // 
-            this.EmployeePanelBackButton.Location = new System.Drawing.Point(105, 244);
+            this.EmployeePanelBackButton.Location = new System.Drawing.Point(30, 601);
             this.EmployeePanelBackButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EmployeePanelBackButton.Name = "EmployeePanelBackButton";
             this.EmployeePanelBackButton.Size = new System.Drawing.Size(107, 37);
@@ -195,7 +254,7 @@
             // NavigationPanel
             // 
             this.NavigationPanel.BackColor = System.Drawing.Color.White;
-            this.NavigationPanel.Controls.Add(this.EmployeePanel);
+            this.NavigationPanel.Controls.Add(this.AddIncendentPanel);
             this.NavigationPanel.Controls.Add(this.TitleDetailNavigationPanel);
             this.NavigationPanel.Controls.Add(this.TitleNavigationPanel);
             this.NavigationPanel.Controls.Add(this.UserManagementButtonNavigationPanel);
@@ -264,14 +323,126 @@
             this.DashboardButtonNavigationPanel.Text = "Dashboard";
             this.DashboardButtonNavigationPanel.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // subjectOfIncidentLabelInIncidentPanel
             // 
-            this.button1.Location = new System.Drawing.Point(354, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.subjectOfIncidentLabelInIncidentPanel.AutoSize = true;
+            this.subjectOfIncidentLabelInIncidentPanel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.subjectOfIncidentLabelInIncidentPanel.Location = new System.Drawing.Point(131, 143);
+            this.subjectOfIncidentLabelInIncidentPanel.Name = "subjectOfIncidentLabelInIncidentPanel";
+            this.subjectOfIncidentLabelInIncidentPanel.Size = new System.Drawing.Size(136, 20);
+            this.subjectOfIncidentLabelInIncidentPanel.TabIndex = 14;
+            this.subjectOfIncidentLabelInIncidentPanel.Text = "Subject of incident:";
+            // 
+            // typeOfIncidentLabelInIncidentLabel
+            // 
+            this.typeOfIncidentLabelInIncidentLabel.AutoSize = true;
+            this.typeOfIncidentLabelInIncidentLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.typeOfIncidentLabelInIncidentLabel.Location = new System.Drawing.Point(131, 185);
+            this.typeOfIncidentLabelInIncidentLabel.Name = "typeOfIncidentLabelInIncidentLabel";
+            this.typeOfIncidentLabelInIncidentLabel.Size = new System.Drawing.Size(118, 20);
+            this.typeOfIncidentLabelInIncidentLabel.TabIndex = 15;
+            this.typeOfIncidentLabelInIncidentLabel.Text = "Type of incident:";
+            // 
+            // reportedByUserInIncidentPanel
+            // 
+            this.reportedByUserInIncidentPanel.AutoSize = true;
+            this.reportedByUserInIncidentPanel.Location = new System.Drawing.Point(131, 220);
+            this.reportedByUserInIncidentPanel.Name = "reportedByUserInIncidentPanel";
+            this.reportedByUserInIncidentPanel.Size = new System.Drawing.Size(125, 20);
+            this.reportedByUserInIncidentPanel.TabIndex = 16;
+            this.reportedByUserInIncidentPanel.Text = "Reported by user:";
+            // 
+            // priorityLabelInIncididentPanel
+            // 
+            this.priorityLabelInIncididentPanel.AutoSize = true;
+            this.priorityLabelInIncididentPanel.Location = new System.Drawing.Point(131, 263);
+            this.priorityLabelInIncididentPanel.Name = "priorityLabelInIncididentPanel";
+            this.priorityLabelInIncididentPanel.Size = new System.Drawing.Size(59, 20);
+            this.priorityLabelInIncididentPanel.TabIndex = 17;
+            this.priorityLabelInIncididentPanel.Text = "Priority:";
+            // 
+            // deadlineLabelInIncidentLabel
+            // 
+            this.deadlineLabelInIncidentLabel.AutoSize = true;
+            this.deadlineLabelInIncidentLabel.Location = new System.Drawing.Point(131, 304);
+            this.deadlineLabelInIncidentLabel.Name = "deadlineLabelInIncidentLabel";
+            this.deadlineLabelInIncidentLabel.Size = new System.Drawing.Size(141, 20);
+            this.deadlineLabelInIncidentLabel.TabIndex = 18;
+            this.deadlineLabelInIncidentLabel.Text = "Deadline/follow up:";
+            // 
+            // descriptionLabelInIncidentPanel
+            // 
+            this.descriptionLabelInIncidentPanel.AutoSize = true;
+            this.descriptionLabelInIncidentPanel.Location = new System.Drawing.Point(131, 344);
+            this.descriptionLabelInIncidentPanel.Name = "descriptionLabelInIncidentPanel";
+            this.descriptionLabelInIncidentPanel.Size = new System.Drawing.Size(88, 20);
+            this.descriptionLabelInIncidentPanel.TabIndex = 19;
+            this.descriptionLabelInIncidentPanel.Text = "Description:";
+            // 
+            // subjectOfIncidentTextBox
+            // 
+            this.subjectOfIncidentTextBox.Location = new System.Drawing.Point(306, 136);
+            this.subjectOfIncidentTextBox.Name = "subjectOfIncidentTextBox";
+            this.subjectOfIncidentTextBox.Size = new System.Drawing.Size(320, 27);
+            this.subjectOfIncidentTextBox.TabIndex = 20;
+            // 
+            // typeOfIncidentComboBox
+            // 
+            this.typeOfIncidentComboBox.FormattingEnabled = true;
+            this.typeOfIncidentComboBox.Location = new System.Drawing.Point(306, 177);
+            this.typeOfIncidentComboBox.Name = "typeOfIncidentComboBox";
+            this.typeOfIncidentComboBox.Size = new System.Drawing.Size(320, 28);
+            this.typeOfIncidentComboBox.TabIndex = 21;
+            // 
+            // ReportedByUserTextBox
+            // 
+            this.ReportedByUserTextBox.Location = new System.Drawing.Point(306, 213);
+            this.ReportedByUserTextBox.Name = "ReportedByUserTextBox";
+            this.ReportedByUserTextBox.Size = new System.Drawing.Size(320, 27);
+            this.ReportedByUserTextBox.TabIndex = 22;
+            // 
+            // priorityComboBox
+            // 
+            this.priorityComboBox.FormattingEnabled = true;
+            this.priorityComboBox.Location = new System.Drawing.Point(306, 255);
+            this.priorityComboBox.Name = "priorityComboBox";
+            this.priorityComboBox.Size = new System.Drawing.Size(320, 28);
+            this.priorityComboBox.TabIndex = 23;
+            // 
+            // DeadlineComboBox
+            // 
+            this.DeadlineComboBox.FormattingEnabled = true;
+            this.DeadlineComboBox.Location = new System.Drawing.Point(306, 296);
+            this.DeadlineComboBox.Name = "DeadlineComboBox";
+            this.DeadlineComboBox.Size = new System.Drawing.Size(320, 28);
+            this.DeadlineComboBox.TabIndex = 24;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(306, 337);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(320, 27);
+            this.textBox1.TabIndex = 25;
+            // 
+            // cancelButtonInIncidentPanel
+            // 
+            this.cancelButtonInIncidentPanel.Location = new System.Drawing.Point(319, 397);
+            this.cancelButtonInIncidentPanel.Name = "cancelButtonInIncidentPanel";
+            this.cancelButtonInIncidentPanel.Size = new System.Drawing.Size(127, 50);
+            this.cancelButtonInIncidentPanel.TabIndex = 26;
+            this.cancelButtonInIncidentPanel.Text = "Cancel";
+            this.cancelButtonInIncidentPanel.UseVisualStyleBackColor = true;
+            // 
+            // submitTicketButtonInIncidentPanel
+            // 
+            this.submitTicketButtonInIncidentPanel.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.submitTicketButtonInIncidentPanel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.submitTicketButtonInIncidentPanel.Location = new System.Drawing.Point(499, 397);
+            this.submitTicketButtonInIncidentPanel.Name = "submitTicketButtonInIncidentPanel";
+            this.submitTicketButtonInIncidentPanel.Size = new System.Drawing.Size(127, 50);
+            this.submitTicketButtonInIncidentPanel.TabIndex = 27;
+            this.submitTicketButtonInIncidentPanel.Text = "Cancel";
+            this.submitTicketButtonInIncidentPanel.UseVisualStyleBackColor = false;
             // 
             // NoSQL
             // 
@@ -284,7 +455,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "NoSQL";
             this.Text = "NoSQL-Project";
-            this.EmployeePanel.ResumeLayout(false);
+            this.AddIncendentPanel.ResumeLayout(false);
+            this.AddIncendentPanel.PerformLayout();
             this.ServicedeskPanel.ResumeLayout(false);
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
@@ -299,7 +471,7 @@
         #endregion
 
         private ListBox AllTickets;
-        private Panel EmployeePanel;
+        private Panel AddIncendentPanel;
         private Panel ServicedeskPanel;
         private Panel LoginPanel;
         private TextBox LoginPanelUsernameTextBox;
@@ -317,6 +489,22 @@
         private Button UserManagementButtonNavigationPanel;
         private Button IncidentManagementButtonNavigationPanel;
         private Button DashboardButtonNavigationPanel;
-        private Button button1;
+        private DateTimePicker dateTimePicker1;
+        private Label dateTimeReportedLabelInIncidentPanel;
+        private Label label1;
+        private Label descriptionLabelInIncidentPanel;
+        private Label deadlineLabelInIncidentLabel;
+        private Label priorityLabelInIncididentPanel;
+        private Label reportedByUserInIncidentPanel;
+        private Label typeOfIncidentLabelInIncidentLabel;
+        private Label subjectOfIncidentLabelInIncidentPanel;
+        private TextBox subjectOfIncidentTextBox;
+        private Button submitTicketButtonInIncidentPanel;
+        private Button cancelButtonInIncidentPanel;
+        private TextBox textBox1;
+        private ComboBox DeadlineComboBox;
+        private ComboBox priorityComboBox;
+        private TextBox ReportedByUserTextBox;
+        private ComboBox typeOfIncidentComboBox;
     }
 }

@@ -14,11 +14,26 @@ namespace Model
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-        [BsonElement("Description")]
-        public string Description { get; set; }
-
         [BsonElement("DateOpened")]
         public string DateTime { get; set; }
+
+        [BsonElement("SubjectOfIncident")]
+        public string SubjectOfIncident { get; set; }
+
+        [BsonElement("TypeOfIncident")]
+        public TypeOfIncident TypeOfIncident { get; set; }
+
+        [BsonElement("ReportedByUser")]
+        public string ReportedByUser { get; set; }
+        
+        [BsonElement("Priority")]
+        public Priority Priority { get; set; }
+
+        [BsonElement("Deadline")]
+        public string Deadline { get; set; }
+
+        [BsonElement("Description")]
+        public string Description { get; set; }
 
         [BsonElement("Status")]
         public StatusTicket Status { get; set; }
@@ -39,6 +54,26 @@ namespace Model
         Pending,
         Reopened
     }
+
+    public enum TypeOfIncident
+    {
+        ServiceInterruption,
+        ServiceDegradation,
+        Hardware,
+        Software,
+        Security,
+        Network,
+        UserRelated,
+        ChangeRelated
+    }
+
+    public enum Priority
+    {
+        High,
+        Normal,
+        Low
+    }
+
 
     public class EmployeeReference
     {
