@@ -34,6 +34,7 @@ namespace UI
             LoginPanel.Hide();
             ServicedeskPanel.Hide();
             EmployeePanel.Hide();
+            NavigationPanel.Hide();
         }
 
         // LOGIN
@@ -52,11 +53,13 @@ namespace UI
                     // open employee panel
                     if (foundUser.EmployeeType == TypeOfEmployee.Regular)
                     {
+                        HideAllPanels();
                         ShowRegularEmployeePanel();
                     }
                     // open servicedesk panel
                     else if (foundUser.EmployeeType == TypeOfEmployee.ServiceDesk)
                     {
+                        HideAllPanels();
                         ShowServicedeskEmployeePanel();
                     }
                 }
@@ -88,6 +91,7 @@ namespace UI
 
         private void ShowRegularEmployeePanel()
         {
+            NavigationPanel.Show();
             EmployeePanel.Show();
 
 

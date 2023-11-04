@@ -34,23 +34,32 @@
             this.ServicedeskPanel = new System.Windows.Forms.Panel();
             this.ServicedeskPanelBackButton = new System.Windows.Forms.Button();
             this.LoginPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LoginPanelUsernameTextBox = new System.Windows.Forms.TextBox();
             this.LoginPanelPasswordTextBox = new System.Windows.Forms.TextBox();
             this.LoginPanelLoginButton = new System.Windows.Forms.Button();
             this.LoginPanelPasswordLabel = new System.Windows.Forms.Label();
             this.LoginPanelUsernameLabel = new System.Windows.Forms.Label();
             this.LoginPanelLogo = new System.Windows.Forms.PictureBox();
+            this.NavigationPanel = new System.Windows.Forms.Panel();
+            this.TitleDetailNavigationPanel = new System.Windows.Forms.Label();
+            this.TitleNavigationPanel = new System.Windows.Forms.Label();
+            this.UserManagementButtonNavigationPanel = new System.Windows.Forms.Button();
+            this.IncidentManagementButtonNavigationPanel = new System.Windows.Forms.Button();
+            this.DashboardButtonNavigationPanel = new System.Windows.Forms.Button();
             this.EmployeePanel.SuspendLayout();
             this.ServicedeskPanel.SuspendLayout();
             this.LoginPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginPanelLogo)).BeginInit();
+            this.NavigationPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // AllTickets
             // 
             this.AllTickets.FormattingEnabled = true;
             this.AllTickets.ItemHeight = 15;
-            this.AllTickets.Location = new System.Drawing.Point(261, 79);
+            this.AllTickets.Location = new System.Drawing.Point(153, 3);
             this.AllTickets.Name = "AllTickets";
             this.AllTickets.Size = new System.Drawing.Size(553, 409);
             this.AllTickets.TabIndex = 0;
@@ -58,14 +67,14 @@
             // EmployeePanel
             // 
             this.EmployeePanel.Controls.Add(this.EmployeePanelBackButton);
-            this.EmployeePanel.Location = new System.Drawing.Point(7, 4);
+            this.EmployeePanel.Location = new System.Drawing.Point(0, 141);
             this.EmployeePanel.Name = "EmployeePanel";
-            this.EmployeePanel.Size = new System.Drawing.Size(1007, 612);
+            this.EmployeePanel.Size = new System.Drawing.Size(935, 497);
             this.EmployeePanel.TabIndex = 1;
             // 
             // EmployeePanelBackButton
             // 
-            this.EmployeePanelBackButton.Location = new System.Drawing.Point(29, 527);
+            this.EmployeePanelBackButton.Location = new System.Drawing.Point(92, 183);
             this.EmployeePanelBackButton.Name = "EmployeePanelBackButton";
             this.EmployeePanelBackButton.Size = new System.Drawing.Size(94, 28);
             this.EmployeePanelBackButton.TabIndex = 9;
@@ -77,14 +86,14 @@
             // 
             this.ServicedeskPanel.Controls.Add(this.ServicedeskPanelBackButton);
             this.ServicedeskPanel.Controls.Add(this.AllTickets);
-            this.ServicedeskPanel.Location = new System.Drawing.Point(4, 5);
+            this.ServicedeskPanel.Location = new System.Drawing.Point(1, 9);
             this.ServicedeskPanel.Name = "ServicedeskPanel";
-            this.ServicedeskPanel.Size = new System.Drawing.Size(1004, 612);
+            this.ServicedeskPanel.Size = new System.Drawing.Size(935, 644);
             this.ServicedeskPanel.TabIndex = 1;
             // 
             // ServicedeskPanelBackButton
             // 
-            this.ServicedeskPanelBackButton.Location = new System.Drawing.Point(43, 560);
+            this.ServicedeskPanelBackButton.Location = new System.Drawing.Point(93, 431);
             this.ServicedeskPanelBackButton.Name = "ServicedeskPanelBackButton";
             this.ServicedeskPanelBackButton.Size = new System.Drawing.Size(93, 34);
             this.ServicedeskPanelBackButton.TabIndex = 1;
@@ -95,34 +104,44 @@
             // LoginPanel
             // 
             this.LoginPanel.BackColor = System.Drawing.Color.White;
+            this.LoginPanel.Controls.Add(this.pictureBox1);
             this.LoginPanel.Controls.Add(this.LoginPanelUsernameTextBox);
             this.LoginPanel.Controls.Add(this.LoginPanelPasswordTextBox);
             this.LoginPanel.Controls.Add(this.LoginPanelLoginButton);
             this.LoginPanel.Controls.Add(this.LoginPanelPasswordLabel);
             this.LoginPanel.Controls.Add(this.LoginPanelUsernameLabel);
-            this.LoginPanel.Controls.Add(this.LoginPanelLogo);
-            this.LoginPanel.Location = new System.Drawing.Point(3, 2);
+            this.LoginPanel.Location = new System.Drawing.Point(1, 9);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(1013, 610);
+            this.LoginPanel.Size = new System.Drawing.Size(929, 644);
             this.LoginPanel.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::UI.Properties.Resources.TheGardenGroupLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(279, 91);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginPanelUsernameTextBox
             // 
-            this.LoginPanelUsernameTextBox.Location = new System.Drawing.Point(431, 325);
+            this.LoginPanelUsernameTextBox.Location = new System.Drawing.Point(399, 233);
             this.LoginPanelUsernameTextBox.Name = "LoginPanelUsernameTextBox";
             this.LoginPanelUsernameTextBox.Size = new System.Drawing.Size(186, 23);
             this.LoginPanelUsernameTextBox.TabIndex = 7;
             // 
             // LoginPanelPasswordTextBox
             // 
-            this.LoginPanelPasswordTextBox.Location = new System.Drawing.Point(431, 377);
+            this.LoginPanelPasswordTextBox.Location = new System.Drawing.Point(399, 285);
             this.LoginPanelPasswordTextBox.Name = "LoginPanelPasswordTextBox";
             this.LoginPanelPasswordTextBox.Size = new System.Drawing.Size(186, 23);
             this.LoginPanelPasswordTextBox.TabIndex = 6;
             // 
             // LoginPanelLoginButton
             // 
-            this.LoginPanelLoginButton.Location = new System.Drawing.Point(503, 433);
+            this.LoginPanelLoginButton.Location = new System.Drawing.Point(471, 341);
             this.LoginPanelLoginButton.Name = "LoginPanelLoginButton";
             this.LoginPanelLoginButton.Size = new System.Drawing.Size(114, 39);
             this.LoginPanelLoginButton.TabIndex = 5;
@@ -134,7 +153,7 @@
             // 
             this.LoginPanelPasswordLabel.AutoSize = true;
             this.LoginPanelPasswordLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LoginPanelPasswordLabel.Location = new System.Drawing.Point(307, 375);
+            this.LoginPanelPasswordLabel.Location = new System.Drawing.Point(275, 283);
             this.LoginPanelPasswordLabel.Name = "LoginPanelPasswordLabel";
             this.LoginPanelPasswordLabel.Size = new System.Drawing.Size(86, 21);
             this.LoginPanelPasswordLabel.TabIndex = 4;
@@ -144,7 +163,7 @@
             // 
             this.LoginPanelUsernameLabel.AutoSize = true;
             this.LoginPanelUsernameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LoginPanelUsernameLabel.Location = new System.Drawing.Point(307, 322);
+            this.LoginPanelUsernameLabel.Location = new System.Drawing.Point(275, 230);
             this.LoginPanelUsernameLabel.Name = "LoginPanelUsernameLabel";
             this.LoginPanelUsernameLabel.Size = new System.Drawing.Size(91, 21);
             this.LoginPanelUsernameLabel.TabIndex = 3;
@@ -153,28 +172,99 @@
             // LoginPanelLogo
             // 
             this.LoginPanelLogo.Image = global::UI.Properties.Resources.TheGardenGroupLogo;
-            this.LoginPanelLogo.Location = new System.Drawing.Point(262, 67);
+            this.LoginPanelLogo.Location = new System.Drawing.Point(11, 5);
             this.LoginPanelLogo.Name = "LoginPanelLogo";
-            this.LoginPanelLogo.Size = new System.Drawing.Size(467, 172);
+            this.LoginPanelLogo.Size = new System.Drawing.Size(279, 91);
             this.LoginPanelLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LoginPanelLogo.TabIndex = 1;
             this.LoginPanelLogo.TabStop = false;
+            // 
+            // NavigationPanel
+            // 
+            this.NavigationPanel.BackColor = System.Drawing.Color.White;
+            this.NavigationPanel.Controls.Add(this.EmployeePanel);
+            this.NavigationPanel.Controls.Add(this.TitleDetailNavigationPanel);
+            this.NavigationPanel.Controls.Add(this.TitleNavigationPanel);
+            this.NavigationPanel.Controls.Add(this.UserManagementButtonNavigationPanel);
+            this.NavigationPanel.Controls.Add(this.IncidentManagementButtonNavigationPanel);
+            this.NavigationPanel.Controls.Add(this.DashboardButtonNavigationPanel);
+            this.NavigationPanel.Controls.Add(this.LoginPanelLogo);
+            this.NavigationPanel.Location = new System.Drawing.Point(1, 12);
+            this.NavigationPanel.Name = "NavigationPanel";
+            this.NavigationPanel.Size = new System.Drawing.Size(935, 641);
+            this.NavigationPanel.TabIndex = 5;
+            // 
+            // TitleDetailNavigationPanel
+            // 
+            this.TitleDetailNavigationPanel.AutoSize = true;
+            this.TitleDetailNavigationPanel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.TitleDetailNavigationPanel.Location = new System.Drawing.Point(490, 63);
+            this.TitleDetailNavigationPanel.Name = "TitleDetailNavigationPanel";
+            this.TitleDetailNavigationPanel.Size = new System.Drawing.Size(262, 25);
+            this.TitleDetailNavigationPanel.TabIndex = 5;
+            this.TitleDetailNavigationPanel.Text = "Licensed to: The Garden Group";
+            // 
+            // TitleNavigationPanel
+            // 
+            this.TitleNavigationPanel.AutoSize = true;
+            this.TitleNavigationPanel.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TitleNavigationPanel.Location = new System.Drawing.Point(594, 13);
+            this.TitleNavigationPanel.Name = "TitleNavigationPanel";
+            this.TitleNavigationPanel.Size = new System.Drawing.Size(158, 50);
+            this.TitleNavigationPanel.TabIndex = 3;
+            this.TitleNavigationPanel.Text = "NoDesk";
+            // 
+            // UserManagementButtonNavigationPanel
+            // 
+            this.UserManagementButtonNavigationPanel.BackColor = System.Drawing.Color.White;
+            this.UserManagementButtonNavigationPanel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UserManagementButtonNavigationPanel.Location = new System.Drawing.Point(577, 102);
+            this.UserManagementButtonNavigationPanel.Name = "UserManagementButtonNavigationPanel";
+            this.UserManagementButtonNavigationPanel.Size = new System.Drawing.Size(175, 33);
+            this.UserManagementButtonNavigationPanel.TabIndex = 2;
+            this.UserManagementButtonNavigationPanel.Text = "User Management";
+            this.UserManagementButtonNavigationPanel.UseVisualStyleBackColor = false;
+            // 
+            // IncidentManagementButtonNavigationPanel
+            // 
+            this.IncidentManagementButtonNavigationPanel.BackColor = System.Drawing.Color.White;
+            this.IncidentManagementButtonNavigationPanel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.IncidentManagementButtonNavigationPanel.Location = new System.Drawing.Point(349, 102);
+            this.IncidentManagementButtonNavigationPanel.Name = "IncidentManagementButtonNavigationPanel";
+            this.IncidentManagementButtonNavigationPanel.Size = new System.Drawing.Size(175, 33);
+            this.IncidentManagementButtonNavigationPanel.TabIndex = 1;
+            this.IncidentManagementButtonNavigationPanel.Text = "Incident Management";
+            this.IncidentManagementButtonNavigationPanel.UseVisualStyleBackColor = false;
+            // 
+            // DashboardButtonNavigationPanel
+            // 
+            this.DashboardButtonNavigationPanel.BackColor = System.Drawing.Color.White;
+            this.DashboardButtonNavigationPanel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DashboardButtonNavigationPanel.Location = new System.Drawing.Point(115, 102);
+            this.DashboardButtonNavigationPanel.Name = "DashboardButtonNavigationPanel";
+            this.DashboardButtonNavigationPanel.Size = new System.Drawing.Size(175, 33);
+            this.DashboardButtonNavigationPanel.TabIndex = 0;
+            this.DashboardButtonNavigationPanel.Text = "Dashboard";
+            this.DashboardButtonNavigationPanel.UseVisualStyleBackColor = false;
             // 
             // NoSQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 615);
-            this.Controls.Add(this.ServicedeskPanel);
-            this.Controls.Add(this.EmployeePanel);
+            this.ClientSize = new System.Drawing.Size(946, 663);
             this.Controls.Add(this.LoginPanel);
+            this.Controls.Add(this.ServicedeskPanel);
+            this.Controls.Add(this.NavigationPanel);
             this.Name = "NoSQL";
             this.Text = "NoSQL-Project";
             this.EmployeePanel.ResumeLayout(false);
             this.ServicedeskPanel.ResumeLayout(false);
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginPanelLogo)).EndInit();
+            this.NavigationPanel.ResumeLayout(false);
+            this.NavigationPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -193,5 +283,12 @@
         private PictureBox LoginPanelLogo;
         private Button ServicedeskPanelBackButton;
         private Button EmployeePanelBackButton;
+        private PictureBox pictureBox1;
+        private Panel NavigationPanel;
+        private Label TitleDetailNavigationPanel;
+        private Label TitleNavigationPanel;
+        private Button UserManagementButtonNavigationPanel;
+        private Button IncidentManagementButtonNavigationPanel;
+        private Button DashboardButtonNavigationPanel;
     }
 }
