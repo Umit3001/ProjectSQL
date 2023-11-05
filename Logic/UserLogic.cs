@@ -24,7 +24,5 @@ namespace Logic
             return userDao.GetAllUsers();
         }
 
-
-
     }
 }

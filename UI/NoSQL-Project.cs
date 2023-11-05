@@ -1,4 +1,5 @@
 
+using DAL;
 using Logic;
 using Microsoft.VisualBasic.ApplicationServices;
 using Model;
@@ -175,12 +176,68 @@ namespace UI
 
         private void IncidentManagementButtonNavigationPanel_Click(object sender, EventArgs e)
         {
+           
             HideAllPanels();
             NavigationPanel.Show();
             AddIncendentPanel.Show();
         }
 
-  
+        private void submitTicketButtonInIncidentPanel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(subjectOfIncidentLabelInIncidentPanel.Text) ||
+                    string.IsNullOrEmpty(typeOfIncidentComboBox.SelectedItem?.ToString()) ||
+                    string.IsNullOrEmpty(reportedByUserTextBox.Text) ||
+                    string.IsNullOrEmpty(priorityComboBox.SelectedItem?.ToString()) ||
+                    string.IsNullOrEmpty(deadlineComboBox.SelectedItem?.ToString()) ||
+                    string.IsNullOrEmpty(descriptionTextBox.Text))
+                {
+                    throw new InvalidOperationException("All required fields must be filled.");
+                }
+
+                Ticket newTicket = new Ticket
+                {
+                    DateOpened = DateTime.Now.ToString("dd/MM/yyyy"),
+                    SubjectOfIncident = subjectOfIncidentTextBox.Text,
+                    TypeOfIncident = typeOfIncidentComboBox.SelectedItem.ToString(),
+                    ReportedByUser = reportedByUserTextBox.Text,
+                    Priority = priorityComboBox.SelectedItem.ToString(),
+                    Deadline = deadlineComboBox.SelectedItem.ToString(),
+                    Description = descriptionTextBox.Text,
+                    Status = StatusTicket.Pending.ToString(),
+                    RegularEmployeeID = new EmployeeReference { EmployeeId = foundUser.Id }
+                };
+
+                ticketLogic.InsertTicket(newTicket);
+
+                MessageBox.Show("Ticket saved successfully!");
+                EmptyTheFieldsInIncidentManagment();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void EmptyTheFieldsInIncidentManagment()
+        {
+            subjectOfIncidentTextBox.Text = string.Empty;
+            typeOfIncidentComboBox.SelectedIndex = -1;
+            reportedByUserTextBox.Text = string.Empty;
+            priorityComboBox.SelectedIndex = -1;
+            deadlineComboBox.SelectedIndex = -1;
+            descriptionTextBox.Text = string.Empty;
+
+        }
+
+ 
     }
+
+
 }
+
+               
+    
+
 

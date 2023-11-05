@@ -4,6 +4,7 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,13 @@ namespace DAL
             }
 
             return tickets;
+        }
+
+        public void InsertTicket(Ticket ticket)
+        {
+            BsonDocument ticketDocument = ticket.ToBsonDocument();
+          
+            Collection.InsertOne(ticketDocument);
         }
 
     }

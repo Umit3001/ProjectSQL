@@ -11,8 +11,7 @@ namespace Model
     public class Ticket
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public ObjectId Id { get; set; }
 
         [BsonElement("DateOpened")]
         public string DateOpened { get; set; }
@@ -21,13 +20,13 @@ namespace Model
         public string SubjectOfIncident { get; set; }
 
         [BsonElement("TypeOfIncident")]
-        public TypeOfIncident TypeOfIncident { get; set; }
+        public string TypeOfIncident { get; set; }
 
         [BsonElement("ReportedByUser")]
         public string ReportedByUser { get; set; }
         
         [BsonElement("Priority")]
-        public Priority Priority { get; set; }
+        public string Priority { get; set; }
 
         [BsonElement("Deadline")]
         public string Deadline { get; set; }
@@ -54,25 +53,6 @@ namespace Model
         Closed,
         Pending,
         Reopened
-    }
-
-    public enum TypeOfIncident
-    {
-        ServiceInterruption,
-        ServiceDegradation,
-        Hardware,
-        Software,
-        Security,
-        Network,
-        UserRelated,
-        ChangeRelated
-    }
-
-    public enum Priority
-    {
-        High,
-        Normal,
-        Low
     }
 
 
