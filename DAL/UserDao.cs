@@ -66,5 +66,22 @@ namespace DAL
             Collection.InsertOne(userDocument);
 
         }
+
+        public List<string> GetServiceDeskEmployeeIds()
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("TypeOfEmployee", "ServiceDesk");
+            var serviceDeskUserDocuments = Collection.Find(filter).ToList();
+
+            List<string> serviceDeskEmployeeIds = new List<string>();
+
+            foreach (var serviceDeskUserDocument in serviceDeskUserDocuments)
+            {
+                serviceDeskEmployeeIds.Add(serviceDeskUserDocument["_id"].ToString());
+            }
+
+            return serviceDeskEmployeeIds;
+        }
+
     }
 }
+

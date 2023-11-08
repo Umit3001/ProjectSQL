@@ -20,11 +20,13 @@ namespace UI
         private UserLogic userLogic;
 
         private TicketLogic ticketLogic;
+        private List<string> serviceDeskEmployeeIds;
 
         public NoSQL()
         {
             userLogic = new UserLogic();
             ticketLogic = new TicketLogic();
+            serviceDeskEmployeeIds = userLogic.GetServiceDeskEmployeeIds();
 
             InitializeComponent();
 
@@ -35,10 +37,11 @@ namespace UI
         private void HideAllPanels()
         {
             LoginPanel.Hide();
-            AddIncendentPanel.Hide();
+            AddIncindentPanel.Hide();
             NavigationPanel.Hide();
             CreateNewUserPanel.Hide();
             UserManagementPanel.Hide();
+            overviewTicketsPanel.Hide();
         }
 
         // LOGIN
@@ -99,7 +102,7 @@ namespace UI
         {
             HideAllPanels();
             NavigationPanel.Show();
-            AddIncendentPanel.Show(); //hier moet dashboard komen
+            overviewTicketsPanel.Show(); //hier moet dashboard komen
         }
         private void AddNewUserButtonUserManagement_Click(object sender, EventArgs e)
         {
@@ -183,35 +186,57 @@ namespace UI
            
             HideAllPanels();
             NavigationPanel.Show();
-            AddIncendentPanel.Show();
+            overviewTicketsPanel.Show();
+
+            List<Ticket> tickets = ticketLogic.GetTicketsByLogtInUser(foundUser.Id);
+
+            overviewTicketsListView.Items.Clear();
+            foreach(Ticket ticket in tickets)
+            {
+                ListViewItem item = new ListViewItem(ticket.Id.ToString());
+                item.SubItems.Add(ticket.DateOpened);
+                item.SubItems.Add(ticket.SubjectOfIncident);
+                item.SubItems.Add(ticket.Deadline);
+                item.SubItems.Add(ticket.Status);
+                overviewTicketsListView.Items.Add(item);
+
+            }
+
+            Debug.WriteLine("Number of tickets: " + tickets.Count);
+
+        }
+
+        private void createIncidentButton_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            NavigationPanel.Show();
+            AddIncindentPanel.Show();
+
+        }
+
+        private void cancelButtonInIncidentPanel_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            NavigationPanel.Show();
+            overviewTicketsPanel.Show();
+
         }
 
         private void submitTicketButtonInIncidentPanel_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrEmpty(subjectOfIncidentLabelInIncidentPanel.Text) ||
-                    string.IsNullOrEmpty(typeOfIncidentComboBox.SelectedItem?.ToString()) ||
-                    string.IsNullOrEmpty(reportedByUserTextBox.Text) ||
-                    string.IsNullOrEmpty(priorityComboBox.SelectedItem?.ToString()) ||
-                    string.IsNullOrEmpty(deadlineComboBox.SelectedItem?.ToString()) ||
-                    string.IsNullOrEmpty(descriptionTextBox.Text))
+                if (RequiredFieldsAreEmpty())
                 {
                     throw new InvalidOperationException("All required fields must be filled.");
                 }
 
-                Ticket newTicket = new Ticket
-                {
-                    DateOpened = DateTime.Now.ToString("dd/MM/yyyy"),
-                    SubjectOfIncident = subjectOfIncidentTextBox.Text,
-                    TypeOfIncident = typeOfIncidentComboBox.SelectedItem.ToString(),
-                    ReportedByUser = reportedByUserTextBox.Text,
-                    Priority = priorityComboBox.SelectedItem.ToString(),
-                    Deadline = deadlineComboBox.SelectedItem.ToString(),
-                    Description = descriptionTextBox.Text,
-                    Status = StatusTicket.Pending.ToString(),
-                    RegularEmployeeID = new EmployeeReference { EmployeeId = foundUser.Id }
-                };
+                List<string> serviceDeskEmployeeIds = userLogic.GetServiceDeskEmployeeIds();
+
+                int nextServiceDeskEmployeeIndex = GetNextServiceDeskEmployeeIndex(serviceDeskEmployeeIds);
+                string serviceDeskEmployeeId = serviceDeskEmployeeIds[nextServiceDeskEmployeeIndex];
+
+                Ticket newTicket = CreateNewTicket(serviceDeskEmployeeId);
 
                 ticketLogic.InsertTicket(newTicket);
 
@@ -222,6 +247,41 @@ namespace UI
             {
                 MessageBox.Show(ex.Message, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool RequiredFieldsAreEmpty()
+        {
+            return string.IsNullOrEmpty(subjectOfIncidentLabelInIncidentPanel.Text) ||
+                string.IsNullOrEmpty(typeOfIncidentComboBox.SelectedItem?.ToString()) ||
+                string.IsNullOrEmpty(reportedByUserTextBox.Text) ||
+                string.IsNullOrEmpty(priorityComboBox.SelectedItem?.ToString()) ||
+                string.IsNullOrEmpty(deadlineComboBox.SelectedItem?.ToString()) ||
+                string.IsNullOrEmpty(descriptionTextBox.Text);
+        }
+
+        private int GetNextServiceDeskEmployeeIndex(List<string> serviceDeskEmployeeIds)
+        {
+            int lastAssignedServiceDeskEmployeeIndex = ticketLogic.GetNextServiceDeskEmployeeIndex(serviceDeskEmployeeIds);
+            return (lastAssignedServiceDeskEmployeeIndex + 1) % serviceDeskEmployeeIds.Count;
+        }
+
+       
+
+        private Ticket CreateNewTicket(string serviceDeskEmployeeId)
+        {
+            return new Ticket
+            {
+                DateOpened = DateTime.Now.ToString("dd/MM/yyyy"),
+                SubjectOfIncident = subjectOfIncidentTextBox.Text,
+                TypeOfIncident = typeOfIncidentComboBox.SelectedItem.ToString(),
+                ReportedByUser = reportedByUserTextBox.Text,
+                Priority = priorityComboBox.SelectedItem.ToString(),
+                Deadline = deadlineComboBox.SelectedItem.ToString(),
+                Description = descriptionTextBox.Text,
+                Status = StatusTicket.Pending.ToString(),
+                RegularEmployeeID = new EmployeeReference { EmployeeId = foundUser.Id },
+                ServiceDeskEmployeeID = new EmployeeReference { EmployeeId = serviceDeskEmployeeId },
+            };
         }
 
         public void EmptyTheFieldsInIncidentManagment()
@@ -277,6 +337,8 @@ namespace UI
             NavigationPanel.Show();
             UserManagementPanel.Show();
         }
+
+       
     }
 
 

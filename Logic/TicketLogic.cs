@@ -11,9 +11,11 @@ namespace Logic
     public class TicketLogic
     {
         private TicketDao ticketDao;
+        int lastAssignedServiceDeskEmployeeIndex;
         public TicketLogic()
         {
             ticketDao = new TicketDao();
+            lastAssignedServiceDeskEmployeeIndex = -1;
         }
         public List<Ticket> GetAllTickets()
         {
@@ -23,6 +25,28 @@ namespace Logic
         public void InsertTicket(Ticket ticket)
         {
             ticketDao.InsertTicket(ticket);
+        }
+
+        public List<Ticket> GetTicketsByLogtInUser(string loggedInUser)
+        {
+           return ticketDao.GetTicketsByLogtInUser(loggedInUser);
+        }
+
+        public int GetNextServiceDeskEmployeeIndex(List<string> serviceDeskEmployeeIds)
+        {
+            if (serviceDeskEmployeeIds.Count == 0)
+            {
+                return -1;
+            }
+
+            lastAssignedServiceDeskEmployeeIndex++;
+
+            if (lastAssignedServiceDeskEmployeeIndex >= serviceDeskEmployeeIds.Count)
+            {
+                lastAssignedServiceDeskEmployeeIndex = 0;
+            }
+
+            return lastAssignedServiceDeskEmployeeIndex;
         }
     }
 }

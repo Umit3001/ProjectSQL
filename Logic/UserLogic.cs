@@ -12,9 +12,13 @@ namespace Logic
     public class UserLogic
     {
         private UserDao userDao;
+       
         public UserLogic()
         {
             userDao = new UserDao();
+           
+
+
         }
         public User FindUser(string username, string password)
         {
@@ -31,6 +35,18 @@ namespace Logic
         {
             userDao.AddUser(newUser);
         }
+
+        public List<string> GetServiceDeskEmployeeIds()
+        {
+            return userDao.GetServiceDeskEmployeeIds();
+        }
+
+
+        
+
+
+
+
 
     }
 }

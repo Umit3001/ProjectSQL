@@ -33,6 +33,24 @@ namespace DAL
             return tickets;
         }
 
+        public List<Ticket> GetTicketsByLogtInUser(string loggedInUser)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("RegularEmployeeID", loggedInUser);
+            var documents = Collection.Find(filter).ToList();
+
+            List<Ticket> tickets = new List<Ticket>();
+
+            foreach(var document in documents)
+            {
+                Ticket ticket = BsonSerializer.Deserialize<Ticket>(document);
+                tickets.Add(ticket);
+            }
+
+            return tickets;
+            
+
+        }
+
         public void InsertTicket(Ticket ticket)
         {
             BsonDocument ticketDocument = ticket.ToBsonDocument();

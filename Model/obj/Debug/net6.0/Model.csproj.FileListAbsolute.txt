@@ -15,3 +15,20 @@ C:\Users\duhak\Documents\GitHub\Extra\ProjectSQL\Model\obj\Debug\net6.0\refint\M
 C:\Users\duhak\Documents\GitHub\Extra\ProjectSQL\Model\obj\Debug\net6.0\Model.pdb
 C:\Users\duhak\Documents\GitHub\Extra\ProjectSQL\Model\obj\Debug\net6.0\Model.genruntimeconfig.cache
 C:\Users\duhak\Documents\GitHub\Extra\ProjectSQL\Model\obj\Debug\net6.0\ref\Model.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\net6.0\Model.exe
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\net6.0\Model.deps.json
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\net6.0\Model.runtimeconfig.json
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\net6.0\Model.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\net6.0\Model.pdb
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\net6.0\MongoDB.Bson.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\net6.0\Model.csproj.AssemblyReference.cache
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\net6.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\net6.0\Model.AssemblyInfoInputs.cache
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\net6.0\Model.AssemblyInfo.cs
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\net6.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\net6.0\Model.csproj.CopyComplete
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\net6.0\Model.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\net6.0\refint\Model.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\net6.0\Model.pdb
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\net6.0\Model.genruntimeconfig.cache
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\net6.0\ref\Model.dll
