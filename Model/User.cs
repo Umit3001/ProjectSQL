@@ -26,6 +26,12 @@ namespace Model
         [BsonElement("Email")]
         public string Email { get; set; }
 
+        [BsonElement("PhoneNumber")]
+        public string PhoneNumber { get; set; }
+
+        [BsonElement("Location")]
+        public Location UserLocation { get; set; }
+
         [BsonElement("TypeOfEmployee")]
         public TypeOfEmployee EmployeeType { get; set; }
     }
@@ -35,5 +41,12 @@ namespace Model
     {
         Regular,
         ServiceDesk
+    }
+
+    public enum Location
+    {
+        Haarlem,
+        Amsterdam,
+        Utrecht
     }
 }

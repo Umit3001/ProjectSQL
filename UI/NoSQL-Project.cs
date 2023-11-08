@@ -231,7 +231,54 @@ namespace UI
 
         }
 
+<<<<<<< Updated upstream
  
+=======
+        // Create User Part
+        private void CancelButtonCreateUserPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddUserButtonCreateUserPanel_Click(object sender, EventArgs e)
+        {
+            string name = FullNameTextboxCreateUserPanel.Text;
+            string userName = UsernameTextboxCreateUserPanel.Text;
+            string password = PasswordTextboxCreateUserPanel.Text;
+            TypeOfEmployee employeeType = (TypeOfEmployee)Enum.Parse(typeof(TypeOfEmployee), TypeUserComboboxCreateUserPanel.Text);
+            string email = EmailTextboxCreateUserPanel.Text;
+            string phoneNumber = PhoneTextboxCreateUserPanel.Text;
+            Location location = (Location)Enum.Parse(typeof(Location), LocationComboboxCreateUserPanel.Text);
+
+            User newUser = new User
+            { 
+                Name = name,
+                Username = userName,
+                Password = password,
+                Email = email,
+                PhoneNumber = phoneNumber,
+                UserLocation = location,
+                EmployeeType = employeeType
+            };
+
+            userLogic.AddUser(newUser);
+
+            FullNameTextboxCreateUserPanel.Text = "";
+            UsernameTextboxCreateUserPanel.Text = "";
+            PasswordTextboxCreateUserPanel.Text = "";
+            EmailTextboxCreateUserPanel.Text = "";
+            PhoneTextboxCreateUserPanel.Text = "";
+            TypeUserComboboxCreateUserPanel.SelectedIndex = -1;
+            LocationComboboxCreateUserPanel.SelectedIndex = -1;
+
+            MessageBox.Show("User successfully created!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void EmployeePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+>>>>>>> Stashed changes
     }
 
 

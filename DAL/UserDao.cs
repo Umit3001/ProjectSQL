@@ -33,6 +33,7 @@ namespace DAL
             return null; // User not found
         }
 
+<<<<<<< Updated upstream
         public List<User> GetAllUsers()
         {
             var userDocuments = Collection.Find(new BsonDocument()).ToList();
@@ -48,6 +49,21 @@ namespace DAL
         }
 
 
+=======
+        public void AddUser(User newUser)
+        {
+            BsonDocument userDocument = new BsonDocument{
+                { "Name", newUser.Name },
+                { "Username", newUser.Username },
+                { "Password", newUser.Password },
+                { "Email", newUser.Email },
+                { "PhoneNumber", newUser.PhoneNumber },
+                { "Location", newUser.UserLocation.ToString() },
+                { "TypeofEmployee", newUser.EmployeeType.ToString() },
+                };
+>>>>>>> Stashed changes
 
+            Collection.InsertOne(userDocument);
+        }
     }
 }

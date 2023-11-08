@@ -54,6 +54,7 @@ C:\Users\duhak\Documents\GitHub\Extra\ProjectSQL\Logic\obj\Debug\net6.0\refint\L
 C:\Users\duhak\Documents\GitHub\Extra\ProjectSQL\Logic\obj\Debug\net6.0\Logic.pdb
 C:\Users\duhak\Documents\GitHub\Extra\ProjectSQL\Logic\obj\Debug\net6.0\Logic.genruntimeconfig.cache
 C:\Users\duhak\Documents\GitHub\Extra\ProjectSQL\Logic\obj\Debug\net6.0\ref\Logic.dll
+<<<<<<< Updated upstream
 C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\net6.0\DAL.deps.json
 C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\net6.0\DAL.runtimeconfig.json
 C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\net6.0\Model.deps.json
@@ -110,3 +111,61 @@ C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\obj\Debug\net6.0
 C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\obj\Debug\net6.0\Logic.pdb
 C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\obj\Debug\net6.0\Logic.genruntimeconfig.cache
 C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\obj\Debug\net6.0\ref\Logic.dll
+=======
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\DAL.deps.json
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\DAL.runtimeconfig.json
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Model.deps.json
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Model.runtimeconfig.json
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Model.exe
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\DAL.exe
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Logic.exe
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Logic.deps.json
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Logic.runtimeconfig.json
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Logic.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Logic.pdb
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\AWSSDK.SecurityToken.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\DnsClient.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\MongoDB.Bson.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\MongoDB.Driver.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\MongoDB.Driver.Core.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\MongoDB.Libmongocrypt.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\SharpCompress.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Snappier.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\ZstdSharp.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\DAL.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Model.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\DAL.pdb
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\bin\Debug\net6.0\Model.pdb
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\obj\Debug\net6.0\Logic.csproj.AssemblyReference.cache
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\obj\Debug\net6.0\Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\obj\Debug\net6.0\Logic.AssemblyInfoInputs.cache
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\obj\Debug\net6.0\Logic.AssemblyInfo.cs
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\obj\Debug\net6.0\Logic.csproj.CoreCompileInputs.cache
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\obj\Debug\net6.0\Logic.csproj.CopyComplete
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\obj\Debug\net6.0\Logic.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\obj\Debug\net6.0\refint\Logic.dll
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\obj\Debug\net6.0\Logic.pdb
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\obj\Debug\net6.0\Logic.genruntimeconfig.cache
+C:\Users\lukop\OneDrive - Hogeschool Inholland\Desktop\Github TGG Project\ProjectSQL\Logic\obj\Debug\net6.0\ref\Logic.dll
+>>>>>>> Stashed changes
