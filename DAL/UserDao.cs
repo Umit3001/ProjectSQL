@@ -12,8 +12,11 @@ namespace DAL
 {
     public class UserDao : BaseDao
     {
+        List<User> users;
+
         public UserDao() : base("User")
         {
+            users = new List<User>();
         }
 
         public User FindUser(string username, string password)
@@ -33,11 +36,10 @@ namespace DAL
             return null; // User not found
         }
 
-<<<<<<< Updated upstream
         public List<User> GetAllUsers()
         {
             var userDocuments = Collection.Find(new BsonDocument()).ToList();
-            List<User> users = new List<User>();
+       
 
             foreach (var userDocument in userDocuments)
             {
@@ -49,7 +51,6 @@ namespace DAL
         }
 
 
-=======
         public void AddUser(User newUser)
         {
             BsonDocument userDocument = new BsonDocument{
@@ -59,11 +60,11 @@ namespace DAL
                 { "Email", newUser.Email },
                 { "PhoneNumber", newUser.PhoneNumber },
                 { "Location", newUser.UserLocation.ToString() },
-                { "TypeofEmployee", newUser.EmployeeType.ToString() },
+                { "TypeOfEmployee", newUser.EmployeeType.ToString() },
                 };
->>>>>>> Stashed changes
 
             Collection.InsertOne(userDocument);
+
         }
     }
 }

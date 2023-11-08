@@ -38,7 +38,7 @@ namespace UI
             AddIncendentPanel.Hide();
             NavigationPanel.Hide();
             CreateNewUserPanel.Hide();
-           
+            UserManagementPanel.Hide();
         }
 
         // LOGIN
@@ -104,11 +104,13 @@ namespace UI
         private void AddNewUserButtonUserManagement_Click(object sender, EventArgs e)
         {
             HideAllPanels();
+            NavigationPanel.Show();
             CreateNewUserPanel.Show();
         }
 
         private void UserManagementButtonNavigationPanel_Click(object sender, EventArgs e)
         {
+
             HideAllPanels();
             NavigationPanel.Show();
             UserManagementPanel.Show();
@@ -126,6 +128,8 @@ namespace UI
 
                 UserListView.Items.Add(item);
             }
+            users.Clear();
+
 
             
         }
@@ -230,14 +234,11 @@ namespace UI
             descriptionTextBox.Text = string.Empty;
 
         }
-
-<<<<<<< Updated upstream
- 
-=======
-        // Create User Part
         private void CancelButtonCreateUserPanel_Click(object sender, EventArgs e)
         {
-
+            HideAllPanels();
+            NavigationPanel.Show();
+            UserManagementPanel.Show();
         }
 
         private void AddUserButtonCreateUserPanel_Click(object sender, EventArgs e)
@@ -272,13 +273,10 @@ namespace UI
             LocationComboboxCreateUserPanel.SelectedIndex = -1;
 
             MessageBox.Show("User successfully created!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            CreateNewUserPanel.Hide();
+            NavigationPanel.Show();
+            UserManagementPanel.Show();
         }
-
-        private void EmployeePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
->>>>>>> Stashed changes
     }
 
 

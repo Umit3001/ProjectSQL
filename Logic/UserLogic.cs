@@ -20,18 +20,17 @@ namespace Logic
         {
             return userDao.FindUser(username, password);
         }
-<<<<<<< Updated upstream
+
         public List<User> GetAllUsers()
         {
             return userDao.GetAllUsers();
         }
 
-=======
 
         public void AddUser(User newUser)
         {
             userDao.AddUser(newUser);
         }
->>>>>>> Stashed changes
+
     }
 }

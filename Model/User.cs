@@ -34,6 +34,7 @@ namespace Model
 
         [BsonElement("TypeOfEmployee")]
         public TypeOfEmployee EmployeeType { get; set; }
+
     }
 
 

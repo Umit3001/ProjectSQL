@@ -1,42 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\UI\\UI.csproj": {}
+    "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\DAL\\DAL.csproj": {
+    "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\umitc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\DAL\\obj\\",
-=======
-    "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\UI.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\DAL.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\DAL.csproj",
-        "projectName": "DAL",
-        "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\obj\\",
->>>>>>> Stashed changes
+        "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\duhak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-<<<<<<< Updated upstream
-          "C:\\Users\\umitc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
+          "C:\\Users\\duhak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,20 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\Model.csproj"
-=======
-              "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj"
->>>>>>> Stashed changes
+              "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj"
               }
             }
           }
@@ -105,36 +77,17 @@
         }
       }
     },
-<<<<<<< Updated upstream
-    "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Logic\\Logic.csproj": {
+    "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Logic\\Logic.csproj",
+        "projectUniqueName": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Logic\\Logic.csproj",
-        "packagesPath": "C:\\Users\\umitc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Logic\\obj\\",
-=======
-    "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Logic\\Logic.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Logic\\Logic.csproj",
-        "projectName": "Logic",
-        "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Logic\\Logic.csproj",
-        "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Logic\\obj\\",
->>>>>>> Stashed changes
+        "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\Logic.csproj",
+        "packagesPath": "C:\\Users\\duhak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-<<<<<<< Updated upstream
-          "C:\\Users\\umitc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
+          "C:\\Users\\duhak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -142,26 +95,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\DAL\\DAL.csproj"
+              "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\Model.csproj"
-=======
-              "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\DAL.csproj"
-              },
-              "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj"
->>>>>>> Stashed changes
+              "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj"
               }
             }
           }
@@ -195,36 +139,17 @@
         }
       }
     },
-<<<<<<< Updated upstream
-    "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\Model.csproj": {
+    "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\umitc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\obj\\",
-=======
-    "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj",
-        "projectName": "Model",
-        "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\obj\\",
->>>>>>> Stashed changes
+        "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\duhak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-<<<<<<< Updated upstream
-          "C:\\Users\\umitc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
+          "C:\\Users\\duhak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -232,7 +157,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -276,36 +200,17 @@
         }
       }
     },
-<<<<<<< Updated upstream
-    "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\UI\\UI.csproj": {
+    "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\UI\\UI.csproj",
+        "projectUniqueName": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\UI.csproj",
         "projectName": "UI",
-        "projectPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\UI\\UI.csproj",
-        "packagesPath": "C:\\Users\\umitc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\UI\\obj\\",
-=======
-    "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\UI.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\UI.csproj",
-        "projectName": "UI",
-        "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\UI.csproj",
-        "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\obj\\",
->>>>>>> Stashed changes
+        "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\UI.csproj",
+        "packagesPath": "C:\\Users\\duhak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-<<<<<<< Updated upstream
-          "C:\\Users\\umitc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-=======
-          "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
+          "C:\\Users\\duhak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -313,26 +218,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Logic\\Logic.csproj": {
-                "projectPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Logic\\Logic.csproj"
+              "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\Logic.csproj": {
+                "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\Logic.csproj"
               },
-              "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\Model.csproj"
-=======
-              "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Logic\\Logic.csproj": {
-                "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Logic\\Logic.csproj"
-              },
-              "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj"
->>>>>>> Stashed changes
+              "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj"
               }
             }
           }
