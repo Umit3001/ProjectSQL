@@ -181,42 +181,66 @@ namespace UI
             NavigationPanel.Show();
             overviewTicketsPanel.Show();
 
+            UpdateTicketsListView();
+        }
+
+        private void sortByPriorityComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateTicketsListView();
+        }
+
+        private void UpdateTicketsListView()
+        {
+            string selectedPriority = sortByPriorityComboBox.SelectedItem?.ToString();
             List<Ticket> allTickets = ticketLogic.GetAllTickets();
-            overviewTicketsListView.Items.Clear();
+            List<Ticket> filteredTickets;
+
             if (foundUser.EmployeeType == TypeOfEmployee.ServiceDesk)
             {
-               
-                foreach (Ticket ticket in allTickets)
-                {
-                    ListViewItem item = new ListViewItem(ticket.Id.ToString());
-                    item.SubItems.Add(ticket.DateOpened);
-                    item.SubItems.Add(ticket.SubjectOfIncident);
-                    item.SubItems.Add(ticket.Deadline);
-                    item.SubItems.Add(ticket.Status);
-                    overviewTicketsListView.Items.Add(item);
-                }
+                filteredTickets = allTickets;
+                createIncidentButton.Hide();
             }
             else if (foundUser.EmployeeType == TypeOfEmployee.Regular)
             {
-                List<Ticket> userTickets = allTickets.Where(ticket => ticket.RegularEmployeeID.EmployeeId == foundUser.Id).ToList();
-                
-                foreach (Ticket ticket in userTickets)
-                {
-                    ListViewItem item = new ListViewItem(ticket.Id.ToString());
-                    item.SubItems.Add(ticket.DateOpened);
-                    item.SubItems.Add(ticket.SubjectOfIncident);
-                    item.SubItems.Add(ticket.Deadline);
-                    item.SubItems.Add(ticket.Status);
-                    overviewTicketsListView.Items.Add(item);
-                }
-
+                filteredTickets = allTickets.Where(ticket => ticket.RegularEmployeeID.EmployeeId == foundUser.Id).ToList();
                 updateButton.Hide();
                 deleteButton.Hide();
                 closeTicketButton.Hide();
-                
+                createButtonInOverviewTickets.Hide();
             }
-            
-            
+            else
+            {
+                return; 
+            }
+
+            overviewTicketsListView.Items.Clear();
+
+            if (!string.IsNullOrEmpty(selectedPriority) && selectedPriority != "All")
+            {
+                filteredTickets = FilterTicketsByPriority(filteredTickets, selectedPriority);
+            }
+
+            DisplayTicketsInListView(filteredTickets);
+        }
+
+
+
+        private void DisplayTicketsInListView(List<Ticket> tickets)
+        {
+            foreach (Ticket ticket in tickets)
+            {
+                ListViewItem item = new ListViewItem(ticket.Id.ToString());
+                item.SubItems.Add(ticket.DateOpened);
+                item.SubItems.Add(ticket.SubjectOfIncident);
+                item.SubItems.Add(ticket.Deadline);
+                item.SubItems.Add(ticket.Status);
+                overviewTicketsListView.Items.Add(item);
+            }
+        }
+
+        private List<Ticket> FilterTicketsByPriority(List<Ticket> tickets, string selectedPriority)
+        {
+            return tickets.Where(ticket => ticket.Priority.ToString() == selectedPriority).ToList();
         }
 
         private void createIncidentButton_Click(object sender, EventArgs e)
@@ -245,8 +269,9 @@ namespace UI
 
                 List<string> serviceDeskEmployeeIds = userLogic.GetServiceDeskEmployeeIds();
 
-                int nextServiceDeskEmployeeIndex = GetNextServiceDeskEmployeeIndex(serviceDeskEmployeeIds);
+                int nextServiceDeskEmployeeIndex = ticketLogic.GetNextServiceDeskEmployeeIndex(serviceDeskEmployeeIds);
                 string serviceDeskEmployeeId = serviceDeskEmployeeIds[nextServiceDeskEmployeeIndex];
+
 
                 Ticket newTicket = CreateNewTicket(serviceDeskEmployeeId);
 
@@ -264,31 +289,25 @@ namespace UI
         private bool RequiredFieldsAreEmpty()
         {
             return string.IsNullOrEmpty(subjectOfIncidentLabelInIncidentPanel.Text) ||
-                string.IsNullOrEmpty(typeOfIncidentComboBox.SelectedItem?.ToString()) ||
+                string.IsNullOrEmpty(typeOfIncidentComboBox.SelectedItem.ToString()) ||
                 string.IsNullOrEmpty(reportedByUserTextBox.Text) ||
-                string.IsNullOrEmpty(priorityComboBox.SelectedItem?.ToString()) ||
-                string.IsNullOrEmpty(deadlineComboBox.SelectedItem?.ToString()) ||
+                string.IsNullOrEmpty(priorityComboBox.SelectedItem.ToString()) ||
+                string.IsNullOrEmpty(deadlineComboBox.SelectedItem.ToString()) ||
                 string.IsNullOrEmpty(descriptionTextBox.Text);
         }
 
-        private int GetNextServiceDeskEmployeeIndex(List<string> serviceDeskEmployeeIds)
-        {
-            int lastAssignedServiceDeskEmployeeIndex = ticketLogic.GetNextServiceDeskEmployeeIndex(serviceDeskEmployeeIds);
-            return (lastAssignedServiceDeskEmployeeIndex + 1) % serviceDeskEmployeeIds.Count;
-        }
-
-       
-
         private Ticket CreateNewTicket(string serviceDeskEmployeeId)
         {
-            Priority priority;
+            Priority priority = (Priority)Enum.Parse(typeof(Priority), priorityComboBox.Text);
+           
+
             return new Ticket
             {
                 DateOpened = DateTime.Now.ToString("dd/MM/yyyy"),
                 SubjectOfIncident = subjectOfIncidentTextBox.Text,
                 TypeOfIncident = typeOfIncidentComboBox.SelectedItem.ToString(),
                 ReportedByUser = reportedByUserTextBox.Text,
-                Priority = (Priority)Enum.Parse(typeof(Priority), priorityComboBox.Text),
+                Priority = priority, 
                 Deadline = deadlineComboBox.SelectedItem.ToString(),
                 Description = descriptionTextBox.Text,
                 Status = StatusTicket.Pending.ToString(),
@@ -296,6 +315,7 @@ namespace UI
                 ServiceDeskEmployeeID = new EmployeeReference { EmployeeId = serviceDeskEmployeeId },
             };
         }
+
 
         public void EmptyTheFieldsInIncidentManagment()
         {
@@ -305,8 +325,8 @@ namespace UI
             priorityComboBox.SelectedIndex = -1;
             deadlineComboBox.SelectedIndex = -1;
             descriptionTextBox.Text = string.Empty;
-
         }
+
         private void CancelButtonCreateUserPanel_Click(object sender, EventArgs e)
         {
             HideAllPanels();
@@ -400,9 +420,9 @@ namespace UI
                 }
             }
         }
+
+       
     }
-
-
 }
 
                

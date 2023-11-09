@@ -11,11 +11,13 @@ namespace Logic
     public class TicketLogic
     {
         private TicketDao ticketDao;
+        private SortTicketByPriority SortTicketByPriority;
         int lastAssignedServiceDeskEmployeeIndex;
         public TicketLogic()
         {
             ticketDao = new TicketDao();
             lastAssignedServiceDeskEmployeeIndex = -1;
+            SortTicketByPriority = new SortTicketByPriority();
         }
         public List<Ticket> GetAllTickets()
         {
@@ -42,6 +44,11 @@ namespace Logic
             }
 
             return lastAssignedServiceDeskEmployeeIndex;
+        }
+
+        public List<Ticket> SortByPriority(List<Ticket> tickets)
+        {
+            return SortTicketByPriority.SortByPriority(tickets);
         }
     }
 }

@@ -26,6 +26,7 @@ namespace Model
         public string ReportedByUser { get; set; }
         
         [BsonElement("Priority")]
+        [BsonRepresentation(BsonType.String)]
         public Priority Priority { get; set; }
 
         [BsonElement("Deadline")]
