@@ -42,6 +42,7 @@ namespace UI
             CreateNewUserPanel.Hide();
             UserManagementPanel.Hide();
             overviewTicketsPanel.Hide();
+            DashBoardPanel.Hide();
         }
 
         // LOGIN
@@ -58,16 +59,19 @@ namespace UI
                 if (foundUser != null)
                 {
                     HideAllPanels();
+                    NavigationPanel.Show();
                     // open employee panel
                     if (foundUser.EmployeeType == TypeOfEmployee.Regular)
                     {
                         UserManagementButtonNavigationPanel.Enabled = false;
-                        ShowDashBoardPanel();
+                        FillListViewDashBoard();
+                        DashBoardPanel.Show();
                     }
                     // open servicedesk panel
                     else if (foundUser.EmployeeType == TypeOfEmployee.ServiceDesk)
                     {
-                        ShowDashBoardPanel();
+                        DashboardButtonNavigationPanel.Enabled = false;
+                        UserManagementPanel.Show();
                     }
                 }
                 else
@@ -86,24 +90,9 @@ namespace UI
                 LoginPanelPasswordTextBox.Text = "";
             }
         }
-        private void ServicedeskPanelBackButton_Click(object sender, EventArgs e)
-        {
-            HideAllPanels();
-            LoginPanel.Show();
-        }
 
-        private void EmployeePanelBackButton_Click(object sender, EventArgs e)
-        {
-            HideAllPanels();
-            LoginPanel.Show();
-        }
 
-        private void ShowDashBoardPanel()
-        {
-            HideAllPanels();
-            NavigationPanel.Show();
-            overviewTicketsPanel.Show(); //hier moet dashboard komen
-        }
+    
         private void AddNewUserButtonUserManagement_Click(object sender, EventArgs e)
         {
             HideAllPanels();
@@ -117,6 +106,13 @@ namespace UI
             HideAllPanels();
             NavigationPanel.Show();
             UserManagementPanel.Show();
+
+            // Refresh the UserListView
+            RefreshUserList();
+        }
+
+        private void RefreshUserList()
+        {
             List<User> users = userLogic.GetAllUsers();
 
             UserListView.Items.Clear();
@@ -132,10 +128,8 @@ namespace UI
                 UserListView.Items.Add(item);
             }
             users.Clear();
-
-
-            
         }
+
 
         private int GetTotalTicketsCreatedByUser(string userId)
         {
@@ -183,29 +177,46 @@ namespace UI
 
         private void IncidentManagementButtonNavigationPanel_Click(object sender, EventArgs e)
         {
-           
             HideAllPanels();
             NavigationPanel.Show();
             overviewTicketsPanel.Show();
 
             List<Ticket> allTickets = ticketLogic.GetAllTickets();
-
-            List<Ticket> userTickets = allTickets.Where(ticket => ticket.RegularEmployeeID.EmployeeId == foundUser.Id).ToList();
-
             overviewTicketsListView.Items.Clear();
-
-            foreach(Ticket ticket in allTickets)
+            if (foundUser.EmployeeType == TypeOfEmployee.ServiceDesk)
             {
-                ListViewItem item = new ListViewItem(ticket.Id.ToString());
-                item.SubItems.Add(ticket.DateOpened);
-                item.SubItems.Add(ticket.SubjectOfIncident);
-                item.SubItems.Add(ticket.Deadline);
-                item.SubItems.Add(ticket.Status);
-                overviewTicketsListView.Items.Add(item);
-
+               
+                foreach (Ticket ticket in allTickets)
+                {
+                    ListViewItem item = new ListViewItem(ticket.Id.ToString());
+                    item.SubItems.Add(ticket.DateOpened);
+                    item.SubItems.Add(ticket.SubjectOfIncident);
+                    item.SubItems.Add(ticket.Deadline);
+                    item.SubItems.Add(ticket.Status);
+                    overviewTicketsListView.Items.Add(item);
+                }
             }
+            else if (foundUser.EmployeeType == TypeOfEmployee.Regular)
+            {
+                List<Ticket> userTickets = allTickets.Where(ticket => ticket.RegularEmployeeID.EmployeeId == foundUser.Id).ToList();
+                
+                foreach (Ticket ticket in userTickets)
+                {
+                    ListViewItem item = new ListViewItem(ticket.Id.ToString());
+                    item.SubItems.Add(ticket.DateOpened);
+                    item.SubItems.Add(ticket.SubjectOfIncident);
+                    item.SubItems.Add(ticket.Deadline);
+                    item.SubItems.Add(ticket.Status);
+                    overviewTicketsListView.Items.Add(item);
+                }
 
-
+                updateButton.Hide();
+                deleteButton.Hide();
+                closeTicketButton.Hide();
+                
+            }
+            
+            
         }
 
         private void createIncidentButton_Click(object sender, EventArgs e)
@@ -213,7 +224,6 @@ namespace UI
             HideAllPanels();
             NavigationPanel.Show();
             AddIncindentPanel.Show();
-
         }
 
         private void cancelButtonInIncidentPanel_Click(object sender, EventArgs e)
@@ -336,12 +346,60 @@ namespace UI
             LocationComboboxCreateUserPanel.SelectedIndex = -1;
 
             MessageBox.Show("User successfully created!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            RefreshUserList();
             CreateNewUserPanel.Hide();
             NavigationPanel.Show();
             UserManagementPanel.Show();
         }
 
-       
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            LoginPanel.Show();
+        }
+
+        private void DashboardButtonNavigationPanel_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            FillListViewDashBoard();
+            NavigationPanel.Show();
+            DashBoardPanel.Show();
+            
+        }
+
+        private void FillListViewDashBoard()
+        {
+
+            List<Ticket> allTickets = ticketLogic.GetAllTickets();
+
+
+            incidentPastDeadLineListView.Items.Clear();
+            unresolvedIncidentsListView.Items.Clear();
+
+            foreach (Ticket ticket in allTickets)
+            {
+                // Check if the ticket belongs to the logged-in employee and has a status indicating it's past deadline
+                if (ticket.RegularEmployeeID.EmployeeId == foundUser.Id && ticket.Status == StatusTicket.InProgress.ToString())
+                {
+                    ListViewItem item = new ListViewItem(ticket.SubjectOfIncident);
+                    item.SubItems.Add(ticket.DateOpened);
+                    item.SubItems.Add(ticket.Deadline);
+                    incidentPastDeadLineListView.Items.Add(item);
+                }
+            }
+
+            foreach (Ticket ticket in allTickets)
+            {
+                // Check if the ticket belongs to the logged-in employee and has a status indicating it's unresolved
+                if (ticket.RegularEmployeeID.EmployeeId == foundUser.Id && (ticket.Status == StatusTicket.Pending.ToString() || ticket.Status == StatusTicket.Reopened.ToString()))
+                {
+                    ListViewItem item = new ListViewItem(ticket.SubjectOfIncident);
+                    item.SubItems.Add(ticket.DateOpened);
+                    item.SubItems.Add(ticket.Deadline);
+                    unresolvedIncidentsListView.Items.Add(item);
+                }
+            }
+        }
     }
 
 
