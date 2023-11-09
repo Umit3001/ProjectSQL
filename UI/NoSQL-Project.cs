@@ -188,10 +188,13 @@ namespace UI
             NavigationPanel.Show();
             overviewTicketsPanel.Show();
 
-            List<Ticket> tickets = ticketLogic.GetTicketsByLogtInUser(foundUser.Id);
+            List<Ticket> allTickets = ticketLogic.GetAllTickets();
+
+            List<Ticket> userTickets = allTickets.Where(ticket => ticket.RegularEmployeeID.EmployeeId == foundUser.Id).ToList();
 
             overviewTicketsListView.Items.Clear();
-            foreach(Ticket ticket in tickets)
+
+            foreach(Ticket ticket in allTickets)
             {
                 ListViewItem item = new ListViewItem(ticket.Id.ToString());
                 item.SubItems.Add(ticket.DateOpened);
@@ -202,7 +205,6 @@ namespace UI
 
             }
 
-            Debug.WriteLine("Number of tickets: " + tickets.Count);
 
         }
 
@@ -269,13 +271,14 @@ namespace UI
 
         private Ticket CreateNewTicket(string serviceDeskEmployeeId)
         {
+            Priority priority;
             return new Ticket
             {
                 DateOpened = DateTime.Now.ToString("dd/MM/yyyy"),
                 SubjectOfIncident = subjectOfIncidentTextBox.Text,
                 TypeOfIncident = typeOfIncidentComboBox.SelectedItem.ToString(),
                 ReportedByUser = reportedByUserTextBox.Text,
-                Priority = priorityComboBox.SelectedItem.ToString(),
+                Priority = (Priority)Enum.Parse(typeof(Priority), priorityComboBox.Text),
                 Deadline = deadlineComboBox.SelectedItem.ToString(),
                 Description = descriptionTextBox.Text,
                 Status = StatusTicket.Pending.ToString(),

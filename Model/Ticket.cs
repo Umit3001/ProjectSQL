@@ -26,7 +26,7 @@ namespace Model
         public string ReportedByUser { get; set; }
         
         [BsonElement("Priority")]
-        public string Priority { get; set; }
+        public Priority Priority { get; set; }
 
         [BsonElement("Deadline")]
         public string Deadline { get; set; }
@@ -54,6 +54,14 @@ namespace Model
         Pending,
         Reopened
     }
+
+    public enum Priority
+    {
+        Low,
+        Normal,
+        High
+    }
+
 
 
     public class EmployeeReference

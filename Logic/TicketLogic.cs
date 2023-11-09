@@ -27,11 +27,6 @@ namespace Logic
             ticketDao.InsertTicket(ticket);
         }
 
-        public List<Ticket> GetTicketsByLogtInUser(string loggedInUser)
-        {
-           return ticketDao.GetTicketsByLogtInUser(loggedInUser);
-        }
-
         public int GetNextServiceDeskEmployeeIndex(List<string> serviceDeskEmployeeIds)
         {
             if (serviceDeskEmployeeIds.Count == 0)
