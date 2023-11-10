@@ -23,6 +23,7 @@ namespace UI
         private List<string> serviceDeskEmployeeIds;
 
         private Ticket selectedTicket;
+        private User currentUser;
 
         public NoSQL()
         {
@@ -45,6 +46,7 @@ namespace UI
             UserManagementPanel.Hide();
             overviewTicketsPanel.Hide();
             DashBoardPanel.Hide();
+            ResetPasswordPanel.Hide();
         }
 
         // LOGIN
@@ -94,7 +96,7 @@ namespace UI
         }
 
 
-    
+
         private void AddNewUserButtonUserManagement_Click(object sender, EventArgs e)
         {
             HideAllPanels();
@@ -212,7 +214,7 @@ namespace UI
             }
             else
             {
-                return; 
+                return;
             }
 
             overviewTicketsListView.Items.Clear();
@@ -324,7 +326,7 @@ namespace UI
         private Ticket CreateNewTicket(string serviceDeskEmployeeId)
         {
             Priority priority = (Priority)Enum.Parse(typeof(Priority), priorityComboBox.Text);
-           
+
 
             return new Ticket
             {
@@ -332,7 +334,7 @@ namespace UI
                 SubjectOfIncident = subjectOfIncidentTextBox.Text,
                 TypeOfIncident = typeOfIncidentComboBox.SelectedItem.ToString(),
                 ReportedByUser = reportedByUserTextBox.Text,
-                Priority = priority, 
+                Priority = priority,
                 Deadline = deadlineComboBox.SelectedItem.ToString(),
                 Description = descriptionTextBox.Text,
                 Status = StatusTicket.Pending.ToString(),
@@ -370,7 +372,7 @@ namespace UI
             Location location = (Location)Enum.Parse(typeof(Location), LocationComboboxCreateUserPanel.Text);
 
             User newUser = new User
-            { 
+            {
                 Name = name,
                 Username = userName,
                 Password = password,
@@ -409,7 +411,7 @@ namespace UI
             FillListViewDashBoard();
             NavigationPanel.Show();
             DashBoardPanel.Show();
-            
+
         }
 
         private void FillListViewDashBoard()
@@ -534,8 +536,80 @@ namespace UI
                 MessageBox.Show("Error: " + ex.Message, "Transfer Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ResetPasswordLabel_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            ResetPasswordPanel.Show();
+
+            newPasswordLabel.Hide();
+            newPasswordTextBox.Hide();
+            ConfirmNewPasswordButton.Hide();
+            UserFoundLabel.Hide();
+        }
+
+        private void confirmButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string email = emailTextBox.Text;
+                string newPassword = newPasswordTextBox.Text;
+
+                // Check if the email exists in the database
+                currentUser = userLogic.GetUserByEmail(email);
+
+                if (currentUser != null)
+                {
+                    
+                    newPasswordLabel.Show();
+                    newPasswordTextBox.Show();
+                    ConfirmNewPasswordButton.Show();
+                    UserFoundLabel.Show();
+
+                    emailTextBox.Hide();
+                    confirmButton.Hide();
+                    EmailLabelResetPassword.Hide();
+
+                }
+                else
+                {
+                    // Email doesn't exist in the database
+                    MessageBox.Show("No user found with the provided email address.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+        private void ConfirmNewPasswordButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string newPassword = newPasswordTextBox.Text;
+
+                if (currentUser != null)
+                {
+                    // Update the user's password
+                    userLogic.UpdateUserPassword(currentUser.Id, newPassword);
+
+                    MessageBox.Show("Your password is reset!");
+
+                }
+
+                HideAllPanels();
+                LoginPanel.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
+
+
 }
+
 
                
     

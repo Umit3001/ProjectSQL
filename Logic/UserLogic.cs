@@ -50,5 +50,15 @@ namespace Logic
         {
             return userDao.GetUserByName(name);
         }
+        public void UpdateUserPassword(string userId, string newPassword)
+        {
+            userDao.UpdatePassword(userId, newPassword);
+        }
+        public User GetUserByEmail(string email)
+        {
+            return userDao.GetUserByEmail(email);
+        }
+
+
     }
 }
