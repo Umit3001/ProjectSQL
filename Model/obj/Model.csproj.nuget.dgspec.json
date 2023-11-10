@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj": {}
+    "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj": {
+    "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\obj\\",
+        "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\duhak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duhak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

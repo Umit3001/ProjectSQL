@@ -1367,19 +1367,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lukop\\.nuget\\packages\\": {}
+    "C:\\Users\\duhak\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\UI.csproj",
+      "projectUniqueName": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\UI.csproj",
       "projectName": "UI",
-      "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\UI.csproj",
-      "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\UI\\obj\\",
+      "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\UI.csproj",
+      "packagesPath": "C:\\Users\\duhak\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\duhak\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1393,11 +1393,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Logic\\Logic.csproj": {
-              "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Logic\\Logic.csproj"
+            "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Logic\\Logic.csproj"
             },
-            "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj"
+            "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj"
             }
           }
         }
