@@ -119,6 +119,7 @@
             this.deadLineUnresolvedTickets = new System.Windows.Forms.ColumnHeader();
             this.TitleLabelDashBOardPanel = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TransferServiceDeskEmployeeButton = new System.Windows.Forms.Button();
             this.AddIncindentPanel.SuspendLayout();
             this.overviewTicketsPanel.SuspendLayout();
             this.UserManagementPanel.SuspendLayout();
@@ -330,6 +331,7 @@
             // 
             // overviewTicketsPanel
             // 
+            this.overviewTicketsPanel.Controls.Add(this.TransferServiceDeskEmployeeButton);
             this.overviewTicketsPanel.Controls.Add(this.sortByPriorityComboBox);
             this.overviewTicketsPanel.Controls.Add(this.sortByPriorityLabel);
             this.overviewTicketsPanel.Controls.Add(this.createButtonInOverviewTickets);
@@ -925,11 +927,11 @@
             this.NavigationPanel.Controls.Add(this.DashboardButtonNavigationPanel);
             this.NavigationPanel.Controls.Add(this.LogOutButton);
             this.NavigationPanel.Controls.Add(this.LoginPanelLogo);
+            this.NavigationPanel.Controls.Add(this.overviewTicketsPanel);
+            this.NavigationPanel.Controls.Add(this.UserManagementPanel);
             this.NavigationPanel.Controls.Add(this.AddIncindentPanel);
             this.NavigationPanel.Controls.Add(this.CreateNewUserPanel);
             this.NavigationPanel.Controls.Add(this.DashBoardPanel);
-            this.NavigationPanel.Controls.Add(this.overviewTicketsPanel);
-            this.NavigationPanel.Controls.Add(this.UserManagementPanel);
             this.NavigationPanel.Location = new System.Drawing.Point(1, -1);
             this.NavigationPanel.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.NavigationPanel.Name = "NavigationPanel";
@@ -1107,6 +1109,17 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // TransferServiceDeskEmployeeButton
+            // 
+            this.TransferServiceDeskEmployeeButton.Location = new System.Drawing.Point(443, 651);
+            this.TransferServiceDeskEmployeeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TransferServiceDeskEmployeeButton.Name = "TransferServiceDeskEmployeeButton";
+            this.TransferServiceDeskEmployeeButton.Size = new System.Drawing.Size(114, 54);
+            this.TransferServiceDeskEmployeeButton.TabIndex = 11;
+            this.TransferServiceDeskEmployeeButton.Text = "Transfer";
+            this.TransferServiceDeskEmployeeButton.UseVisualStyleBackColor = true;
+            this.TransferServiceDeskEmployeeButton.Click += new System.EventHandler(this.TransferServiceDeskEmployeeButton_Click);
+            // 
             // NoSQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -1228,5 +1241,6 @@
         private Button createButtonInOverviewTickets;
         private ComboBox sortByPriorityComboBox;
         private Label sortByPriorityLabel;
+        private Button TransferServiceDeskEmployeeButton;
     }
 }

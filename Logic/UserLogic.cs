@@ -41,12 +41,14 @@ namespace Logic
             return userDao.GetServiceDeskEmployeeIds();
         }
 
+        public User GetUserById(string userId)
+        {
+            return userDao.GetUserById(userId);
+        }
 
-        
-
-
-
-
-
+        public User GetUserByName(string name)
+        {
+            return userDao.GetUserByName(name);
+        }
     }
 }

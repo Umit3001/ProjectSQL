@@ -487,6 +487,53 @@ namespace UI
 
             UpdateTicketsListView();
         }
+
+        private void TransferServiceDeskEmployeeButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ListViewItem selectedItem = overviewTicketsListView.SelectedItems[0];
+
+                selectedTicket = ticketLogic.GetTicketById(selectedItem.SubItems[0].Text);
+
+                User currentServiceDeskEmployee = userLogic.GetUserById(selectedTicket.ServiceDeskEmployeeID.EmployeeId);
+
+                if (selectedTicket != null)
+                {
+                    string newServiceDeskEmployeeName = Microsoft.VisualBasic.Interaction.InputBox(
+                        "Enter the name of the new service desk employee:",
+                        "Transfer Ticket",
+                        currentServiceDeskEmployee.Name
+                    );
+
+                    if (!string.IsNullOrWhiteSpace(newServiceDeskEmployeeName))
+                    {
+                        User newServiceDeskEmployee = userLogic.GetUserByName(newServiceDeskEmployeeName);
+
+                        if (newServiceDeskEmployee == null)
+                        {
+                            throw new InvalidOperationException("Service desk employee not found in the database.");
+                        }
+
+                        selectedTicket.ServiceDeskEmployeeID.EmployeeId = newServiceDeskEmployee.Id;
+
+                        ticketLogic.UpdateTicket(selectedTicket);
+
+                        UpdateTicketsListView();
+
+                        MessageBox.Show("Ticket transferred to a new service desk employee successfully.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a ticket to transfer.");
+                }
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Transfer Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 
