@@ -1,5 +1,6 @@
 ﻿using DAL;
 using Model;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,6 +50,24 @@ namespace Logic
         public List<Ticket> SortByPriority(List<Ticket> tickets)
         {
             return SortTicketByPriority.SortByPriority(tickets);
+        }
+
+        public Ticket GetTicketById(string ticketId)
+        {
+            return ticketDao.GetTicketById(ticketId);
+        }
+
+        public void DeleteTicket(Ticket ticket)
+        {
+            if (ticket != null && ticket.Id != ObjectId.Empty)
+            {
+                ticketDao.DeleteTicket(ticket);
+            }
+        }
+
+        public void UpdateTicket(Ticket updatedTicket)
+        {
+            ticketDao.UpdateTicket(updatedTicket);
         }
     }
 }

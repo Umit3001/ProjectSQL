@@ -41,5 +41,37 @@ namespace DAL
             Collection.InsertOne(ticketDocument);
         }
 
+        public Ticket GetTicketById(string ticketId)
+        {
+            if (ObjectId.TryParse(ticketId, out ObjectId objectId))
+            {
+                var filter = Builders<BsonDocument>.Filter.Eq("_id", objectId);
+                var ticketDocument = Collection.Find(filter).FirstOrDefault();
+
+                if (ticketDocument != null)
+                {
+                    Ticket foundTicket = BsonSerializer.Deserialize<Ticket>(ticketDocument);
+                    return foundTicket;
+                }
+            }
+
+            return null;
+        }
+
+        public void DeleteTicket(Ticket ticket)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", ticket.Id);
+            Collection.DeleteOne(filter);
+        }
+
+        public void UpdateTicket(Ticket updatedTicket)
+        {
+            if (updatedTicket != null && updatedTicket.Id != ObjectId.Empty)
+            {
+                var filter = Builders<BsonDocument>.Filter.Eq("_id", updatedTicket.Id);
+                BsonDocument ticketDocument = updatedTicket.ToBsonDocument();
+                Collection.ReplaceOne(filter, ticketDocument);
+            }
+        }
     }
 }

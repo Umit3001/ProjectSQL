@@ -22,6 +22,8 @@ namespace UI
         private TicketLogic ticketLogic;
         private List<string> serviceDeskEmployeeIds;
 
+        private Ticket selectedTicket;
+
         public NoSQL()
         {
             userLogic = new UserLogic();
@@ -238,6 +240,7 @@ namespace UI
             }
         }
 
+
         private List<Ticket> FilterTicketsByPriority(List<Ticket> tickets, string selectedPriority)
         {
             return tickets.Where(ticket => ticket.Priority.ToString() == selectedPriority).ToList();
@@ -267,18 +270,40 @@ namespace UI
                     throw new InvalidOperationException("All required fields must be filled.");
                 }
 
-                List<string> serviceDeskEmployeeIds = userLogic.GetServiceDeskEmployeeIds();
+                if (labelIncidentTicket.Text == "Update incident ticket")
+                {
+                    Ticket updatedTicket = selectedTicket;
 
-                int nextServiceDeskEmployeeIndex = ticketLogic.GetNextServiceDeskEmployeeIndex(serviceDeskEmployeeIds);
-                string serviceDeskEmployeeId = serviceDeskEmployeeIds[nextServiceDeskEmployeeIndex];
+                    updatedTicket.SubjectOfIncident = subjectOfIncidentTextBox.Text;
+                    updatedTicket.TypeOfIncident = typeOfIncidentComboBox.Text;
+                    updatedTicket.ReportedByUser = reportedByUserTextBox.Text;
+                    updatedTicket.Priority = Enum.TryParse(priorityComboBox.Text, out Priority selectedPriority) ? selectedPriority : Priority.Normal;
+                    updatedTicket.Deadline = deadlineComboBox.Text;
+                    updatedTicket.Description = descriptionTextBox.Text;
+
+                    ticketLogic.UpdateTicket(updatedTicket);
+
+                    labelIncidentTicket.Text = "Create new incident ticket";
+                    submitTicketButtonInIncidentPanel.Text = "Submit ticket";
+
+                    EmptyTheFieldsInIncidentManagment();
+                    MessageBox.Show("Ticket saved successfully!");
+                }
+                else
+                {
+                    List<string> serviceDeskEmployeeIds = userLogic.GetServiceDeskEmployeeIds();
+
+                    int nextServiceDeskEmployeeIndex = ticketLogic.GetNextServiceDeskEmployeeIndex(serviceDeskEmployeeIds);
+                    string serviceDeskEmployeeId = serviceDeskEmployeeIds[nextServiceDeskEmployeeIndex];
 
 
-                Ticket newTicket = CreateNewTicket(serviceDeskEmployeeId);
+                    Ticket newTicket = CreateNewTicket(serviceDeskEmployeeId);
 
-                ticketLogic.InsertTicket(newTicket);
+                    ticketLogic.InsertTicket(newTicket);
 
-                MessageBox.Show("Ticket saved successfully!");
-                EmptyTheFieldsInIncidentManagment();
+                    MessageBox.Show("Ticket saved successfully!");
+                    EmptyTheFieldsInIncidentManagment();
+                }
             }
             catch (InvalidOperationException ex)
             {
@@ -421,7 +446,47 @@ namespace UI
             }
         }
 
-       
+        // CRUD 
+        private void createButtonInOverviewTickets_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            NavigationPanel.Show();
+            AddIncindentPanel.Show();
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            labelIncidentTicket.Text = "Update incident ticket";
+            submitTicketButtonInIncidentPanel.Text = "Update ticket";
+
+            // MAKEN DAT ADDINCIDENTPANEL NAAM NIET ALLEEN VOOR ADD IS MAAR OOK VOOR UPDATE
+
+            HideAllPanels();
+            NavigationPanel.Show();
+            AddIncindentPanel.Show();
+
+            ListViewItem selectedItem = overviewTicketsListView.SelectedItems[0];
+
+            selectedTicket = ticketLogic.GetTicketById(selectedItem.SubItems[0].Text);
+
+            subjectOfIncidentTextBox.Text = selectedTicket.SubjectOfIncident;
+            typeOfIncidentComboBox.Text = selectedTicket.TypeOfIncident;
+            reportedByUserTextBox.Text = selectedTicket.ReportedByUser;
+            priorityComboBox.Text = selectedTicket.Priority.ToString();
+            deadlineComboBox.Text = selectedTicket.Deadline;
+            descriptionTextBox.Text = selectedTicket.Description;
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            ListViewItem selectedItem = overviewTicketsListView.SelectedItems[0];
+
+            selectedTicket = ticketLogic.GetTicketById(selectedItem.SubItems[0].Text);
+
+            ticketLogic.DeleteTicket(selectedTicket);
+
+            UpdateTicketsListView();
+        }
     }
 }
 
