@@ -1329,19 +1329,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\duhak\\.nuget\\packages\\": {}
+    "C:\\Users\\lukop\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\duhak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\DAL\\obj\\",
+      "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\duhak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1355,8 +1355,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\Model\\Model.csproj"
+            "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj"
             }
           }
         }

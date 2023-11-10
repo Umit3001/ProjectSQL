@@ -25,10 +25,13 @@ namespace UI
         private Ticket selectedTicket;
         private User currentUser;
 
+        private TransferTicketLogic transferTicketLogic;
+
         public NoSQL()
         {
             userLogic = new UserLogic();
             ticketLogic = new TicketLogic();
+            transferTicketLogic = new TransferTicketLogic();
             serviceDeskEmployeeIds = userLogic.GetServiceDeskEmployeeIds();
 
             InitializeComponent();
@@ -498,7 +501,7 @@ namespace UI
 
                 selectedTicket = ticketLogic.GetTicketById(selectedItem.SubItems[0].Text);
 
-                User currentServiceDeskEmployee = userLogic.GetUserById(selectedTicket.ServiceDeskEmployeeID.EmployeeId);
+                User currentServiceDeskEmployee = transferTicketLogic.GetUserById(selectedTicket.ServiceDeskEmployeeID.EmployeeId);
 
                 if (selectedTicket != null)
                 {
@@ -510,7 +513,7 @@ namespace UI
 
                     if (!string.IsNullOrWhiteSpace(newServiceDeskEmployeeName))
                     {
-                        User newServiceDeskEmployee = userLogic.GetUserByName(newServiceDeskEmployeeName);
+                        User newServiceDeskEmployee = transferTicketLogic.GetUserByName(newServiceDeskEmployeeName);
 
                         if (newServiceDeskEmployee == null)
                         {
