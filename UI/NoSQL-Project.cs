@@ -214,6 +214,7 @@ namespace UI
                 deleteButton.Hide();
                 closeTicketButton.Hide();
                 createButtonInOverviewTickets.Hide();
+                TransferServiceDeskEmployeeButton.Hide();
             }
             else
             {
@@ -417,36 +418,70 @@ namespace UI
 
         }
 
+        private DateTime ParseDateTime(string dateStr)
+        {
+            return DateTime.Parse(dateStr);
+        }
+
+        private DateTime ParseDeadline(string duration, string dateOpened)
+        {
+            DateTime dateOpenedDateTime = ParseDateTime(dateOpened);
+            DateTime deadline = dateOpenedDateTime;
+
+            if (duration.Contains("hour") || duration.Contains("hours"))
+            {
+                int hours = int.Parse(duration.Split(' ')[0]);
+                deadline = deadline.AddHours(hours);
+            }
+            else if (duration.Contains("day") || duration.Contains("days"))
+            {
+                int days = int.Parse(duration.Split(' ')[0]);
+                deadline = deadline.AddDays(days);
+            }
+            else if (duration.Contains("week") || duration.Contains("weeks"))
+            {
+                int weeks = int.Parse(duration.Split(' ')[0]);
+                deadline = deadline.AddDays(weeks * 7); // 1 week = 7 dagen
+            }
+
+            return deadline;
+        }
+
         private void FillListViewDashBoard()
         {
-
             List<Ticket> allTickets = ticketLogic.GetAllTickets();
-
 
             incidentPastDeadLineListView.Items.Clear();
             unresolvedIncidentsListView.Items.Clear();
 
             foreach (Ticket ticket in allTickets)
             {
-                // Check if the ticket belongs to the logged-in employee and has a status indicating it's past deadline
-                if (ticket.RegularEmployeeID.EmployeeId == foundUser.Id && ticket.Status == StatusTicket.InProgress.ToString())
+                // Check if the ticket belongs to the logged-in employee
+                if (ticket.RegularEmployeeID.EmployeeId == foundUser.Id)
                 {
-                    ListViewItem item = new ListViewItem(ticket.SubjectOfIncident);
-                    item.SubItems.Add(ticket.DateOpened);
-                    item.SubItems.Add(ticket.Deadline);
-                    incidentPastDeadLineListView.Items.Add(item);
+                    DateTime dateOpened = ParseDateTime(ticket.DateOpened);
+                    DateTime deadline = ParseDeadline(ticket.Deadline, ticket.DateOpened);
+
+                    if (deadline < dateOpened)
+                    {
+                        ListViewItem item = new ListViewItem(ticket.SubjectOfIncident);
+                        item.SubItems.Add(ticket.DateOpened);
+                        item.SubItems.Add(ticket.Deadline);
+                        incidentPastDeadLineListView.Items.Add(item);
+                    }
                 }
             }
 
+
             foreach (Ticket ticket in allTickets)
             {
-                // Check if the ticket belongs to the logged-in employee and has a status indicating it's unresolved
                 if (ticket.RegularEmployeeID.EmployeeId == foundUser.Id && (ticket.Status == StatusTicket.Pending.ToString() || ticket.Status == StatusTicket.Reopened.ToString()))
                 {
-                    ListViewItem item = new ListViewItem(ticket.SubjectOfIncident);
-                    item.SubItems.Add(ticket.DateOpened);
-                    item.SubItems.Add(ticket.Deadline);
-                    unresolvedIncidentsListView.Items.Add(item);
+                    
+                        ListViewItem item = new ListViewItem(ticket.SubjectOfIncident);
+                        item.SubItems.Add(ticket.DateOpened);
+                        item.SubItems.Add(ticket.Deadline);
+                        unresolvedIncidentsListView.Items.Add(item);
                 }
             }
         }
