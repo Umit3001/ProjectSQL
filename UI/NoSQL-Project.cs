@@ -204,6 +204,11 @@ namespace UI
 
             if (foundUser.EmployeeType == TypeOfEmployee.ServiceDesk)
             {
+                updateButton.Show();
+                deleteButton.Show();
+                closeTicketButton.Show();
+                createButtonInOverviewTickets.Show();
+                TransferServiceDeskEmployeeButton.Show();
                 filteredTickets = allTickets;
                 createIncidentButton.Hide();
             }
@@ -215,6 +220,7 @@ namespace UI
                 closeTicketButton.Hide();
                 createButtonInOverviewTickets.Hide();
                 TransferServiceDeskEmployeeButton.Hide();
+                createIncidentButton.Show();
             }
             else
             {
@@ -255,6 +261,16 @@ namespace UI
         private void createIncidentButton_Click(object sender, EventArgs e)
         {
             HideAllPanels();
+            if (labelIncidentTicket.Text == "Update incident ticket")
+            {
+                labelStatusAddIncidentPanel.Show();
+                StatusComboBoxAddIncidentPanel.Show();
+            }
+            else
+            {
+                labelStatusAddIncidentPanel.Hide();
+                StatusComboBoxAddIncidentPanel.Hide();
+            }
             NavigationPanel.Show();
             AddIncindentPanel.Show();
         }
@@ -286,6 +302,7 @@ namespace UI
                     updatedTicket.Priority = Enum.TryParse(priorityComboBox.Text, out Priority selectedPriority) ? selectedPriority : Priority.Normal;
                     updatedTicket.Deadline = deadlineComboBox.Text;
                     updatedTicket.Description = descriptionTextBox.Text;
+                    updatedTicket.Status = StatusComboBoxAddIncidentPanel.Text;
 
                     ticketLogic.UpdateTicket(updatedTicket);
 
@@ -294,6 +311,8 @@ namespace UI
 
                     EmptyTheFieldsInIncidentManagment();
                     MessageBox.Show("Ticket saved successfully!");
+
+                    UpdateTicketsListView();
                 }
                 else
                 {
@@ -356,6 +375,7 @@ namespace UI
             priorityComboBox.SelectedIndex = -1;
             deadlineComboBox.SelectedIndex = -1;
             descriptionTextBox.Text = string.Empty;
+            StatusComboBoxAddIncidentPanel.SelectedIndex = -1;
         }
 
         private void CancelButtonCreateUserPanel_Click(object sender, EventArgs e)
@@ -499,8 +519,6 @@ namespace UI
             labelIncidentTicket.Text = "Update incident ticket";
             submitTicketButtonInIncidentPanel.Text = "Update ticket";
 
-            // MAKEN DAT ADDINCIDENTPANEL NAAM NIET ALLEEN VOOR ADD IS MAAR OOK VOOR UPDATE
-
             HideAllPanels();
             NavigationPanel.Show();
             AddIncindentPanel.Show();
@@ -515,6 +533,7 @@ namespace UI
             priorityComboBox.Text = selectedTicket.Priority.ToString();
             deadlineComboBox.Text = selectedTicket.Deadline;
             descriptionTextBox.Text = selectedTicket.Description;
+            StatusComboBoxAddIncidentPanel.Text = selectedTicket.Status;
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -643,9 +662,18 @@ namespace UI
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void closeTicketButton_Click(object sender, EventArgs e)
+        {
+            ListViewItem selectedItem = overviewTicketsListView.SelectedItems[0];
+
+            selectedTicket = ticketLogic.GetTicketById(selectedItem.SubItems[0].Text);
+
+            ticketLogic.CloseTicket(selectedTicket);
+
+            UpdateTicketsListView();
+        }
     }
-
-
 }
 
 

@@ -73,5 +73,15 @@ namespace DAL
                 Collection.ReplaceOne(filter, ticketDocument);
             }
         }
+
+        public void CloseTicket(Ticket ticket)
+        {
+            if (ticket.Status != StatusTicket.Closed.ToString())
+            {
+                ticket.Status = StatusTicket.Closed.ToString();
+
+                UpdateTicket(ticket);
+            }
+        }
     }
 }

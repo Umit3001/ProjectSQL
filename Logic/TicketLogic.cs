@@ -69,5 +69,13 @@ namespace Logic
         {
             ticketDao.UpdateTicket(updatedTicket);
         }
+
+        public void CloseTicket(Ticket ticket)
+        {
+            if (ticket != null)
+            {
+                ticketDao.CloseTicket(ticket);
+            }
+        }
     }
 }
