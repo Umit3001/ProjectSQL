@@ -125,19 +125,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lukop\\.nuget\\packages\\": {}
+    "C:\\Users\\umitc\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj",
+      "projectUniqueName": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\Model.csproj",
-      "packagesPath": "C:\\Users\\lukop\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukop\\OneDrive - Hogeschool Inholland\\Desktop\\Github TGG Project\\ProjectSQL\\Model\\obj\\",
+      "projectPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\Model.csproj",
+      "packagesPath": "C:\\Users\\umitc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\umitc\\OneDrive\\Bureaublad\\Project TGG\\ProjectSQL\\Model\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\lukop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\umitc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -145,6 +150,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
