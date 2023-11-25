@@ -31,6 +31,9 @@
           }
         }
       },
+      "Chart.js/3.7.1": {
+        "type": "package"
+      },
       "DnsClient/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -582,6 +585,19 @@
         "lib/netstandard2.0/AWSSDK.SecurityToken.xml",
         "tools/install.ps1",
         "tools/uninstall.ps1"
+      ]
+    },
+    "Chart.js/3.7.1": {
+      "sha512": "gJunTMEueTNdA5Hp92J9sv363msSemW+GSy1VtbrwjxCaMrp+/mgB20EdVezbP34dbM+h+A8G5XbEuL6tOJoCw==",
+      "type": "package",
+      "path": "chart.js/3.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "chart.js.3.7.1.nupkg.sha512",
+        "chart.js.nuspec",
+        "content/Scripts/chart.js",
+        "content/Scripts/chart.min.js"
       ]
     },
     "DnsClient/1.6.1": {
@@ -1362,6 +1378,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "Chart.js >= 3.7.1",
       "Logic >= 1.0.0",
       "Model >= 1.0.0"
     ]
@@ -1411,6 +1428,12 @@
     "frameworks": {
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "Chart.js": {
+            "target": "Package",
+            "version": "[3.7.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

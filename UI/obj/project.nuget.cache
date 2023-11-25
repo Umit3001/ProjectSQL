@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "aq7mLIleQOiJgX6oqOM0KzuASput7HjlAebh91B55xpMdiBJDe0ijFRM4/Zuk9FLBaywNGSKlTLmzKyFi06Fqw==",
+  "dgSpecHash": "5IOQr2yEoTWVfzXBNdN8VcrawgylSs4KTDN129LXF19dYL9hkyuLZbYCeHfzJrtCB4Bzir6EzIqa8+HNSaDmNQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\duhak\\Documents\\GitHub\\Extra\\ProjectSQL\\UI\\UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duhak\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\duhak\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
+    "C:\\Users\\duhak\\.nuget\\packages\\chart.js\\3.7.1\\chart.js.3.7.1.nupkg.sha512",
     "C:\\Users\\duhak\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\duhak\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
     "C:\\Users\\duhak\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",

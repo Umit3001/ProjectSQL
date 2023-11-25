@@ -26,12 +26,14 @@ namespace UI
         private User currentUser;
 
         private TransferTicketLogic transferTicketLogic;
+        private ResetPasswordLogic passwordLogic;
 
         public NoSQL()
         {
             userLogic = new UserLogic();
             ticketLogic = new TicketLogic();
             transferTicketLogic = new TransferTicketLogic();
+            passwordLogic = new ResetPasswordLogic();
             serviceDeskEmployeeIds = userLogic.GetServiceDeskEmployeeIds();
 
             InitializeComponent();
@@ -469,41 +471,7 @@ namespace UI
 
         private void FillListViewDashBoard()
         {
-            List<Ticket> allTickets = ticketLogic.GetAllTickets();
-
-            incidentPastDeadLineListView.Items.Clear();
-            unresolvedIncidentsListView.Items.Clear();
-
-            foreach (Ticket ticket in allTickets)
-            {
-                // Check if the ticket belongs to the logged-in employee
-                if (ticket.RegularEmployeeID.EmployeeId == foundUser.Id)
-                {
-                    DateTime dateOpened = ParseDateTime(ticket.DateOpened);
-                    DateTime deadline = ParseDeadline(ticket.Deadline, ticket.DateOpened);
-
-                    if (deadline < dateOpened)
-                    {
-                        ListViewItem item = new ListViewItem(ticket.SubjectOfIncident);
-                        item.SubItems.Add(ticket.DateOpened);
-                        item.SubItems.Add(ticket.Deadline);
-                        incidentPastDeadLineListView.Items.Add(item);
-                    }
-                }
-            }
-
-
-            foreach (Ticket ticket in allTickets)
-            {
-                if (ticket.RegularEmployeeID.EmployeeId == foundUser.Id && (ticket.Status == StatusTicket.Pending.ToString() || ticket.Status == StatusTicket.Reopened.ToString()))
-                {
-                    
-                        ListViewItem item = new ListViewItem(ticket.SubjectOfIncident);
-                        item.SubItems.Add(ticket.DateOpened);
-                        item.SubItems.Add(ticket.Deadline);
-                        unresolvedIncidentsListView.Items.Add(item);
-                }
-            }
+            
         }
 
         // CRUD 
@@ -613,7 +581,7 @@ namespace UI
                 string newPassword = newPasswordTextBox.Text;
 
                 // Check if the email exists in the database
-                currentUser = userLogic.GetUserByEmail(email);
+                currentUser = passwordLogic.GetUserByEmail(email);
 
                 if (currentUser != null)
                 {
@@ -648,7 +616,7 @@ namespace UI
                 if (currentUser != null)
                 {
                     // Update the user's password
-                    userLogic.UpdateUserPassword(currentUser.Id, newPassword);
+                    passwordLogic.UpdateUserPassword(currentUser.Id, newPassword);
 
                     MessageBox.Show("Your password is reset!");
 
