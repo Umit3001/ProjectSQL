@@ -6,7 +6,6 @@ using System.Diagnostics;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Collections.Generic;
-using Model;
 using MongoDB.Bson.Serialization;
 
 namespace DAL

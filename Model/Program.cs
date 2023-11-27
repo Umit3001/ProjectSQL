@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            // Your code goes here
         }
     }
 }

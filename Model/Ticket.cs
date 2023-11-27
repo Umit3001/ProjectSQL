@@ -24,7 +24,7 @@ namespace Model
 
         [BsonElement("ReportedByUser")]
         public string ReportedByUser { get; set; }
-        
+
         [BsonElement("Priority")]
         [BsonRepresentation(BsonType.String)]
         public Priority Priority { get; set; }
@@ -70,5 +70,4 @@ namespace Model
         [BsonElement("$_id")]
         public string EmployeeId { get; set; }
     }
-
 }

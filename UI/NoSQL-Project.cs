@@ -1,15 +1,14 @@
-
-using DAL;
-using Logic;
-using Microsoft.VisualBasic.ApplicationServices;
+﻿using Logic;
 using Model;
-using System.Diagnostics;
-using System.Diagnostics.Eventing.Reader;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Serialization;
-using static System.Windows.Forms.LinkLabel;
-using Timer = System.Windows.Forms.Timer;
-using User = Model.User;
 
 namespace UI
 {
@@ -172,7 +171,7 @@ namespace UI
                 int totalTicketsCreatedByUser = GetTotalTicketsCreatedByUser(user.Id);
 
                 // Check if the email contains the filter text (with at least 3 letters)
-                if (string.IsNullOrEmpty(filter) || filter.Length < 3 || user.Email.Contains(filter, StringComparison.OrdinalIgnoreCase))
+                if (string.IsNullOrEmpty(filter) || filter.Length < 3 || user.Email.IndexOf(filter, StringComparison.OrdinalIgnoreCase) >= 0)
                 {
                     ListViewItem item = new ListViewItem(user.Id);
                     item.SubItems.Add(user.Email);
@@ -183,6 +182,7 @@ namespace UI
                 }
             }
         }
+
 
         private void IncidentManagementButtonNavigationPanel_Click(object sender, EventArgs e)
         {
@@ -471,7 +471,7 @@ namespace UI
 
         private void FillListViewDashBoard()
         {
-            
+
         }
 
         // CRUD 
@@ -517,7 +517,7 @@ namespace UI
 
         private void TransferServiceDeskEmployeeButton_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 ListViewItem selectedItem = overviewTicketsListView.SelectedItems[0];
 
@@ -559,7 +559,7 @@ namespace UI
             catch (InvalidOperationException ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Transfer Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void ResetPasswordLabel_Click(object sender, EventArgs e)
@@ -585,7 +585,7 @@ namespace UI
 
                 if (currentUser != null)
                 {
-                    
+
                     newPasswordLabel.Show();
                     newPasswordTextBox.Show();
                     ConfirmNewPasswordButton.Show();
@@ -643,9 +643,4 @@ namespace UI
         }
     }
 }
-
-
-               
-    
-
 
