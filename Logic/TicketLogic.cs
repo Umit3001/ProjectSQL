@@ -77,5 +77,16 @@ namespace Logic
                 ticketDao.CloseTicket(ticket);
             }
         }
+        public List<Ticket> GetTicketsForUser(string userId)
+        {
+            List<Ticket> allTickets = ticketDao.GetAllTickets();
+            List<Ticket> userTickets = allTickets
+                .Where(ticket => ticket.RegularEmployeeID?.EmployeeId == userId)
+                .ToList();
+
+            return userTickets;
+        }
+
+
     }
 }

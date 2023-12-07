@@ -32,8 +32,11 @@ namespace UI
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.AddIncindentPanel = new System.Windows.Forms.Panel();
             this.StatusComboBoxAddIncidentPanel = new System.Windows.Forms.ComboBox();
             this.labelStatusAddIncidentPanel = new System.Windows.Forms.Label();
@@ -116,6 +119,11 @@ namespace UI
             this.IncidentManagementButtonNavigationPanel = new System.Windows.Forms.Button();
             this.DashboardButtonNavigationPanel = new System.Windows.Forms.Button();
             this.DashBoardPanel = new System.Windows.Forms.Panel();
+            this.incidentsPastDeadlineAmountLabel = new System.Windows.Forms.Label();
+            this.unreseolvedIncidentsLabelAmount = new System.Windows.Forms.Label();
+            this.ShowListButton = new System.Windows.Forms.Button();
+            this.pie2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pie1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.incidentsPastDeadLineLabel = new System.Windows.Forms.Label();
             this.unresolvedTicketsLabel = new System.Windows.Forms.Label();
             this.TitleLabelDashBOardPanel = new System.Windows.Forms.Label();
@@ -130,7 +138,6 @@ namespace UI
             this.EmailLabelResetPassword = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.AddIncindentPanel.SuspendLayout();
             this.overviewTicketsPanel.SuspendLayout();
             this.UserManagementPanel.SuspendLayout();
@@ -140,8 +147,9 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.LoginPanelLogo)).BeginInit();
             this.NavigationPanel.SuspendLayout();
             this.DashBoardPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pie2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pie1)).BeginInit();
             this.ResetPasswordPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // AddIncindentPanel
@@ -988,11 +996,11 @@ namespace UI
             this.NavigationPanel.Controls.Add(this.DashboardButtonNavigationPanel);
             this.NavigationPanel.Controls.Add(this.LogOutButton);
             this.NavigationPanel.Controls.Add(this.LoginPanelLogo);
-            this.NavigationPanel.Controls.Add(this.DashBoardPanel);
             this.NavigationPanel.Controls.Add(this.overviewTicketsPanel);
             this.NavigationPanel.Controls.Add(this.UserManagementPanel);
             this.NavigationPanel.Controls.Add(this.AddIncindentPanel);
             this.NavigationPanel.Controls.Add(this.CreateNewUserPanel);
+            this.NavigationPanel.Controls.Add(this.DashBoardPanel);
             this.NavigationPanel.Location = new System.Drawing.Point(1, 1);
             this.NavigationPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.NavigationPanel.Name = "NavigationPanel";
@@ -1062,7 +1070,11 @@ namespace UI
             // 
             // DashBoardPanel
             // 
-            this.DashBoardPanel.Controls.Add(this.chart1);
+            this.DashBoardPanel.Controls.Add(this.incidentsPastDeadlineAmountLabel);
+            this.DashBoardPanel.Controls.Add(this.unreseolvedIncidentsLabelAmount);
+            this.DashBoardPanel.Controls.Add(this.ShowListButton);
+            this.DashBoardPanel.Controls.Add(this.pie2);
+            this.DashBoardPanel.Controls.Add(this.pie1);
             this.DashBoardPanel.Controls.Add(this.incidentsPastDeadLineLabel);
             this.DashBoardPanel.Controls.Add(this.unresolvedTicketsLabel);
             this.DashBoardPanel.Controls.Add(this.TitleLabelDashBOardPanel);
@@ -1070,6 +1082,68 @@ namespace UI
             this.DashBoardPanel.Name = "DashBoardPanel";
             this.DashBoardPanel.Size = new System.Drawing.Size(613, 387);
             this.DashBoardPanel.TabIndex = 7;
+            // 
+            // incidentsPastDeadlineAmountLabel
+            // 
+            this.incidentsPastDeadlineAmountLabel.AutoSize = true;
+            this.incidentsPastDeadlineAmountLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.incidentsPastDeadlineAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incidentsPastDeadlineAmountLabel.Location = new System.Drawing.Point(375, 323);
+            this.incidentsPastDeadlineAmountLabel.Name = "incidentsPastDeadlineAmountLabel";
+            this.incidentsPastDeadlineAmountLabel.Size = new System.Drawing.Size(2, 26);
+            this.incidentsPastDeadlineAmountLabel.TabIndex = 9;
+            // 
+            // unreseolvedIncidentsLabelAmount
+            // 
+            this.unreseolvedIncidentsLabelAmount.AutoSize = true;
+            this.unreseolvedIncidentsLabelAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.unreseolvedIncidentsLabelAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unreseolvedIncidentsLabelAmount.Location = new System.Drawing.Point(69, 323);
+            this.unreseolvedIncidentsLabelAmount.Name = "unreseolvedIncidentsLabelAmount";
+            this.unreseolvedIncidentsLabelAmount.Size = new System.Drawing.Size(2, 26);
+            this.unreseolvedIncidentsLabelAmount.TabIndex = 8;
+            // 
+            // ShowListButton
+            // 
+            this.ShowListButton.Location = new System.Drawing.Point(526, 13);
+            this.ShowListButton.Name = "ShowListButton";
+            this.ShowListButton.Size = new System.Drawing.Size(75, 23);
+            this.ShowListButton.TabIndex = 7;
+            this.ShowListButton.Text = "Show list";
+            this.ShowListButton.UseVisualStyleBackColor = true;
+            this.ShowListButton.Click += new System.EventHandler(this.ShowListButton_Click);
+            // 
+            // pie2
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.pie2.ChartAreas.Add(chartArea1);
+            this.pie2.Location = new System.Drawing.Point(308, 101);
+            this.pie2.Name = "pie2";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Name = "Series1";
+            this.pie2.Series.Add(series1);
+            this.pie2.Size = new System.Drawing.Size(202, 182);
+            this.pie2.TabIndex = 6;
+            this.pie2.Text = "chart2";
+            title1.Name = "Unresolved incidents";
+            this.pie2.Titles.Add(title1);
+            // 
+            // pie1
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.pie1.ChartAreas.Add(chartArea2);
+            this.pie1.Location = new System.Drawing.Point(12, 98);
+            this.pie1.Name = "pie1";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Name = "Series1";
+            this.pie1.Series.Add(series2);
+            this.pie1.Size = new System.Drawing.Size(202, 182);
+            this.pie1.TabIndex = 5;
+            this.pie1.Text = "chart1";
+            title2.Name = "Unresolved incidents";
+            this.pie1.Titles.Add(title2);
             // 
             // incidentsPastDeadLineLabel
             // 
@@ -1194,30 +1268,14 @@ namespace UI
             this.emailTextBox.Size = new System.Drawing.Size(134, 20);
             this.emailTextBox.TabIndex = 0;
             // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(28, 98);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(202, 182);
-            this.chart1.TabIndex = 5;
-            this.chart1.Text = "chart1";
-            // 
             // NoSQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 484);
+            this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.ResetPasswordPanel);
-            this.Controls.Add(this.LoginPanel);
             this.Name = "NoSQL";
             this.Text = "NoSQL-Project";
             this.AddIncindentPanel.ResumeLayout(false);
@@ -1236,9 +1294,10 @@ namespace UI
             this.NavigationPanel.PerformLayout();
             this.DashBoardPanel.ResumeLayout(false);
             this.DashBoardPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pie2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pie1)).EndInit();
             this.ResetPasswordPanel.ResumeLayout(false);
             this.ResetPasswordPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1340,7 +1399,11 @@ namespace UI
         private ComboBox StatusComboBoxAddIncidentPanel;
         private Label labelStatusAddIncidentPanel;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart pie1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart pie2;
+        private Button ShowListButton;
+        private Label incidentsPastDeadlineAmountLabel;
+        private Label unreseolvedIncidentsLabelAmount;
     }
 }
 

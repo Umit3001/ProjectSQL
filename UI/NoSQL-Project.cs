@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace UI
 {
@@ -20,6 +22,7 @@ namespace UI
 
         private TicketLogic ticketLogic;
         private List<string> serviceDeskEmployeeIds;
+        private List<Ticket> ticketList;
 
         private Ticket selectedTicket;
         private User currentUser;
@@ -56,8 +59,7 @@ namespace UI
         // LOGIN
         private void LoginPanelLoginButton_Click(object sender, EventArgs e)
         {
-            try
-            {
+            
                 string username = LoginPanelUsernameTextBox.Text;
                 string password = LoginPanelPasswordTextBox.Text;
 
@@ -72,7 +74,7 @@ namespace UI
                     if (foundUser.EmployeeType == TypeOfEmployee.Regular)
                     {
                         UserManagementButtonNavigationPanel.Enabled = false;
-                        FillListViewDashBoard();
+                        FillDashboard();
                         DashBoardPanel.Show();
                     }
                     // open servicedesk panel
@@ -87,11 +89,8 @@ namespace UI
                     MessageBox.Show("Username or password is incorrect.");
                 }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Fout bij het inloggen: " + ex.Message);
-            }
+            
+            
             if (!RememberMeCheckBoxLoginPanel.Checked)
             {
                 LoginPanelUsernameTextBox.Text = "";
@@ -121,9 +120,11 @@ namespace UI
 
         private void RefreshUserList()
         {
-            List<User> users = userLogic.GetAllUsers();
 
             UserListView.Items.Clear();
+
+            List<User> users = userLogic.GetAllUsers();
+
 
             foreach (var user in users)
             {
@@ -434,44 +435,148 @@ namespace UI
         private void DashboardButtonNavigationPanel_Click(object sender, EventArgs e)
         {
             HideAllPanels();
-            FillListViewDashBoard();
+            FillDashboard();
             NavigationPanel.Show();
             DashBoardPanel.Show();
 
         }
 
-        private DateTime ParseDateTime(string dateStr)
+        private DateTime DateOpenedParse(string dateOpened)
         {
-            return DateTime.Parse(dateStr);
+            int day = 0;
+            int month = 0;
+            int year = 0;
+
+            if (dateOpened.Contains("-"))
+            {
+                string[] dates = dateOpened.Split('-');
+                if (dates.Length == 3)
+                {
+                    day = int.Parse(dates[0]);
+                    month = int.Parse(dates[1]);
+                    year = int.Parse(dates[2]);
+                }
+            }
+            else if (dateOpened.Contains("/"))
+            {
+                string[] dates = dateOpened.Split('/');
+                if (dates.Length == 3)
+                {
+                    day = int.Parse(dates[0]);
+                    month = int.Parse(dates[1]);
+                    year = int.Parse(dates[2]);
+                }
+            }
+
+            return new DateTime(year, month, day);
         }
 
-        private DateTime ParseDeadline(string duration, string dateOpened)
+
+
+        private DateTime DeadLineParse(string duration, string dateOpened)
         {
-            DateTime dateOpenedDateTime = ParseDateTime(dateOpened);
-            DateTime deadline = dateOpenedDateTime;
+            DateTime dateOpenedTicket = DateOpenedParse(dateOpened);
 
             if (duration.Contains("hour") || duration.Contains("hours"))
             {
                 int hours = int.Parse(duration.Split(' ')[0]);
-                deadline = deadline.AddHours(hours);
+                dateOpenedTicket = dateOpenedTicket.AddHours(hours);
             }
             else if (duration.Contains("day") || duration.Contains("days"))
             {
                 int days = int.Parse(duration.Split(' ')[0]);
-                deadline = deadline.AddDays(days);
+                dateOpenedTicket = dateOpenedTicket.AddDays(days);
             }
             else if (duration.Contains("week") || duration.Contains("weeks"))
             {
                 int weeks = int.Parse(duration.Split(' ')[0]);
-                deadline = deadline.AddDays(weeks * 7); // 1 week = 7 dagen
+                dateOpenedTicket = dateOpenedTicket.AddDays(weeks * 7);
             }
 
-            return deadline;
+            return dateOpenedTicket;
         }
 
-        private void FillListViewDashBoard()
-        {
 
+
+
+        private void FillDashboard()
+        {
+          
+                if (foundUser.EmployeeType == TypeOfEmployee.ServiceDesk)
+                {
+                    ticketList = ticketLogic.GetAllTickets();
+                }
+                else if (foundUser.EmployeeType == TypeOfEmployee.Regular)
+                {
+                    ticketList = ticketLogic.GetTicketsForUser(foundUser.Id);
+                }
+
+                UnResolvedIncidentsPie();
+                DeadlinePastIncidentsPie();
+
+        }
+
+        private void UnResolvedIncidentsPie()
+        {
+            pie1.Series.Clear();
+
+            int unresolvedIncidentsCount = ticketList.Count(ticket => ticket.Status != StatusTicket.Closed.ToString());
+
+            Color colorSelect = Color.Orange;
+            Series series = PopulatePie(unresolvedIncidentsCount, "UnresolvedIncidents", colorSelect);
+
+            unreseolvedIncidentsLabelAmount.Text = $"{unresolvedIncidentsCount} / {ticketList.Count}";
+            
+            pie1.Series.Add(series);
+        }
+
+        private void DeadlinePastIncidentsPie()
+        {
+            pie2.Series.Clear();
+            Color incidentColor = Color.Red;
+
+            // Filter incidents that have passed the deadline and are in progress
+            var pastDeadlineIncidents = ticketList
+                .Where(ticket =>
+                {
+                    DateTime deadlineDateTime = DeadLineParse(ticket.Deadline, ticket.DateOpened);
+
+                    return deadlineDateTime < DateTime.Now;
+                })
+                .ToList();
+
+            Series series = PopulatePie(pastDeadlineIncidents.Count, "PastDeadline", incidentColor);
+
+            incidentsPastDeadlineAmountLabel.Text = pastDeadlineIncidents.Count.ToString();
+
+            pie2.Series.Add(series);
+
+
+        }
+
+
+        private Series PopulatePie(int countTheIncidents, string propSeries, Color color)
+        {
+            Series series = new Series(propSeries);
+            series.Points.AddXY("", ticketList.Count - countTheIncidents);
+            series.Points.AddXY("", countTheIncidents);
+
+            series.Points[0].Color = Color.Gray;
+            series.Points[1].Color = color;
+
+     
+            series.IsVisibleInLegend = false;
+            series.ChartType = SeriesChartType.Doughnut;
+            
+            return series;
+        }
+
+
+        private void ShowListButton_Click(object sender, EventArgs e)
+        {
+           HideAllPanels();
+           NavigationPanel.Show();
+            overviewTicketsPanel.Show();
         }
 
         // CRUD 
@@ -641,6 +746,8 @@ namespace UI
 
             UpdateTicketsListView();
         }
+
+   
     }
 }
 
