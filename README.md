@@ -13,23 +13,6 @@ Servicedesk
 Duha
 DuhaPassword
 
-verantwoording op ieder onderdeel van de Rubrics voor ‘Project NoSQL’:
-
-A: Luko, Duha, Umit
-B: Luko, Duha, Umit
-C: Luko, Duha, Umit
-D: Duha
-E: Luko, Duha, Umit
-F: Luko, Duha, Umit
-G: Luko, Duha, Umit
-H: Luko, Umit
-I: Duha
-J: Luko, Umit
-K: Luko, Duha, Umit
-L: Luko, Duha, Umit
-M: Luko, Duha, Umit
-N: Luko, Duha, Umit
-O: Luko, Duha, Umit
 
 A. The application uses a NoSQL database as a data storage technique.
 Uitleg:

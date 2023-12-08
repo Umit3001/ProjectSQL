@@ -86,3 +86,47 @@ C:\Users\duhak\Documents\GitHub\Extra\ProjectSQL\Logic\obj\Debug\Logic.csproj.Co
 C:\Users\duhak\Documents\GitHub\Extra\ProjectSQL\Logic\obj\Debug\Logic.csproj.CopyComplete
 C:\Users\duhak\Documents\GitHub\Extra\ProjectSQL\Logic\obj\Debug\Logic.exe
 C:\Users\duhak\Documents\GitHub\Extra\ProjectSQL\Logic\obj\Debug\Logic.pdb
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\mongocrypt.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\Logic.exe.config
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\Logic.exe
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\Logic.pdb
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\DAL.exe
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\Model.exe
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\MongoDB.Bson.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\System.Buffers.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\System.Memory.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\MongoDB.Driver.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\MongoDB.Libmongocrypt.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\DnsClient.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\SharpCompress.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\ZstdSharp.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\AWSSDK.Core.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\Snappier.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\DAL.pdb
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\DAL.exe.config
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\Model.pdb
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\Model.exe.config
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\MongoDB.Bson.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\System.Buffers.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\System.Memory.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\MongoDB.Driver.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\DnsClient.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\AWSSDK.Core.pdb
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\AWSSDK.Core.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\Snappier.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\obj\Debug\Logic.csproj.AssemblyReference.cache
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\obj\Debug\Logic.csproj.SuggestedBindingRedirects.cache
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\obj\Debug\Logic.csproj.CopyComplete
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\obj\Debug\Logic.exe
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Logic\obj\Debug\Logic.pdb

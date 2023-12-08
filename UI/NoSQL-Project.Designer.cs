@@ -31,12 +31,12 @@ namespace UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.AddIncindentPanel = new System.Windows.Forms.Panel();
             this.StatusComboBoxAddIncidentPanel = new System.Windows.Forms.ComboBox();
             this.labelStatusAddIncidentPanel = new System.Windows.Forms.Label();
@@ -171,10 +171,10 @@ namespace UI
             this.AddIncindentPanel.Controls.Add(this.typeOfIncidentLabelInIncidentLabel);
             this.AddIncindentPanel.Controls.Add(this.subjectOfIncidentLabelInIncidentPanel);
             this.AddIncindentPanel.Controls.Add(this.labelIncidentTicket);
-            this.AddIncindentPanel.Location = new System.Drawing.Point(1, 98);
+            this.AddIncindentPanel.Location = new System.Drawing.Point(1, 121);
             this.AddIncindentPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.AddIncindentPanel.Name = "AddIncindentPanel";
-            this.AddIncindentPanel.Size = new System.Drawing.Size(613, 389);
+            this.AddIncindentPanel.Size = new System.Drawing.Size(817, 479);
             this.AddIncindentPanel.TabIndex = 1;
             // 
             // StatusComboBoxAddIncidentPanel
@@ -187,19 +187,19 @@ namespace UI
             "Closed",
             "Pending",
             "Reopened"});
-            this.StatusComboBoxAddIncidentPanel.Location = new System.Drawing.Point(187, 188);
+            this.StatusComboBoxAddIncidentPanel.Location = new System.Drawing.Point(249, 231);
             this.StatusComboBoxAddIncidentPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.StatusComboBoxAddIncidentPanel.Name = "StatusComboBoxAddIncidentPanel";
-            this.StatusComboBoxAddIncidentPanel.Size = new System.Drawing.Size(193, 21);
+            this.StatusComboBoxAddIncidentPanel.Size = new System.Drawing.Size(256, 24);
             this.StatusComboBoxAddIncidentPanel.TabIndex = 29;
             // 
             // labelStatusAddIncidentPanel
             // 
             this.labelStatusAddIncidentPanel.AutoSize = true;
-            this.labelStatusAddIncidentPanel.Location = new System.Drawing.Point(82, 192);
+            this.labelStatusAddIncidentPanel.Location = new System.Drawing.Point(109, 236);
             this.labelStatusAddIncidentPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelStatusAddIncidentPanel.Name = "labelStatusAddIncidentPanel";
-            this.labelStatusAddIncidentPanel.Size = new System.Drawing.Size(40, 13);
+            this.labelStatusAddIncidentPanel.Size = new System.Drawing.Size(47, 16);
             this.labelStatusAddIncidentPanel.TabIndex = 28;
             this.labelStatusAddIncidentPanel.Text = "Status:";
             // 
@@ -207,10 +207,10 @@ namespace UI
             // 
             this.submitTicketButtonInIncidentPanel.BackColor = System.Drawing.Color.LightSkyBlue;
             this.submitTicketButtonInIncidentPanel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.submitTicketButtonInIncidentPanel.Location = new System.Drawing.Point(279, 216);
+            this.submitTicketButtonInIncidentPanel.Location = new System.Drawing.Point(372, 266);
             this.submitTicketButtonInIncidentPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.submitTicketButtonInIncidentPanel.Name = "submitTicketButtonInIncidentPanel";
-            this.submitTicketButtonInIncidentPanel.Size = new System.Drawing.Size(99, 27);
+            this.submitTicketButtonInIncidentPanel.Size = new System.Drawing.Size(132, 33);
             this.submitTicketButtonInIncidentPanel.TabIndex = 27;
             this.submitTicketButtonInIncidentPanel.Text = "Submit ticket";
             this.submitTicketButtonInIncidentPanel.UseVisualStyleBackColor = false;
@@ -218,10 +218,10 @@ namespace UI
             // 
             // cancelButtonInIncidentPanel
             // 
-            this.cancelButtonInIncidentPanel.Location = new System.Drawing.Point(187, 216);
+            this.cancelButtonInIncidentPanel.Location = new System.Drawing.Point(249, 266);
             this.cancelButtonInIncidentPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.cancelButtonInIncidentPanel.Name = "cancelButtonInIncidentPanel";
-            this.cancelButtonInIncidentPanel.Size = new System.Drawing.Size(77, 27);
+            this.cancelButtonInIncidentPanel.Size = new System.Drawing.Size(103, 33);
             this.cancelButtonInIncidentPanel.TabIndex = 26;
             this.cancelButtonInIncidentPanel.Text = "Cancel";
             this.cancelButtonInIncidentPanel.UseVisualStyleBackColor = true;
@@ -229,10 +229,10 @@ namespace UI
             // 
             // descriptionTextBox
             // 
-            this.descriptionTextBox.Location = new System.Drawing.Point(187, 165);
+            this.descriptionTextBox.Location = new System.Drawing.Point(249, 203);
             this.descriptionTextBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(193, 20);
+            this.descriptionTextBox.Size = new System.Drawing.Size(256, 22);
             this.descriptionTextBox.TabIndex = 25;
             // 
             // deadlineComboBox
@@ -250,10 +250,10 @@ namespace UI
             "6 days",
             "1 week",
             "2 weeks"});
-            this.deadlineComboBox.Location = new System.Drawing.Point(187, 144);
+            this.deadlineComboBox.Location = new System.Drawing.Point(249, 177);
             this.deadlineComboBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.deadlineComboBox.Name = "deadlineComboBox";
-            this.deadlineComboBox.Size = new System.Drawing.Size(193, 21);
+            this.deadlineComboBox.Size = new System.Drawing.Size(256, 24);
             this.deadlineComboBox.TabIndex = 24;
             // 
             // priorityComboBox
@@ -264,18 +264,18 @@ namespace UI
             "High",
             "Normal",
             "Low"});
-            this.priorityComboBox.Location = new System.Drawing.Point(187, 121);
+            this.priorityComboBox.Location = new System.Drawing.Point(249, 149);
             this.priorityComboBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.priorityComboBox.Name = "priorityComboBox";
-            this.priorityComboBox.Size = new System.Drawing.Size(193, 21);
+            this.priorityComboBox.Size = new System.Drawing.Size(256, 24);
             this.priorityComboBox.TabIndex = 23;
             // 
             // reportedByUserTextBox
             // 
-            this.reportedByUserTextBox.Location = new System.Drawing.Point(187, 101);
+            this.reportedByUserTextBox.Location = new System.Drawing.Point(249, 124);
             this.reportedByUserTextBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.reportedByUserTextBox.Name = "reportedByUserTextBox";
-            this.reportedByUserTextBox.Size = new System.Drawing.Size(193, 20);
+            this.reportedByUserTextBox.Size = new System.Drawing.Size(256, 22);
             this.reportedByUserTextBox.TabIndex = 22;
             // 
             // typeOfIncidentComboBox
@@ -291,57 +291,57 @@ namespace UI
             "Network",
             "UserRelated",
             "ChangeRelated"});
-            this.typeOfIncidentComboBox.Location = new System.Drawing.Point(187, 81);
+            this.typeOfIncidentComboBox.Location = new System.Drawing.Point(249, 100);
             this.typeOfIncidentComboBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.typeOfIncidentComboBox.Name = "typeOfIncidentComboBox";
-            this.typeOfIncidentComboBox.Size = new System.Drawing.Size(193, 21);
+            this.typeOfIncidentComboBox.Size = new System.Drawing.Size(256, 24);
             this.typeOfIncidentComboBox.TabIndex = 21;
             // 
             // subjectOfIncidentTextBox
             // 
-            this.subjectOfIncidentTextBox.Location = new System.Drawing.Point(187, 61);
+            this.subjectOfIncidentTextBox.Location = new System.Drawing.Point(249, 75);
             this.subjectOfIncidentTextBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.subjectOfIncidentTextBox.Name = "subjectOfIncidentTextBox";
-            this.subjectOfIncidentTextBox.Size = new System.Drawing.Size(193, 20);
+            this.subjectOfIncidentTextBox.Size = new System.Drawing.Size(256, 22);
             this.subjectOfIncidentTextBox.TabIndex = 20;
             // 
             // descriptionLabelInIncidentPanel
             // 
             this.descriptionLabelInIncidentPanel.AutoSize = true;
-            this.descriptionLabelInIncidentPanel.Location = new System.Drawing.Point(81, 168);
+            this.descriptionLabelInIncidentPanel.Location = new System.Drawing.Point(108, 207);
             this.descriptionLabelInIncidentPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.descriptionLabelInIncidentPanel.Name = "descriptionLabelInIncidentPanel";
-            this.descriptionLabelInIncidentPanel.Size = new System.Drawing.Size(63, 13);
+            this.descriptionLabelInIncidentPanel.Size = new System.Drawing.Size(78, 16);
             this.descriptionLabelInIncidentPanel.TabIndex = 19;
             this.descriptionLabelInIncidentPanel.Text = "Description:";
             // 
             // deadlineLabelInIncidentLabel
             // 
             this.deadlineLabelInIncidentLabel.AutoSize = true;
-            this.deadlineLabelInIncidentLabel.Location = new System.Drawing.Point(81, 147);
+            this.deadlineLabelInIncidentLabel.Location = new System.Drawing.Point(108, 181);
             this.deadlineLabelInIncidentLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.deadlineLabelInIncidentLabel.Name = "deadlineLabelInIncidentLabel";
-            this.deadlineLabelInIncidentLabel.Size = new System.Drawing.Size(99, 13);
+            this.deadlineLabelInIncidentLabel.Size = new System.Drawing.Size(121, 16);
             this.deadlineLabelInIncidentLabel.TabIndex = 18;
             this.deadlineLabelInIncidentLabel.Text = "Deadline/follow up:";
             // 
             // priorityLabelInIncididentPanel
             // 
             this.priorityLabelInIncididentPanel.AutoSize = true;
-            this.priorityLabelInIncididentPanel.Location = new System.Drawing.Point(81, 126);
+            this.priorityLabelInIncididentPanel.Location = new System.Drawing.Point(108, 155);
             this.priorityLabelInIncididentPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.priorityLabelInIncididentPanel.Name = "priorityLabelInIncididentPanel";
-            this.priorityLabelInIncididentPanel.Size = new System.Drawing.Size(41, 13);
+            this.priorityLabelInIncididentPanel.Size = new System.Drawing.Size(51, 16);
             this.priorityLabelInIncididentPanel.TabIndex = 17;
             this.priorityLabelInIncididentPanel.Text = "Priority:";
             // 
             // reportedByUserInIncidentPanel
             // 
             this.reportedByUserInIncidentPanel.AutoSize = true;
-            this.reportedByUserInIncidentPanel.Location = new System.Drawing.Point(81, 104);
+            this.reportedByUserInIncidentPanel.Location = new System.Drawing.Point(108, 128);
             this.reportedByUserInIncidentPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.reportedByUserInIncidentPanel.Name = "reportedByUserInIncidentPanel";
-            this.reportedByUserInIncidentPanel.Size = new System.Drawing.Size(91, 13);
+            this.reportedByUserInIncidentPanel.Size = new System.Drawing.Size(114, 16);
             this.reportedByUserInIncidentPanel.TabIndex = 16;
             this.reportedByUserInIncidentPanel.Text = "Reported by user:";
             // 
@@ -349,10 +349,10 @@ namespace UI
             // 
             this.typeOfIncidentLabelInIncidentLabel.AutoSize = true;
             this.typeOfIncidentLabelInIncidentLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.typeOfIncidentLabelInIncidentLabel.Location = new System.Drawing.Point(81, 86);
+            this.typeOfIncidentLabelInIncidentLabel.Location = new System.Drawing.Point(108, 106);
             this.typeOfIncidentLabelInIncidentLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.typeOfIncidentLabelInIncidentLabel.Name = "typeOfIncidentLabelInIncidentLabel";
-            this.typeOfIncidentLabelInIncidentLabel.Size = new System.Drawing.Size(94, 15);
+            this.typeOfIncidentLabelInIncidentLabel.Size = new System.Drawing.Size(118, 20);
             this.typeOfIncidentLabelInIncidentLabel.TabIndex = 15;
             this.typeOfIncidentLabelInIncidentLabel.Text = "Type of incident:";
             // 
@@ -360,10 +360,10 @@ namespace UI
             // 
             this.subjectOfIncidentLabelInIncidentPanel.AutoSize = true;
             this.subjectOfIncidentLabelInIncidentPanel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.subjectOfIncidentLabelInIncidentPanel.Location = new System.Drawing.Point(81, 64);
+            this.subjectOfIncidentLabelInIncidentPanel.Location = new System.Drawing.Point(108, 79);
             this.subjectOfIncidentLabelInIncidentPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.subjectOfIncidentLabelInIncidentPanel.Name = "subjectOfIncidentLabelInIncidentPanel";
-            this.subjectOfIncidentLabelInIncidentPanel.Size = new System.Drawing.Size(109, 15);
+            this.subjectOfIncidentLabelInIncidentPanel.Size = new System.Drawing.Size(136, 20);
             this.subjectOfIncidentLabelInIncidentPanel.TabIndex = 14;
             this.subjectOfIncidentLabelInIncidentPanel.Text = "Subject of incident:";
             // 
@@ -371,10 +371,10 @@ namespace UI
             // 
             this.labelIncidentTicket.AutoSize = true;
             this.labelIncidentTicket.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.labelIncidentTicket.Location = new System.Drawing.Point(79, 14);
+            this.labelIncidentTicket.Location = new System.Drawing.Point(105, 17);
             this.labelIncidentTicket.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelIncidentTicket.Name = "labelIncidentTicket";
-            this.labelIncidentTicket.Size = new System.Drawing.Size(408, 45);
+            this.labelIncidentTicket.Size = new System.Drawing.Size(514, 54);
             this.labelIncidentTicket.TabIndex = 10;
             this.labelIncidentTicket.Text = "Create new incident ticket";
             // 
@@ -391,17 +391,18 @@ namespace UI
             this.overviewTicketsPanel.Controls.Add(this.createIncidentButton);
             this.overviewTicketsPanel.Controls.Add(this.overviewTicketsLabel);
             this.overviewTicketsPanel.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.overviewTicketsPanel.Location = new System.Drawing.Point(1, 98);
-            this.overviewTicketsPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 3);
+            this.overviewTicketsPanel.Location = new System.Drawing.Point(1, 121);
+            this.overviewTicketsPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 4);
             this.overviewTicketsPanel.Name = "overviewTicketsPanel";
-            this.overviewTicketsPanel.Size = new System.Drawing.Size(613, 389);
+            this.overviewTicketsPanel.Size = new System.Drawing.Size(817, 479);
             this.overviewTicketsPanel.TabIndex = 1;
             // 
             // TransferServiceDeskEmployeeButton
             // 
-            this.TransferServiceDeskEmployeeButton.Location = new System.Drawing.Point(266, 339);
+            this.TransferServiceDeskEmployeeButton.Location = new System.Drawing.Point(355, 417);
+            this.TransferServiceDeskEmployeeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TransferServiceDeskEmployeeButton.Name = "TransferServiceDeskEmployeeButton";
-            this.TransferServiceDeskEmployeeButton.Size = new System.Drawing.Size(69, 28);
+            this.TransferServiceDeskEmployeeButton.Size = new System.Drawing.Size(92, 34);
             this.TransferServiceDeskEmployeeButton.TabIndex = 11;
             this.TransferServiceDeskEmployeeButton.Text = "Transfer";
             this.TransferServiceDeskEmployeeButton.UseVisualStyleBackColor = true;
@@ -415,27 +416,29 @@ namespace UI
             "Low",
             "Normal",
             "High"});
-            this.sortByPriorityComboBox.Location = new System.Drawing.Point(105, 43);
-            this.sortByPriorityComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sortByPriorityComboBox.Location = new System.Drawing.Point(140, 53);
+            this.sortByPriorityComboBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.sortByPriorityComboBox.Name = "sortByPriorityComboBox";
-            this.sortByPriorityComboBox.Size = new System.Drawing.Size(115, 21);
+            this.sortByPriorityComboBox.Size = new System.Drawing.Size(152, 24);
             this.sortByPriorityComboBox.TabIndex = 10;
             this.sortByPriorityComboBox.SelectedIndexChanged += new System.EventHandler(this.sortByPriorityComboBox_SelectedIndexChanged);
             // 
             // sortByPriorityLabel
             // 
             this.sortByPriorityLabel.AutoSize = true;
-            this.sortByPriorityLabel.Location = new System.Drawing.Point(25, 46);
+            this.sortByPriorityLabel.Location = new System.Drawing.Point(33, 57);
+            this.sortByPriorityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sortByPriorityLabel.Name = "sortByPriorityLabel";
-            this.sortByPriorityLabel.Size = new System.Drawing.Size(75, 13);
+            this.sortByPriorityLabel.Size = new System.Drawing.Size(93, 16);
             this.sortByPriorityLabel.TabIndex = 9;
             this.sortByPriorityLabel.Text = "Priorty Sort by:";
             // 
             // createButtonInOverviewTickets
             // 
-            this.createButtonInOverviewTickets.Location = new System.Drawing.Point(187, 339);
+            this.createButtonInOverviewTickets.Location = new System.Drawing.Point(249, 417);
+            this.createButtonInOverviewTickets.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.createButtonInOverviewTickets.Name = "createButtonInOverviewTickets";
-            this.createButtonInOverviewTickets.Size = new System.Drawing.Size(69, 28);
+            this.createButtonInOverviewTickets.Size = new System.Drawing.Size(92, 34);
             this.createButtonInOverviewTickets.TabIndex = 8;
             this.createButtonInOverviewTickets.Text = "Create";
             this.createButtonInOverviewTickets.UseVisualStyleBackColor = true;
@@ -443,9 +446,10 @@ namespace UI
             // 
             // closeTicketButton
             // 
-            this.closeTicketButton.Location = new System.Drawing.Point(511, 339);
+            this.closeTicketButton.Location = new System.Drawing.Point(681, 417);
+            this.closeTicketButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.closeTicketButton.Name = "closeTicketButton";
-            this.closeTicketButton.Size = new System.Drawing.Size(83, 28);
+            this.closeTicketButton.Size = new System.Drawing.Size(111, 34);
             this.closeTicketButton.TabIndex = 7;
             this.closeTicketButton.Text = "Close Ticket";
             this.closeTicketButton.UseVisualStyleBackColor = true;
@@ -453,9 +457,10 @@ namespace UI
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(105, 339);
+            this.deleteButton.Location = new System.Drawing.Point(140, 417);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(69, 28);
+            this.deleteButton.Size = new System.Drawing.Size(92, 34);
             this.deleteButton.TabIndex = 6;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -463,9 +468,10 @@ namespace UI
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(25, 339);
+            this.updateButton.Location = new System.Drawing.Point(33, 417);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(69, 28);
+            this.updateButton.Size = new System.Drawing.Size(92, 34);
             this.updateButton.TabIndex = 5;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = true;
@@ -482,11 +488,11 @@ namespace UI
             this.overviewTicketsListView.FullRowSelect = true;
             this.overviewTicketsListView.HideSelection = false;
             this.overviewTicketsListView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.overviewTicketsListView.Location = new System.Drawing.Point(23, 71);
-            this.overviewTicketsListView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.overviewTicketsListView.Location = new System.Drawing.Point(31, 87);
+            this.overviewTicketsListView.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.overviewTicketsListView.MultiSelect = false;
             this.overviewTicketsListView.Name = "overviewTicketsListView";
-            this.overviewTicketsListView.Size = new System.Drawing.Size(571, 260);
+            this.overviewTicketsListView.Size = new System.Drawing.Size(760, 319);
             this.overviewTicketsListView.TabIndex = 2;
             this.overviewTicketsListView.UseCompatibleStateImageBehavior = false;
             this.overviewTicketsListView.View = System.Windows.Forms.View.Details;
@@ -520,10 +526,10 @@ namespace UI
             // 
             this.createIncidentButton.BackColor = System.Drawing.Color.CornflowerBlue;
             this.createIncidentButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.createIncidentButton.Location = new System.Drawing.Point(491, 37);
-            this.createIncidentButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.createIncidentButton.Location = new System.Drawing.Point(655, 46);
+            this.createIncidentButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.createIncidentButton.Name = "createIncidentButton";
-            this.createIncidentButton.Size = new System.Drawing.Size(103, 30);
+            this.createIncidentButton.Size = new System.Drawing.Size(137, 37);
             this.createIncidentButton.TabIndex = 1;
             this.createIncidentButton.Text = "Create incident";
             this.createIncidentButton.UseVisualStyleBackColor = false;
@@ -533,9 +539,10 @@ namespace UI
             // 
             this.overviewTicketsLabel.AutoSize = true;
             this.overviewTicketsLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.overviewTicketsLabel.Location = new System.Drawing.Point(37, 1);
+            this.overviewTicketsLabel.Location = new System.Drawing.Point(49, 1);
+            this.overviewTicketsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.overviewTicketsLabel.Name = "overviewTicketsLabel";
-            this.overviewTicketsLabel.Size = new System.Drawing.Size(274, 45);
+            this.overviewTicketsLabel.Size = new System.Drawing.Size(343, 54);
             this.overviewTicketsLabel.TabIndex = 0;
             this.overviewTicketsLabel.Text = "Overview Tickets";
             // 
@@ -546,9 +553,10 @@ namespace UI
             this.UserManagementPanel.Controls.Add(this.FilterByEmailLabelUserManagement);
             this.UserManagementPanel.Controls.Add(this.FilterByEmailTextBoxUserManagement);
             this.UserManagementPanel.Controls.Add(this.TitleUserManagementPanel);
-            this.UserManagementPanel.Location = new System.Drawing.Point(1, 98);
+            this.UserManagementPanel.Location = new System.Drawing.Point(1, 121);
+            this.UserManagementPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UserManagementPanel.Name = "UserManagementPanel";
-            this.UserManagementPanel.Size = new System.Drawing.Size(613, 388);
+            this.UserManagementPanel.Size = new System.Drawing.Size(817, 478);
             this.UserManagementPanel.TabIndex = 1;
             // 
             // UserListView
@@ -559,10 +567,10 @@ namespace UI
             this.EmployeeName,
             this.Tickets});
             this.UserListView.HideSelection = false;
-            this.UserListView.Location = new System.Drawing.Point(69, 68);
+            this.UserListView.Location = new System.Drawing.Point(92, 84);
             this.UserListView.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.UserListView.Name = "UserListView";
-            this.UserListView.Size = new System.Drawing.Size(459, 216);
+            this.UserListView.Size = new System.Drawing.Size(611, 265);
             this.UserListView.TabIndex = 6;
             this.UserListView.UseCompatibleStateImageBehavior = false;
             this.UserListView.View = System.Windows.Forms.View.Details;
@@ -590,10 +598,10 @@ namespace UI
             // AddNewUserButtonUserManagement
             // 
             this.AddNewUserButtonUserManagement.BackColor = System.Drawing.Color.Lime;
-            this.AddNewUserButtonUserManagement.Location = new System.Drawing.Point(445, 32);
+            this.AddNewUserButtonUserManagement.Location = new System.Drawing.Point(593, 39);
             this.AddNewUserButtonUserManagement.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.AddNewUserButtonUserManagement.Name = "AddNewUserButtonUserManagement";
-            this.AddNewUserButtonUserManagement.Size = new System.Drawing.Size(81, 23);
+            this.AddNewUserButtonUserManagement.Size = new System.Drawing.Size(108, 28);
             this.AddNewUserButtonUserManagement.TabIndex = 5;
             this.AddNewUserButtonUserManagement.Text = "+ADD NEW USER";
             this.AddNewUserButtonUserManagement.UseVisualStyleBackColor = false;
@@ -602,19 +610,19 @@ namespace UI
             // FilterByEmailLabelUserManagement
             // 
             this.FilterByEmailLabelUserManagement.AutoSize = true;
-            this.FilterByEmailLabelUserManagement.Location = new System.Drawing.Point(67, 37);
+            this.FilterByEmailLabelUserManagement.Location = new System.Drawing.Point(89, 46);
             this.FilterByEmailLabelUserManagement.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.FilterByEmailLabelUserManagement.Name = "FilterByEmailLabelUserManagement";
-            this.FilterByEmailLabelUserManagement.Size = new System.Drawing.Size(76, 13);
+            this.FilterByEmailLabelUserManagement.Size = new System.Drawing.Size(96, 16);
             this.FilterByEmailLabelUserManagement.TabIndex = 4;
             this.FilterByEmailLabelUserManagement.Text = "Filter by email: ";
             // 
             // FilterByEmailTextBoxUserManagement
             // 
-            this.FilterByEmailTextBoxUserManagement.Location = new System.Drawing.Point(143, 35);
+            this.FilterByEmailTextBoxUserManagement.Location = new System.Drawing.Point(191, 43);
             this.FilterByEmailTextBoxUserManagement.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.FilterByEmailTextBoxUserManagement.Name = "FilterByEmailTextBoxUserManagement";
-            this.FilterByEmailTextBoxUserManagement.Size = new System.Drawing.Size(117, 20);
+            this.FilterByEmailTextBoxUserManagement.Size = new System.Drawing.Size(155, 22);
             this.FilterByEmailTextBoxUserManagement.TabIndex = 3;
             this.FilterByEmailTextBoxUserManagement.TextChanged += new System.EventHandler(this.FilterByEmailTextBoxUserManagement_TextChanged);
             // 
@@ -622,19 +630,19 @@ namespace UI
             // 
             this.TitleUserManagementPanel.AutoSize = true;
             this.TitleUserManagementPanel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.TitleUserManagementPanel.Location = new System.Drawing.Point(69, 6);
+            this.TitleUserManagementPanel.Location = new System.Drawing.Point(92, 7);
             this.TitleUserManagementPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.TitleUserManagementPanel.Name = "TitleUserManagementPanel";
-            this.TitleUserManagementPanel.Size = new System.Drawing.Size(223, 32);
+            this.TitleUserManagementPanel.Size = new System.Drawing.Size(276, 41);
             this.TitleUserManagementPanel.TabIndex = 2;
             this.TitleUserManagementPanel.Text = "User Management";
             // 
             // LogOutButton
             // 
-            this.LogOutButton.Location = new System.Drawing.Point(551, 9);
+            this.LogOutButton.Location = new System.Drawing.Point(735, 11);
             this.LogOutButton.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.LogOutButton.Name = "LogOutButton";
-            this.LogOutButton.Size = new System.Drawing.Size(54, 25);
+            this.LogOutButton.Size = new System.Drawing.Size(72, 31);
             this.LogOutButton.TabIndex = 1;
             this.LogOutButton.Text = "Log out";
             this.LogOutButton.UseVisualStyleBackColor = true;
@@ -660,48 +668,48 @@ namespace UI
             this.CreateNewUserPanel.Controls.Add(this.TypeUserLabelCreateUserPanel);
             this.CreateNewUserPanel.Controls.Add(this.FullNameLabelCreateUserPanel);
             this.CreateNewUserPanel.Controls.Add(this.HeaderLabelCreateUserPanel);
-            this.CreateNewUserPanel.Location = new System.Drawing.Point(3, 98);
+            this.CreateNewUserPanel.Location = new System.Drawing.Point(4, 121);
             this.CreateNewUserPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.CreateNewUserPanel.Name = "CreateNewUserPanel";
-            this.CreateNewUserPanel.Size = new System.Drawing.Size(612, 391);
+            this.CreateNewUserPanel.Size = new System.Drawing.Size(816, 481);
             this.CreateNewUserPanel.TabIndex = 6;
             // 
             // PasswordTextboxCreateUserPanel
             // 
-            this.PasswordTextboxCreateUserPanel.Location = new System.Drawing.Point(263, 137);
+            this.PasswordTextboxCreateUserPanel.Location = new System.Drawing.Point(351, 169);
             this.PasswordTextboxCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.PasswordTextboxCreateUserPanel.Name = "PasswordTextboxCreateUserPanel";
             this.PasswordTextboxCreateUserPanel.PasswordChar = '●';
-            this.PasswordTextboxCreateUserPanel.Size = new System.Drawing.Size(245, 20);
+            this.PasswordTextboxCreateUserPanel.Size = new System.Drawing.Size(325, 22);
             this.PasswordTextboxCreateUserPanel.TabIndex = 24;
             // 
             // PasswordLabelCreateUserPanel
             // 
             this.PasswordLabelCreateUserPanel.AutoSize = true;
             this.PasswordLabelCreateUserPanel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.PasswordLabelCreateUserPanel.Location = new System.Drawing.Point(103, 133);
+            this.PasswordLabelCreateUserPanel.Location = new System.Drawing.Point(137, 164);
             this.PasswordLabelCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.PasswordLabelCreateUserPanel.Name = "PasswordLabelCreateUserPanel";
-            this.PasswordLabelCreateUserPanel.Size = new System.Drawing.Size(95, 25);
+            this.PasswordLabelCreateUserPanel.Size = new System.Drawing.Size(116, 32);
             this.PasswordLabelCreateUserPanel.TabIndex = 23;
             this.PasswordLabelCreateUserPanel.Text = "Password:";
             // 
             // UsernameTextboxCreateUserPanel
             // 
-            this.UsernameTextboxCreateUserPanel.Location = new System.Drawing.Point(263, 111);
+            this.UsernameTextboxCreateUserPanel.Location = new System.Drawing.Point(351, 137);
             this.UsernameTextboxCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.UsernameTextboxCreateUserPanel.Name = "UsernameTextboxCreateUserPanel";
-            this.UsernameTextboxCreateUserPanel.Size = new System.Drawing.Size(245, 20);
+            this.UsernameTextboxCreateUserPanel.Size = new System.Drawing.Size(325, 22);
             this.UsernameTextboxCreateUserPanel.TabIndex = 21;
             // 
             // UsernameLabelCreateUserPanel
             // 
             this.UsernameLabelCreateUserPanel.AutoSize = true;
             this.UsernameLabelCreateUserPanel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.UsernameLabelCreateUserPanel.Location = new System.Drawing.Point(103, 107);
+            this.UsernameLabelCreateUserPanel.Location = new System.Drawing.Point(137, 132);
             this.UsernameLabelCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.UsernameLabelCreateUserPanel.Name = "UsernameLabelCreateUserPanel";
-            this.UsernameLabelCreateUserPanel.Size = new System.Drawing.Size(101, 25);
+            this.UsernameLabelCreateUserPanel.Size = new System.Drawing.Size(126, 32);
             this.UsernameLabelCreateUserPanel.TabIndex = 20;
             this.UsernameLabelCreateUserPanel.Text = "Username:";
             // 
@@ -713,10 +721,10 @@ namespace UI
             "Haarlem",
             "Amsterdam",
             "Utrecht"});
-            this.LocationComboboxCreateUserPanel.Location = new System.Drawing.Point(263, 246);
+            this.LocationComboboxCreateUserPanel.Location = new System.Drawing.Point(351, 303);
             this.LocationComboboxCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.LocationComboboxCreateUserPanel.Name = "LocationComboboxCreateUserPanel";
-            this.LocationComboboxCreateUserPanel.Size = new System.Drawing.Size(245, 21);
+            this.LocationComboboxCreateUserPanel.Size = new System.Drawing.Size(325, 24);
             this.LocationComboboxCreateUserPanel.TabIndex = 19;
             // 
             // TypeUserComboboxCreateUserPanel
@@ -726,20 +734,20 @@ namespace UI
             this.TypeUserComboboxCreateUserPanel.Items.AddRange(new object[] {
             "Regular",
             "ServiceDesk"});
-            this.TypeUserComboboxCreateUserPanel.Location = new System.Drawing.Point(263, 163);
+            this.TypeUserComboboxCreateUserPanel.Location = new System.Drawing.Point(351, 201);
             this.TypeUserComboboxCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.TypeUserComboboxCreateUserPanel.Name = "TypeUserComboboxCreateUserPanel";
-            this.TypeUserComboboxCreateUserPanel.Size = new System.Drawing.Size(245, 21);
+            this.TypeUserComboboxCreateUserPanel.Size = new System.Drawing.Size(325, 24);
             this.TypeUserComboboxCreateUserPanel.TabIndex = 18;
             // 
             // CancelButtonCreateUserPanel
             // 
             this.CancelButtonCreateUserPanel.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.CancelButtonCreateUserPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CancelButtonCreateUserPanel.Location = new System.Drawing.Point(283, 296);
+            this.CancelButtonCreateUserPanel.Location = new System.Drawing.Point(377, 364);
             this.CancelButtonCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.CancelButtonCreateUserPanel.Name = "CancelButtonCreateUserPanel";
-            this.CancelButtonCreateUserPanel.Size = new System.Drawing.Size(90, 26);
+            this.CancelButtonCreateUserPanel.Size = new System.Drawing.Size(120, 32);
             this.CancelButtonCreateUserPanel.TabIndex = 17;
             this.CancelButtonCreateUserPanel.Text = "CANCEL";
             this.CancelButtonCreateUserPanel.UseVisualStyleBackColor = false;
@@ -749,10 +757,10 @@ namespace UI
             // 
             this.AddUserButtonCreateUserPanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.AddUserButtonCreateUserPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AddUserButtonCreateUserPanel.Location = new System.Drawing.Point(389, 296);
+            this.AddUserButtonCreateUserPanel.Location = new System.Drawing.Point(519, 364);
             this.AddUserButtonCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.AddUserButtonCreateUserPanel.Name = "AddUserButtonCreateUserPanel";
-            this.AddUserButtonCreateUserPanel.Size = new System.Drawing.Size(90, 26);
+            this.AddUserButtonCreateUserPanel.Size = new System.Drawing.Size(120, 32);
             this.AddUserButtonCreateUserPanel.TabIndex = 16;
             this.AddUserButtonCreateUserPanel.Text = "ADD USER";
             this.AddUserButtonCreateUserPanel.UseVisualStyleBackColor = false;
@@ -760,36 +768,36 @@ namespace UI
             // 
             // PhoneTextboxCreateUserPanel
             // 
-            this.PhoneTextboxCreateUserPanel.Location = new System.Drawing.Point(263, 219);
+            this.PhoneTextboxCreateUserPanel.Location = new System.Drawing.Point(351, 270);
             this.PhoneTextboxCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.PhoneTextboxCreateUserPanel.Name = "PhoneTextboxCreateUserPanel";
-            this.PhoneTextboxCreateUserPanel.Size = new System.Drawing.Size(245, 20);
+            this.PhoneTextboxCreateUserPanel.Size = new System.Drawing.Size(325, 22);
             this.PhoneTextboxCreateUserPanel.TabIndex = 12;
             // 
             // EmailTextboxCreateUserPanel
             // 
-            this.EmailTextboxCreateUserPanel.Location = new System.Drawing.Point(263, 192);
+            this.EmailTextboxCreateUserPanel.Location = new System.Drawing.Point(351, 236);
             this.EmailTextboxCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.EmailTextboxCreateUserPanel.Name = "EmailTextboxCreateUserPanel";
-            this.EmailTextboxCreateUserPanel.Size = new System.Drawing.Size(245, 20);
+            this.EmailTextboxCreateUserPanel.Size = new System.Drawing.Size(325, 22);
             this.EmailTextboxCreateUserPanel.TabIndex = 11;
             // 
             // FullNameTextboxCreateUserPanel
             // 
-            this.FullNameTextboxCreateUserPanel.Location = new System.Drawing.Point(263, 83);
+            this.FullNameTextboxCreateUserPanel.Location = new System.Drawing.Point(351, 102);
             this.FullNameTextboxCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.FullNameTextboxCreateUserPanel.Name = "FullNameTextboxCreateUserPanel";
-            this.FullNameTextboxCreateUserPanel.Size = new System.Drawing.Size(245, 20);
+            this.FullNameTextboxCreateUserPanel.Size = new System.Drawing.Size(325, 22);
             this.FullNameTextboxCreateUserPanel.TabIndex = 8;
             // 
             // LocationLabelCreateUserPanel
             // 
             this.LocationLabelCreateUserPanel.AutoSize = true;
             this.LocationLabelCreateUserPanel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.LocationLabelCreateUserPanel.Location = new System.Drawing.Point(103, 244);
+            this.LocationLabelCreateUserPanel.Location = new System.Drawing.Point(137, 300);
             this.LocationLabelCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.LocationLabelCreateUserPanel.Name = "LocationLabelCreateUserPanel";
-            this.LocationLabelCreateUserPanel.Size = new System.Drawing.Size(154, 25);
+            this.LocationLabelCreateUserPanel.Size = new System.Drawing.Size(191, 32);
             this.LocationLabelCreateUserPanel.TabIndex = 6;
             this.LocationLabelCreateUserPanel.Text = "Location/branch:";
             // 
@@ -797,10 +805,10 @@ namespace UI
             // 
             this.PhoneLabelCreateUserPanel.AutoSize = true;
             this.PhoneLabelCreateUserPanel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.PhoneLabelCreateUserPanel.Location = new System.Drawing.Point(103, 216);
+            this.PhoneLabelCreateUserPanel.Location = new System.Drawing.Point(137, 266);
             this.PhoneLabelCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.PhoneLabelCreateUserPanel.Name = "PhoneLabelCreateUserPanel";
-            this.PhoneLabelCreateUserPanel.Size = new System.Drawing.Size(141, 25);
+            this.PhoneLabelCreateUserPanel.Size = new System.Drawing.Size(178, 32);
             this.PhoneLabelCreateUserPanel.TabIndex = 5;
             this.PhoneLabelCreateUserPanel.Text = "Phone number:";
             // 
@@ -808,10 +816,10 @@ namespace UI
             // 
             this.EmailLabelCreateUserPanel.AutoSize = true;
             this.EmailLabelCreateUserPanel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.EmailLabelCreateUserPanel.Location = new System.Drawing.Point(103, 188);
+            this.EmailLabelCreateUserPanel.Location = new System.Drawing.Point(137, 231);
             this.EmailLabelCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.EmailLabelCreateUserPanel.Name = "EmailLabelCreateUserPanel";
-            this.EmailLabelCreateUserPanel.Size = new System.Drawing.Size(140, 25);
+            this.EmailLabelCreateUserPanel.Size = new System.Drawing.Size(174, 32);
             this.EmailLabelCreateUserPanel.TabIndex = 4;
             this.EmailLabelCreateUserPanel.Text = "E-mail address:";
             // 
@@ -819,10 +827,10 @@ namespace UI
             // 
             this.TypeUserLabelCreateUserPanel.AutoSize = true;
             this.TypeUserLabelCreateUserPanel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.TypeUserLabelCreateUserPanel.Location = new System.Drawing.Point(103, 160);
+            this.TypeUserLabelCreateUserPanel.Location = new System.Drawing.Point(137, 197);
             this.TypeUserLabelCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.TypeUserLabelCreateUserPanel.Name = "TypeUserLabelCreateUserPanel";
-            this.TypeUserLabelCreateUserPanel.Size = new System.Drawing.Size(118, 25);
+            this.TypeUserLabelCreateUserPanel.Size = new System.Drawing.Size(151, 32);
             this.TypeUserLabelCreateUserPanel.TabIndex = 3;
             this.TypeUserLabelCreateUserPanel.Text = "Type of user:";
             // 
@@ -830,10 +838,10 @@ namespace UI
             // 
             this.FullNameLabelCreateUserPanel.AutoSize = true;
             this.FullNameLabelCreateUserPanel.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.FullNameLabelCreateUserPanel.Location = new System.Drawing.Point(103, 80);
+            this.FullNameLabelCreateUserPanel.Location = new System.Drawing.Point(137, 98);
             this.FullNameLabelCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.FullNameLabelCreateUserPanel.Name = "FullNameLabelCreateUserPanel";
-            this.FullNameLabelCreateUserPanel.Size = new System.Drawing.Size(98, 25);
+            this.FullNameLabelCreateUserPanel.Size = new System.Drawing.Size(124, 32);
             this.FullNameLabelCreateUserPanel.TabIndex = 1;
             this.FullNameLabelCreateUserPanel.Text = "Full name:";
             // 
@@ -841,10 +849,10 @@ namespace UI
             // 
             this.HeaderLabelCreateUserPanel.AutoSize = true;
             this.HeaderLabelCreateUserPanel.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
-            this.HeaderLabelCreateUserPanel.Location = new System.Drawing.Point(96, 16);
+            this.HeaderLabelCreateUserPanel.Location = new System.Drawing.Point(128, 20);
             this.HeaderLabelCreateUserPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.HeaderLabelCreateUserPanel.Name = "HeaderLabelCreateUserPanel";
-            this.HeaderLabelCreateUserPanel.Size = new System.Drawing.Size(284, 47);
+            this.HeaderLabelCreateUserPanel.Size = new System.Drawing.Size(357, 60);
             this.HeaderLabelCreateUserPanel.TabIndex = 0;
             this.HeaderLabelCreateUserPanel.Text = "Create new user";
             // 
@@ -861,10 +869,10 @@ namespace UI
             this.LoginPanel.Controls.Add(this.LoginPanelLoginButton);
             this.LoginPanel.Controls.Add(this.LoginPanelPasswordLabel);
             this.LoginPanel.Controls.Add(this.LoginPanelUsernameLabel);
-            this.LoginPanel.Location = new System.Drawing.Point(1, 3);
+            this.LoginPanel.Location = new System.Drawing.Point(1, 4);
             this.LoginPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(615, 484);
+            this.LoginPanel.Size = new System.Drawing.Size(820, 596);
             this.LoginPanel.TabIndex = 4;
             // 
             // ResetPasswordLabel
@@ -873,9 +881,10 @@ namespace UI
             this.ResetPasswordLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ResetPasswordLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.ResetPasswordLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ResetPasswordLabel.Location = new System.Drawing.Point(273, 256);
+            this.ResetPasswordLabel.Location = new System.Drawing.Point(364, 315);
+            this.ResetPasswordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ResetPasswordLabel.Name = "ResetPasswordLabel";
-            this.ResetPasswordLabel.Size = new System.Drawing.Size(132, 17);
+            this.ResetPasswordLabel.Size = new System.Drawing.Size(171, 23);
             this.ResetPasswordLabel.TabIndex = 12;
             this.ResetPasswordLabel.Text = "Forgot Login Details?";
             this.ResetPasswordLabel.Click += new System.EventHandler(this.ResetPasswordLabel_Click);
@@ -883,10 +892,10 @@ namespace UI
             // RememberMeCheckBoxLoginPanel
             // 
             this.RememberMeCheckBoxLoginPanel.AutoSize = true;
-            this.RememberMeCheckBoxLoginPanel.Location = new System.Drawing.Point(273, 228);
+            this.RememberMeCheckBoxLoginPanel.Location = new System.Drawing.Point(364, 281);
             this.RememberMeCheckBoxLoginPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.RememberMeCheckBoxLoginPanel.Name = "RememberMeCheckBoxLoginPanel";
-            this.RememberMeCheckBoxLoginPanel.Size = new System.Drawing.Size(94, 17);
+            this.RememberMeCheckBoxLoginPanel.Size = new System.Drawing.Size(119, 20);
             this.RememberMeCheckBoxLoginPanel.TabIndex = 11;
             this.RememberMeCheckBoxLoginPanel.Text = "Remember me";
             this.RememberMeCheckBoxLoginPanel.UseVisualStyleBackColor = true;
@@ -895,10 +904,10 @@ namespace UI
             // 
             this.TitleDetailLoginPanel.AutoSize = true;
             this.TitleDetailLoginPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic);
-            this.TitleDetailLoginPanel.Location = new System.Drawing.Point(245, 116);
+            this.TitleDetailLoginPanel.Location = new System.Drawing.Point(327, 143);
             this.TitleDetailLoginPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.TitleDetailLoginPanel.Name = "TitleDetailLoginPanel";
-            this.TitleDetailLoginPanel.Size = new System.Drawing.Size(263, 40);
+            this.TitleDetailLoginPanel.Size = new System.Drawing.Size(335, 50);
             this.TitleDetailLoginPanel.TabIndex = 10;
             this.TitleDetailLoginPanel.Text = "Please provide login credentials to login\r\nto NoDesk The Garden Group";
             this.TitleDetailLoginPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -907,47 +916,47 @@ namespace UI
             // 
             this.TitleLoginPanel.AutoSize = true;
             this.TitleLoginPanel.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
-            this.TitleLoginPanel.Location = new System.Drawing.Point(265, 77);
+            this.TitleLoginPanel.Location = new System.Drawing.Point(353, 95);
             this.TitleLoginPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.TitleLoginPanel.Name = "TitleLoginPanel";
-            this.TitleLoginPanel.Size = new System.Drawing.Size(199, 40);
+            this.TitleLoginPanel.Size = new System.Drawing.Size(252, 50);
             this.TitleLoginPanel.TabIndex = 9;
             this.TitleLoginPanel.Text = "NoDesk: TGG";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::UI.Properties.Resources.TheGardenGroupLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 5);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(191, 63);
+            this.pictureBox1.Size = new System.Drawing.Size(255, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
             // LoginPanelUsernameTextBox
             // 
-            this.LoginPanelUsernameTextBox.Location = new System.Drawing.Point(273, 162);
+            this.LoginPanelUsernameTextBox.Location = new System.Drawing.Point(364, 199);
             this.LoginPanelUsernameTextBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.LoginPanelUsernameTextBox.Name = "LoginPanelUsernameTextBox";
-            this.LoginPanelUsernameTextBox.Size = new System.Drawing.Size(129, 20);
+            this.LoginPanelUsernameTextBox.Size = new System.Drawing.Size(171, 22);
             this.LoginPanelUsernameTextBox.TabIndex = 7;
             // 
             // LoginPanelPasswordTextBox
             // 
-            this.LoginPanelPasswordTextBox.Location = new System.Drawing.Point(273, 198);
+            this.LoginPanelPasswordTextBox.Location = new System.Drawing.Point(364, 244);
             this.LoginPanelPasswordTextBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.LoginPanelPasswordTextBox.Name = "LoginPanelPasswordTextBox";
             this.LoginPanelPasswordTextBox.PasswordChar = '*';
-            this.LoginPanelPasswordTextBox.Size = new System.Drawing.Size(129, 20);
+            this.LoginPanelPasswordTextBox.Size = new System.Drawing.Size(171, 22);
             this.LoginPanelPasswordTextBox.TabIndex = 6;
             // 
             // LoginPanelLoginButton
             // 
-            this.LoginPanelLoginButton.Location = new System.Drawing.Point(273, 297);
+            this.LoginPanelLoginButton.Location = new System.Drawing.Point(364, 366);
             this.LoginPanelLoginButton.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.LoginPanelLoginButton.Name = "LoginPanelLoginButton";
-            this.LoginPanelLoginButton.Size = new System.Drawing.Size(78, 27);
+            this.LoginPanelLoginButton.Size = new System.Drawing.Size(104, 33);
             this.LoginPanelLoginButton.TabIndex = 5;
             this.LoginPanelLoginButton.Text = "Log in";
             this.LoginPanelLoginButton.UseVisualStyleBackColor = true;
@@ -957,10 +966,10 @@ namespace UI
             // 
             this.LoginPanelPasswordLabel.AutoSize = true;
             this.LoginPanelPasswordLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LoginPanelPasswordLabel.Location = new System.Drawing.Point(180, 195);
+            this.LoginPanelPasswordLabel.Location = new System.Drawing.Point(240, 240);
             this.LoginPanelPasswordLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.LoginPanelPasswordLabel.Name = "LoginPanelPasswordLabel";
-            this.LoginPanelPasswordLabel.Size = new System.Drawing.Size(86, 21);
+            this.LoginPanelPasswordLabel.Size = new System.Drawing.Size(106, 28);
             this.LoginPanelPasswordLabel.TabIndex = 4;
             this.LoginPanelPasswordLabel.Text = "Password:";
             // 
@@ -968,20 +977,20 @@ namespace UI
             // 
             this.LoginPanelUsernameLabel.AutoSize = true;
             this.LoginPanelUsernameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LoginPanelUsernameLabel.Location = new System.Drawing.Point(180, 159);
+            this.LoginPanelUsernameLabel.Location = new System.Drawing.Point(240, 196);
             this.LoginPanelUsernameLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.LoginPanelUsernameLabel.Name = "LoginPanelUsernameLabel";
-            this.LoginPanelUsernameLabel.Size = new System.Drawing.Size(91, 21);
+            this.LoginPanelUsernameLabel.Size = new System.Drawing.Size(111, 28);
             this.LoginPanelUsernameLabel.TabIndex = 3;
             this.LoginPanelUsernameLabel.Text = "Username:";
             // 
             // LoginPanelLogo
             // 
             this.LoginPanelLogo.Image = global::UI.Properties.Resources.TheGardenGroupLogo;
-            this.LoginPanelLogo.Location = new System.Drawing.Point(7, 3);
+            this.LoginPanelLogo.Location = new System.Drawing.Point(9, 4);
             this.LoginPanelLogo.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.LoginPanelLogo.Name = "LoginPanelLogo";
-            this.LoginPanelLogo.Size = new System.Drawing.Size(191, 63);
+            this.LoginPanelLogo.Size = new System.Drawing.Size(255, 78);
             this.LoginPanelLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LoginPanelLogo.TabIndex = 1;
             this.LoginPanelLogo.TabStop = false;
@@ -1004,17 +1013,17 @@ namespace UI
             this.NavigationPanel.Location = new System.Drawing.Point(1, 1);
             this.NavigationPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.NavigationPanel.Name = "NavigationPanel";
-            this.NavigationPanel.Size = new System.Drawing.Size(615, 487);
+            this.NavigationPanel.Size = new System.Drawing.Size(820, 599);
             this.NavigationPanel.TabIndex = 5;
             // 
             // TitleDetailNavigationPanel
             // 
             this.TitleDetailNavigationPanel.AutoSize = true;
             this.TitleDetailNavigationPanel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic);
-            this.TitleDetailNavigationPanel.Location = new System.Drawing.Point(336, 43);
+            this.TitleDetailNavigationPanel.Location = new System.Drawing.Point(448, 53);
             this.TitleDetailNavigationPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.TitleDetailNavigationPanel.Name = "TitleDetailNavigationPanel";
-            this.TitleDetailNavigationPanel.Size = new System.Drawing.Size(262, 25);
+            this.TitleDetailNavigationPanel.Size = new System.Drawing.Size(334, 32);
             this.TitleDetailNavigationPanel.TabIndex = 5;
             this.TitleDetailNavigationPanel.Text = "Licensed to: The Garden Group";
             // 
@@ -1022,10 +1031,10 @@ namespace UI
             // 
             this.TitleNavigationPanel.AutoSize = true;
             this.TitleNavigationPanel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleNavigationPanel.Location = new System.Drawing.Point(440, 6);
+            this.TitleNavigationPanel.Location = new System.Drawing.Point(587, 7);
             this.TitleNavigationPanel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.TitleNavigationPanel.Name = "TitleNavigationPanel";
-            this.TitleNavigationPanel.Size = new System.Drawing.Size(103, 32);
+            this.TitleNavigationPanel.Size = new System.Drawing.Size(128, 41);
             this.TitleNavigationPanel.TabIndex = 3;
             this.TitleNavigationPanel.Text = "NoDesk";
             // 
@@ -1033,10 +1042,10 @@ namespace UI
             // 
             this.UserManagementButtonNavigationPanel.BackColor = System.Drawing.Color.White;
             this.UserManagementButtonNavigationPanel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.UserManagementButtonNavigationPanel.Location = new System.Drawing.Point(395, 71);
+            this.UserManagementButtonNavigationPanel.Location = new System.Drawing.Point(527, 87);
             this.UserManagementButtonNavigationPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.UserManagementButtonNavigationPanel.Name = "UserManagementButtonNavigationPanel";
-            this.UserManagementButtonNavigationPanel.Size = new System.Drawing.Size(120, 23);
+            this.UserManagementButtonNavigationPanel.Size = new System.Drawing.Size(160, 28);
             this.UserManagementButtonNavigationPanel.TabIndex = 2;
             this.UserManagementButtonNavigationPanel.Text = "User Management";
             this.UserManagementButtonNavigationPanel.UseVisualStyleBackColor = false;
@@ -1046,10 +1055,10 @@ namespace UI
             // 
             this.IncidentManagementButtonNavigationPanel.BackColor = System.Drawing.Color.White;
             this.IncidentManagementButtonNavigationPanel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.IncidentManagementButtonNavigationPanel.Location = new System.Drawing.Point(239, 71);
+            this.IncidentManagementButtonNavigationPanel.Location = new System.Drawing.Point(319, 87);
             this.IncidentManagementButtonNavigationPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.IncidentManagementButtonNavigationPanel.Name = "IncidentManagementButtonNavigationPanel";
-            this.IncidentManagementButtonNavigationPanel.Size = new System.Drawing.Size(120, 23);
+            this.IncidentManagementButtonNavigationPanel.Size = new System.Drawing.Size(160, 28);
             this.IncidentManagementButtonNavigationPanel.TabIndex = 1;
             this.IncidentManagementButtonNavigationPanel.Text = "Incident Management";
             this.IncidentManagementButtonNavigationPanel.UseVisualStyleBackColor = false;
@@ -1059,10 +1068,10 @@ namespace UI
             // 
             this.DashboardButtonNavigationPanel.BackColor = System.Drawing.Color.White;
             this.DashboardButtonNavigationPanel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.DashboardButtonNavigationPanel.Location = new System.Drawing.Point(79, 71);
+            this.DashboardButtonNavigationPanel.Location = new System.Drawing.Point(105, 87);
             this.DashboardButtonNavigationPanel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.DashboardButtonNavigationPanel.Name = "DashboardButtonNavigationPanel";
-            this.DashboardButtonNavigationPanel.Size = new System.Drawing.Size(120, 23);
+            this.DashboardButtonNavigationPanel.Size = new System.Drawing.Size(160, 28);
             this.DashboardButtonNavigationPanel.TabIndex = 0;
             this.DashboardButtonNavigationPanel.Text = "Dashboard";
             this.DashboardButtonNavigationPanel.UseVisualStyleBackColor = false;
@@ -1078,9 +1087,10 @@ namespace UI
             this.DashBoardPanel.Controls.Add(this.incidentsPastDeadLineLabel);
             this.DashBoardPanel.Controls.Add(this.unresolvedTicketsLabel);
             this.DashBoardPanel.Controls.Add(this.TitleLabelDashBOardPanel);
-            this.DashBoardPanel.Location = new System.Drawing.Point(1, 99);
+            this.DashBoardPanel.Location = new System.Drawing.Point(1, 122);
+            this.DashBoardPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DashBoardPanel.Name = "DashBoardPanel";
-            this.DashBoardPanel.Size = new System.Drawing.Size(613, 387);
+            this.DashBoardPanel.Size = new System.Drawing.Size(817, 476);
             this.DashBoardPanel.TabIndex = 7;
             // 
             // incidentsPastDeadlineAmountLabel
@@ -1088,9 +1098,10 @@ namespace UI
             this.incidentsPastDeadlineAmountLabel.AutoSize = true;
             this.incidentsPastDeadlineAmountLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.incidentsPastDeadlineAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incidentsPastDeadlineAmountLabel.Location = new System.Drawing.Point(375, 323);
+            this.incidentsPastDeadlineAmountLabel.Location = new System.Drawing.Point(500, 398);
+            this.incidentsPastDeadlineAmountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.incidentsPastDeadlineAmountLabel.Name = "incidentsPastDeadlineAmountLabel";
-            this.incidentsPastDeadlineAmountLabel.Size = new System.Drawing.Size(2, 26);
+            this.incidentsPastDeadlineAmountLabel.Size = new System.Drawing.Size(2, 31);
             this.incidentsPastDeadlineAmountLabel.TabIndex = 9;
             // 
             // unreseolvedIncidentsLabelAmount
@@ -1098,16 +1109,18 @@ namespace UI
             this.unreseolvedIncidentsLabelAmount.AutoSize = true;
             this.unreseolvedIncidentsLabelAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.unreseolvedIncidentsLabelAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unreseolvedIncidentsLabelAmount.Location = new System.Drawing.Point(69, 323);
+            this.unreseolvedIncidentsLabelAmount.Location = new System.Drawing.Point(92, 398);
+            this.unreseolvedIncidentsLabelAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.unreseolvedIncidentsLabelAmount.Name = "unreseolvedIncidentsLabelAmount";
-            this.unreseolvedIncidentsLabelAmount.Size = new System.Drawing.Size(2, 26);
+            this.unreseolvedIncidentsLabelAmount.Size = new System.Drawing.Size(2, 31);
             this.unreseolvedIncidentsLabelAmount.TabIndex = 8;
             // 
             // ShowListButton
             // 
-            this.ShowListButton.Location = new System.Drawing.Point(526, 13);
+            this.ShowListButton.Location = new System.Drawing.Point(701, 16);
+            this.ShowListButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ShowListButton.Name = "ShowListButton";
-            this.ShowListButton.Size = new System.Drawing.Size(75, 23);
+            this.ShowListButton.Size = new System.Drawing.Size(100, 28);
             this.ShowListButton.TabIndex = 7;
             this.ShowListButton.Text = "Show list";
             this.ShowListButton.UseVisualStyleBackColor = true;
@@ -1115,43 +1128,46 @@ namespace UI
             // 
             // pie2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.pie2.ChartAreas.Add(chartArea1);
-            this.pie2.Location = new System.Drawing.Point(308, 101);
+            chartArea3.Name = "ChartArea1";
+            this.pie2.ChartAreas.Add(chartArea3);
+            this.pie2.Location = new System.Drawing.Point(411, 124);
+            this.pie2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pie2.Name = "pie2";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Name = "Series1";
-            this.pie2.Series.Add(series1);
-            this.pie2.Size = new System.Drawing.Size(202, 182);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Name = "Series1";
+            this.pie2.Series.Add(series3);
+            this.pie2.Size = new System.Drawing.Size(269, 224);
             this.pie2.TabIndex = 6;
             this.pie2.Text = "chart2";
-            title1.Name = "Unresolved incidents";
-            this.pie2.Titles.Add(title1);
+            title3.Name = "Unresolved incidents";
+            this.pie2.Titles.Add(title3);
             // 
             // pie1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.pie1.ChartAreas.Add(chartArea2);
-            this.pie1.Location = new System.Drawing.Point(12, 98);
+            chartArea4.Name = "ChartArea1";
+            this.pie1.ChartAreas.Add(chartArea4);
+            this.pie1.Location = new System.Drawing.Point(16, 121);
+            this.pie1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pie1.Name = "pie1";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Name = "Series1";
-            this.pie1.Series.Add(series2);
-            this.pie1.Size = new System.Drawing.Size(202, 182);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Name = "Series1";
+            this.pie1.Series.Add(series4);
+            this.pie1.Size = new System.Drawing.Size(269, 224);
             this.pie1.TabIndex = 5;
             this.pie1.Text = "chart1";
-            title2.Name = "Unresolved incidents";
-            this.pie1.Titles.Add(title2);
+            title4.Name = "Unresolved incidents";
+            this.pie1.Titles.Add(title4);
             // 
             // incidentsPastDeadLineLabel
             // 
             this.incidentsPastDeadLineLabel.AutoSize = true;
             this.incidentsPastDeadLineLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic);
-            this.incidentsPastDeadLineLabel.Location = new System.Drawing.Point(305, 52);
+            this.incidentsPastDeadLineLabel.Location = new System.Drawing.Point(407, 64);
+            this.incidentsPastDeadLineLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.incidentsPastDeadLineLabel.Name = "incidentsPastDeadLineLabel";
-            this.incidentsPastDeadLineLabel.Size = new System.Drawing.Size(198, 25);
+            this.incidentsPastDeadLineLabel.Size = new System.Drawing.Size(249, 32);
             this.incidentsPastDeadLineLabel.TabIndex = 4;
             this.incidentsPastDeadLineLabel.Text = "Incidents past deadline";
             // 
@@ -1159,9 +1175,10 @@ namespace UI
             // 
             this.unresolvedTicketsLabel.AutoSize = true;
             this.unresolvedTicketsLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic);
-            this.unresolvedTicketsLabel.Location = new System.Drawing.Point(7, 55);
+            this.unresolvedTicketsLabel.Location = new System.Drawing.Point(9, 68);
+            this.unresolvedTicketsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.unresolvedTicketsLabel.Name = "unresolvedTicketsLabel";
-            this.unresolvedTicketsLabel.Size = new System.Drawing.Size(181, 25);
+            this.unresolvedTicketsLabel.Size = new System.Drawing.Size(226, 32);
             this.unresolvedTicketsLabel.TabIndex = 3;
             this.unresolvedTicketsLabel.Text = "Unresolved incidents";
             // 
@@ -1169,9 +1186,10 @@ namespace UI
             // 
             this.TitleLabelDashBOardPanel.AutoSize = true;
             this.TitleLabelDashBOardPanel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.TitleLabelDashBOardPanel.Location = new System.Drawing.Point(11, 9);
+            this.TitleLabelDashBOardPanel.Location = new System.Drawing.Point(15, 11);
+            this.TitleLabelDashBOardPanel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TitleLabelDashBOardPanel.Name = "TitleLabelDashBOardPanel";
-            this.TitleLabelDashBOardPanel.Size = new System.Drawing.Size(212, 32);
+            this.TitleLabelDashBOardPanel.Size = new System.Drawing.Size(261, 41);
             this.TitleLabelDashBOardPanel.TabIndex = 0;
             this.TitleLabelDashBOardPanel.Text = "Current incidents";
             // 
@@ -1192,25 +1210,28 @@ namespace UI
             this.ResetPasswordPanel.Controls.Add(this.EmailLabelResetPassword);
             this.ResetPasswordPanel.Controls.Add(this.emailTextBox);
             this.ResetPasswordPanel.Location = new System.Drawing.Point(1, 1);
+            this.ResetPasswordPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ResetPasswordPanel.Name = "ResetPasswordPanel";
-            this.ResetPasswordPanel.Size = new System.Drawing.Size(615, 483);
+            this.ResetPasswordPanel.Size = new System.Drawing.Size(820, 594);
             this.ResetPasswordPanel.TabIndex = 13;
             // 
             // UserFoundLabel
             // 
             this.UserFoundLabel.AutoSize = true;
             this.UserFoundLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.UserFoundLabel.Location = new System.Drawing.Point(147, 248);
+            this.UserFoundLabel.Location = new System.Drawing.Point(196, 305);
+            this.UserFoundLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserFoundLabel.Name = "UserFoundLabel";
-            this.UserFoundLabel.Size = new System.Drawing.Size(336, 21);
+            this.UserFoundLabel.Size = new System.Drawing.Size(416, 28);
             this.UserFoundLabel.TabIndex = 7;
             this.UserFoundLabel.Text = "User found, change password down below:";
             // 
             // ConfirmNewPasswordButton
             // 
-            this.ConfirmNewPasswordButton.Location = new System.Drawing.Point(245, 331);
+            this.ConfirmNewPasswordButton.Location = new System.Drawing.Point(327, 407);
+            this.ConfirmNewPasswordButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ConfirmNewPasswordButton.Name = "ConfirmNewPasswordButton";
-            this.ConfirmNewPasswordButton.Size = new System.Drawing.Size(110, 28);
+            this.ConfirmNewPasswordButton.Size = new System.Drawing.Size(147, 34);
             this.ConfirmNewPasswordButton.TabIndex = 6;
             this.ConfirmNewPasswordButton.Text = "Confirm password";
             this.ConfirmNewPasswordButton.UseVisualStyleBackColor = true;
@@ -1218,25 +1239,28 @@ namespace UI
             // 
             // newPasswordTextBox
             // 
-            this.newPasswordTextBox.Location = new System.Drawing.Point(245, 287);
+            this.newPasswordTextBox.Location = new System.Drawing.Point(327, 353);
+            this.newPasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.newPasswordTextBox.Name = "newPasswordTextBox";
-            this.newPasswordTextBox.Size = new System.Drawing.Size(140, 20);
+            this.newPasswordTextBox.Size = new System.Drawing.Size(185, 22);
             this.newPasswordTextBox.TabIndex = 5;
             // 
             // newPasswordLabel
             // 
             this.newPasswordLabel.AutoSize = true;
-            this.newPasswordLabel.Location = new System.Drawing.Point(164, 289);
+            this.newPasswordLabel.Location = new System.Drawing.Point(219, 356);
+            this.newPasswordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.newPasswordLabel.Name = "newPasswordLabel";
-            this.newPasswordLabel.Size = new System.Drawing.Size(80, 13);
+            this.newPasswordLabel.Size = new System.Drawing.Size(99, 16);
             this.newPasswordLabel.TabIndex = 4;
             this.newPasswordLabel.Text = "New password:";
             // 
             // confirmButton
             // 
-            this.confirmButton.Location = new System.Drawing.Point(245, 205);
+            this.confirmButton.Location = new System.Drawing.Point(327, 252);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(110, 28);
+            this.confirmButton.Size = new System.Drawing.Size(147, 34);
             this.confirmButton.TabIndex = 3;
             this.confirmButton.Text = "Confirm email";
             this.confirmButton.UseVisualStyleBackColor = true;
@@ -1246,36 +1270,40 @@ namespace UI
             // 
             this.ResetPasswordLabelTitle.AutoSize = true;
             this.ResetPasswordLabelTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.ResetPasswordLabelTitle.Location = new System.Drawing.Point(184, 100);
+            this.ResetPasswordLabelTitle.Location = new System.Drawing.Point(245, 123);
+            this.ResetPasswordLabelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ResetPasswordLabelTitle.Name = "ResetPasswordLabelTitle";
-            this.ResetPasswordLabelTitle.Size = new System.Drawing.Size(252, 45);
+            this.ResetPasswordLabelTitle.Size = new System.Drawing.Size(316, 54);
             this.ResetPasswordLabelTitle.TabIndex = 2;
             this.ResetPasswordLabelTitle.Text = "Reset Password";
             // 
             // EmailLabelResetPassword
             // 
             this.EmailLabelResetPassword.AutoSize = true;
-            this.EmailLabelResetPassword.Location = new System.Drawing.Point(202, 162);
+            this.EmailLabelResetPassword.Location = new System.Drawing.Point(269, 199);
+            this.EmailLabelResetPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EmailLabelResetPassword.Name = "EmailLabelResetPassword";
-            this.EmailLabelResetPassword.Size = new System.Drawing.Size(38, 13);
+            this.EmailLabelResetPassword.Size = new System.Drawing.Size(47, 16);
             this.EmailLabelResetPassword.TabIndex = 1;
             this.EmailLabelResetPassword.Text = "Email: ";
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(243, 162);
+            this.emailTextBox.Location = new System.Drawing.Point(324, 199);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(134, 20);
+            this.emailTextBox.Size = new System.Drawing.Size(177, 22);
             this.emailTextBox.TabIndex = 0;
             // 
             // NoSQL
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 484);
-            this.Controls.Add(this.LoginPanel);
+            this.ClientSize = new System.Drawing.Size(820, 596);
             this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.ResetPasswordPanel);
+            this.Controls.Add(this.LoginPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "NoSQL";
             this.Text = "NoSQL-Project";
             this.AddIncindentPanel.ResumeLayout(false);

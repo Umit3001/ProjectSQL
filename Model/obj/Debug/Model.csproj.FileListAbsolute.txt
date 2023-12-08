@@ -17,3 +17,22 @@ C:\Users\duhak\source\repos\NoSQL-Project\Model\obj\Debug\Model.csproj.CoreCompi
 C:\Users\duhak\source\repos\NoSQL-Project\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\duhak\source\repos\NoSQL-Project\Model\obj\Debug\Model.exe
 C:\Users\duhak\source\repos\NoSQL-Project\Model\obj\Debug\Model.pdb
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\Model.exe.config
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\Model.exe
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\Model.pdb
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\MongoDB.Bson.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\System.Buffers.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\System.Memory.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\MongoDB.Bson.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\System.Buffers.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\System.Memory.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\Model.csproj.SuggestedBindingRedirects.cache
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\Model.exe
+C:\Users\umitc\OneDrive\Bureaublad\Project TGG\ProjectSQL\Model\obj\Debug\Model.pdb

@@ -315,6 +315,8 @@ namespace UI
                     EmptyTheFieldsInIncidentManagment();
                     MessageBox.Show("Ticket saved successfully!");
 
+                    overviewTicketsPanel.Show();
+
                     UpdateTicketsListView();
                 }
                 else
@@ -329,8 +331,13 @@ namespace UI
 
                     ticketLogic.InsertTicket(newTicket);
 
-                    MessageBox.Show("Ticket saved successfully!");
                     EmptyTheFieldsInIncidentManagment();
+
+                    MessageBox.Show("Ticket saved successfully!");
+                   
+                    overviewTicketsPanel.Show();
+
+                    UpdateTicketsListView();
                 }
             }
             catch (InvalidOperationException ex)
