@@ -83,12 +83,23 @@ namespace UI
                         UserManagementButtonNavigationPanel.Enabled = false;
                         FillDashboard();
                         DashBoardPanel.Show();
-                    }
+                        labelIncidentTicket.Text = "Create new incident ticket";
+                        submitTicketButtonInIncidentPanel.Text = "Submit ticket";
+                        subjectOfIncidentTextBox.Text = "";
+                        typeOfIncidentComboBox.SelectedIndex = -1;
+                        reportedByUserTextBox.Text = "";
+                        priorityComboBox.SelectedIndex = -1;
+                        deadlineComboBox.SelectedIndex = -1;
+                        descriptionTextBox.Text = "";
+                        StatusComboBoxAddIncidentPanel.SelectedIndex = -1;
+
+                }
                     // open servicedesk panel
                     else if (foundUser.EmployeeType == TypeOfEmployee.ServiceDesk)
                     {
                         DashboardButtonNavigationPanel.Enabled = false;
                         UserManagementPanel.Show();
+
                     }
 
                 }
