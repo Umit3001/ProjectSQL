@@ -652,21 +652,17 @@ namespace UI
 
         private void TransferServiceDeskEmployeeButton_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
-                ListViewItem selectedItem = overviewTicketsListView.SelectedItems[0];
+                ListViewItem selectedItem = overviewTicketsListView.SelectedItems.Count > 0 ? overviewTicketsListView.SelectedItems[0] : null;
 
-                selectedTicket = ticketLogic.GetTicketById(selectedItem.SubItems[0].Text);
-
-                User currentServiceDeskEmployee = transferTicketLogic.GetUserById(selectedTicket.ServiceDeskEmployeeID.EmployeeId);
-
-                if (selectedTicket != null)
+                if (selectedItem != null)
                 {
-                    string newServiceDeskEmployeeName = Microsoft.VisualBasic.Interaction.InputBox(
-                        "Enter the name of the new service desk employee:",
-                        "Transfer Ticket",
-                        currentServiceDeskEmployee.Name
-                    );
+                    selectedTicket = ticketLogic.GetTicketById(selectedItem.SubItems[0].Text);
+
+                    User currentServiceDeskEmployee = transferTicketLogic.GetUserById(selectedTicket.ServiceDeskEmployeeID.EmployeeId);
+
+                    string newServiceDeskEmployeeName = ShowInputDialog("Enter employee", "Transfer Ticket", currentServiceDeskEmployee.Name);
 
                     if (!string.IsNullOrWhiteSpace(newServiceDeskEmployeeName))
                     {
@@ -694,7 +690,30 @@ namespace UI
             catch (InvalidOperationException ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Transfer Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+            }
+        }
+
+        // Custom input dialog function
+        private string ShowInputDialog(string prompt, string title, string defaultValue = "")
+        {
+            Form promptForm = new Form();
+            promptForm.Width = 300;
+            promptForm.Height = 150;
+            promptForm.Text = title;
+
+            Label textLabel = new Label() { Left = 50, Top = 20, Text = prompt };
+            TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 200, Text = defaultValue };
+            Button confirmation = new Button() { Text = "Ok", Left = 100, Width = 100, Top = 70 };
+
+            confirmation.Click += (sender, e) => { promptForm.Close(); };
+
+            promptForm.Controls.Add(confirmation);
+            promptForm.Controls.Add(textLabel);
+            promptForm.Controls.Add(textBox);
+
+            promptForm.ShowDialog();
+
+            return textBox.Text;
         }
 
         private void ResetPasswordLabel_Click(object sender, EventArgs e)
@@ -776,8 +795,6 @@ namespace UI
 
             UpdateTicketsListView();
         }
-
-   
     }
 }
 
