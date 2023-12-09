@@ -59,7 +59,9 @@ namespace UI
         // LOGIN
         private void LoginPanelLoginButton_Click(object sender, EventArgs e)
         {
-            
+           
+
+
                 string username = LoginPanelUsernameTextBox.Text;
                 string password = LoginPanelPasswordTextBox.Text;
 
@@ -70,6 +72,11 @@ namespace UI
                 {
                     HideAllPanels();
                     NavigationPanel.Show();
+
+                    RoleLabel.Text = $"{foundUser.Name} ({foundUser.EmployeeType})";
+                    UserManagementButtonNavigationPanel.Enabled = true;
+                    DashboardButtonNavigationPanel.Enabled = true;
+
                     // open employee panel
                     if (foundUser.EmployeeType == TypeOfEmployee.Regular)
                     {
@@ -83,6 +90,7 @@ namespace UI
                         DashboardButtonNavigationPanel.Enabled = false;
                         UserManagementPanel.Show();
                     }
+
                 }
                 else
                 {
@@ -90,14 +98,14 @@ namespace UI
                 }
 
             
-            
+
             if (!RememberMeCheckBoxLoginPanel.Checked)
             {
                 LoginPanelUsernameTextBox.Text = "";
                 LoginPanelPasswordTextBox.Text = "";
             }
+          
         }
-
 
 
         private void AddNewUserButtonUserManagement_Click(object sender, EventArgs e)
@@ -457,22 +465,20 @@ namespace UI
             if (dateOpened.Contains("-"))
             {
                 string[] dates = dateOpened.Split('-');
-                if (dates.Length == 3)
-                {
-                    day = int.Parse(dates[0]);
-                    month = int.Parse(dates[1]);
-                    year = int.Parse(dates[2]);
-                }
+
+                day = int.Parse(dates[0]);
+                month = int.Parse(dates[1]);
+                year = int.Parse(dates[2]);
+
             }
             else if (dateOpened.Contains("/"))
             {
                 string[] dates = dateOpened.Split('/');
-                if (dates.Length == 3)
-                {
-                    day = int.Parse(dates[0]);
-                    month = int.Parse(dates[1]);
-                    year = int.Parse(dates[2]);
-                }
+
+                day = int.Parse(dates[0]);
+                month = int.Parse(dates[1]);
+                year = int.Parse(dates[2]);
+
             }
 
             return new DateTime(year, month, day);
@@ -503,9 +509,6 @@ namespace UI
             return dateOpenedTicket;
         }
 
-
-
-
         private void FillDashboard()
         {
           
@@ -530,7 +533,7 @@ namespace UI
             int unresolvedIncidentsCount = ticketList.Count(ticket => ticket.Status != StatusTicket.Closed.ToString());
 
             Color colorSelect = Color.Orange;
-            Series series = PopulatePie(unresolvedIncidentsCount, "UnresolvedIncidents", colorSelect);
+            Series series = PopulatePieUnResolved(unresolvedIncidentsCount, "UnresolvedIncidents", colorSelect);
 
             unreseolvedIncidentsLabelAmount.Text = $"{unresolvedIncidentsCount} / {ticketList.Count}";
             
@@ -542,7 +545,7 @@ namespace UI
             pie2.Series.Clear();
             Color incidentColor = Color.Red;
 
-            // Filter incidents that have passed the deadline and are in progress
+            // Filter incidents that have passed the deadline
             var pastDeadlineIncidents = ticketList
                 .Where(ticket =>
                 {
@@ -552,7 +555,7 @@ namespace UI
                 })
                 .ToList();
 
-            Series series = PopulatePie(pastDeadlineIncidents.Count, "PastDeadline", incidentColor);
+            Series series = PopulatePieDeadline(pastDeadlineIncidents.Count, "PastDeadline", incidentColor);
 
             incidentsPastDeadlineAmountLabel.Text = pastDeadlineIncidents.Count.ToString();
 
@@ -562,19 +565,39 @@ namespace UI
         }
 
 
-        private Series PopulatePie(int countTheIncidents, string propSeries, Color color)
+        private Series PopulatePieUnResolved(int countTheIncidents, string propSeries, Color color)
         {
             Series series = new Series(propSeries);
+
+
             series.Points.AddXY("", ticketList.Count - countTheIncidents);
             series.Points.AddXY("", countTheIncidents);
 
             series.Points[0].Color = Color.Gray;
             series.Points[1].Color = color;
 
-     
+
             series.IsVisibleInLegend = false;
             series.ChartType = SeriesChartType.Doughnut;
-            
+
+            return series;
+        }
+
+        private Series PopulatePieDeadline(int countTheIncidents, string propSeries, Color color)
+        {
+            Series series = new Series(propSeries);
+
+
+            series.Points.AddXY("", ticketList.Count - countTheIncidents);
+            series.Points.AddXY("", countTheIncidents);
+
+            series.Points[0].Color = Color.Red;
+            series.Points[1].Color = color;
+
+
+            series.IsVisibleInLegend = false;
+            series.ChartType = SeriesChartType.Doughnut;
+
             return series;
         }
 
